@@ -365,7 +365,7 @@ public class QingCloudAPIsIntegrationTest {
 	}
 	
 	@Test
-	public void testInstanceLifecylcesManagement() throws Exception {
+	public void testInstanceLifecylceManagementAPIs() throws Exception {
 		//create keypair
 		CreateKeyPairRequest createKeyPairRequest = this.getCreateKeyPairRequest();
 		CreateKeyPairResponse createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);

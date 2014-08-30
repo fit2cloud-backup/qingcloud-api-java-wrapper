@@ -52,7 +52,7 @@ public class QingCloudKeyPairsAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testDescribeKeyPairs() throws Exception {
 		DescribeKeyPairsRequest describeKeyPairsRequest = new DescribeKeyPairsRequest();
 		
@@ -83,7 +83,7 @@ public class QingCloudKeyPairsAPITest {
 		assertTrue(describeKeyPairsResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testCreateKeyPair() throws Exception {
 		CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
 		
@@ -108,7 +108,7 @@ public class QingCloudKeyPairsAPITest {
 		assertTrue(createKeyPairResponse.getKeypair_id()!=null);
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteKeyPair() throws Exception {
 		DeleteKeyPairsRequest deleteKeyPairsRequest = new DeleteKeyPairsRequest();
 		
@@ -132,7 +132,7 @@ public class QingCloudKeyPairsAPITest {
 		assertTrue(deleteKeyPairsResponse.getKeypairs()!=null);
 	}
 	
-	@Test
+	//@Test
 	public void testAttachKeyPairs() throws Exception {
 		AttachKeyPairsRequest attachKeyPairsRequest = new AttachKeyPairsRequest();
 		
@@ -161,7 +161,7 @@ public class QingCloudKeyPairsAPITest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void testDettachKeyPairs() throws Exception {
 		DettachKeyPairsRequest dettachKeyPairsRequest = new DettachKeyPairsRequest();
 		

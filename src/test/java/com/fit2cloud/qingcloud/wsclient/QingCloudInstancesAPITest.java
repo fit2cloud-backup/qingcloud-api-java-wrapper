@@ -72,7 +72,7 @@ public class QingCloudInstancesAPITest {
 	public void tearDown() throws Exception {
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeInstances() throws Exception {
 		DescribeInstancesRequest describeInstancesRequest = new DescribeInstancesRequest();
 		
@@ -109,7 +109,7 @@ public class QingCloudInstancesAPITest {
 		System.out.println("QingCloudWSClientTest");
 	}
 
-	@Test
+	//@Test
 	public void testRunInstances() throws Exception {
 		RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
 		runInstancesRequest.setImage_id(QingCloudImageId.CENTOS64_X86a);
@@ -137,7 +137,7 @@ public class QingCloudInstancesAPITest {
 		System.out.println("QingCloudWSClientTest");
 	}
 	
-	@Test
+	//@Test
 	public void testTerminateInstances() throws Exception {
 		TerminateInstancesRequest terminateInstancesRequest = new TerminateInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -155,7 +155,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(terminateInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testStopInstances() throws Exception {
 		StopInstancesRequest stopInstancesRequest = new StopInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -173,7 +173,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(stopInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testStartInstances() throws Exception {
 		StartInstancesRequest startInstancesRequest = new StartInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -191,7 +191,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(startInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testRestartInstances() throws Exception {
 		RestartInstancesRequest restartInstancesRequest = new RestartInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -209,7 +209,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(restartInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testResetInstances() throws Exception {
 		ResetInstancesRequest resetInstancesRequest = new ResetInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -234,7 +234,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(resetInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testResizeInstances() throws Exception {
 		ResizeInstancesRequest resizeInstancesRequest = new ResizeInstancesRequest();
 		List<String> instances = new ArrayList<String>();
@@ -255,7 +255,7 @@ public class QingCloudInstancesAPITest {
 		assertTrue(resizeInstancesResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testModifyInstanceAttributesRequest() throws Exception {
 		ModifyInstanceAttributesRequest modifyInstanceAttributesRequest = new ModifyInstanceAttributesRequest();
 		

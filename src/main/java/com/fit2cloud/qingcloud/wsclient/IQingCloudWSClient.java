@@ -2,16 +2,6 @@ package com.fit2cloud.qingcloud.wsclient;
 
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 
-
-
-
-
-
-
-
-
-
-
 public interface IQingCloudWSClient {
 
 	public DescribeInstancesResponse describeInstances(

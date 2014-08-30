@@ -57,7 +57,7 @@ public class QingCloudVolumesAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testDescribeVolumes() throws Exception {
 		DescribeVolumesRequest describeVolumesRequest = new DescribeVolumesRequest();
 		
@@ -90,7 +90,7 @@ public class QingCloudVolumesAPITest {
 		assertTrue(describeVolumesResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testCreateVolumes() throws Exception {
 		//PermissionDenied, high capacity volume minimum size should be [100 GB]
 		CreateVolumesRequest createVolumesRequest = new CreateVolumesRequest();
@@ -119,7 +119,7 @@ public class QingCloudVolumesAPITest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteVolumes() throws Exception {
 		DeleteVolumesRequest deleteVolumesRequest = new DeleteVolumesRequest();
 		
@@ -141,7 +141,7 @@ public class QingCloudVolumesAPITest {
 		assertTrue(deleteVolumesResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testAttachVolumes() throws Exception {
 		AttachVolumesRequest attachVolumesRequest = new AttachVolumesRequest();
 		
@@ -168,7 +168,7 @@ public class QingCloudVolumesAPITest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void testDetachVolumes() throws Exception {
 		DetachVolumesRequest detachVolumesRequest = new DetachVolumesRequest();
 		
@@ -194,7 +194,7 @@ public class QingCloudVolumesAPITest {
 		assertTrue(detachVolumesResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testResizeVolumes() throws Exception {
 		ResizeVolumesRequest resizeVolumesRequest = new ResizeVolumesRequest();
 		
@@ -222,7 +222,7 @@ public class QingCloudVolumesAPITest {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testModifyVolumeAttributes() throws Exception {
 		ModifyVolumeAttributesRequest modifyVolumeAttributesRequest = new ModifyVolumeAttributesRequest();
 		

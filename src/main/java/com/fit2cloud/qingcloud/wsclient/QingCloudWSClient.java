@@ -26,22 +26,19 @@ import org.apache.commons.codec.binary.Base64;
 
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAction;
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-
-
-
-
-
-
-
-
-
 
 
 /**
- * ToDo: Each Request's parameters' check
+ * ToDo: 
+ * 1) Each Request's parameters' check
+ * 2) Vxnet APIs
+ * 3) Router APIs
+ * 4) Image APIs
+ * 5) Snapshot APIs
+ * 6) Load Balancer APIs
+ * 7) Monitor APIs
+ * 8) QingCloudServiceException Refactor
+ * 9) API Unit Test Refactor
  * @author jason
  *
  */

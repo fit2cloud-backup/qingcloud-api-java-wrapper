@@ -34,7 +34,11 @@ import com.fit2cloud.qingcloud.wsclient.ui.model.ReleaseEipsResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-
+/**
+ * 
+ * @author jason
+ *
+ */
 public class QingCloudEIPAPITest {
 
 	private static IQingCloudWSClient qingCloudWSClient;
@@ -59,7 +63,7 @@ public class QingCloudEIPAPITest {
 	}
     
 	
-	@Test
+	//@Test
 	public void testDescribeEips() throws Exception {
 		DescribeEipsRequest describeEipsRequest = new DescribeEipsRequest();
 		
@@ -85,7 +89,7 @@ public class QingCloudEIPAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAllocateEipsRequest() throws Exception {
 		AllocateEipsRequest allocateEipsRequest = new AllocateEipsRequest();
 		
@@ -113,7 +117,7 @@ public class QingCloudEIPAPITest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void testReleaseEips() throws Exception {
 		ReleaseEipsRequest releaseEipsRequest = new ReleaseEipsRequest();
 
@@ -134,7 +138,7 @@ public class QingCloudEIPAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAssociateEip() throws Exception {
 		AssociateEipRequest associateEipRequest = new AssociateEipRequest();
 		
@@ -156,7 +160,7 @@ public class QingCloudEIPAPITest {
 		assertTrue(associateEipResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testDissociateEips() throws Exception {
 		DissociateEipsRequest dissociateEipsRequest = new DissociateEipsRequest();
 		
@@ -177,7 +181,7 @@ public class QingCloudEIPAPITest {
 		assertTrue(dissociateEipsResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testChangeEipsBandwidth() throws Exception {
 		ChangeEipsBandwidthRequest changeEipsBandwidthRequest = new ChangeEipsBandwidthRequest();
 		
@@ -201,7 +205,7 @@ public class QingCloudEIPAPITest {
 	
 	}
 
-	@Test
+	//@Test
 	public void testModifyEipAttributes() throws Exception {
 		ModifyEipAttributesRequest modifyEipAttributesRequest = new ModifyEipAttributesRequest();
 		

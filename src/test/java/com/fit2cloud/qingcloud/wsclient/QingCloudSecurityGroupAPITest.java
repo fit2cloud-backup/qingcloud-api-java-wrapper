@@ -63,7 +63,7 @@ public class QingCloudSecurityGroupAPITest {
 	}
     
 	
-	@Test
+	//@Test
 	public void testDescribeSecurityGroups() throws Exception {
 		DescribeSecurityGroupsRequest describeSecurityGroupsRequest = new DescribeSecurityGroupsRequest();
 		
@@ -90,7 +90,7 @@ public class QingCloudSecurityGroupAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testCreateSecurityGroup() throws Exception {
 		CreateSecurityGroupRequest createSecurityGroupRequest = new CreateSecurityGroupRequest();
 		
@@ -112,7 +112,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(createSecurityGroupResponse.getSecurity_group_id()!=null);
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteSecurityGroups() throws Exception {
 		DeleteSecurityGroupsRequest deleteSecurityGroupsRequest = new DeleteSecurityGroupsRequest();
 		
@@ -135,7 +135,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(deleteSecurityGroupsResponse.getSecurity_groups()==null);
 	}
 	
-	@Test
+	//@Test
 	public void testApplySecurityGroups() throws Exception {
 		ApplySecurityGroupRequest applySecurityGroupRequest = new ApplySecurityGroupRequest();
 		
@@ -159,7 +159,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(applySecurityGroupResponse.getRet_code() != 0);
 	}
 	
-	@Test
+	//@Test
 	public void testModifySecurityGroupAttributes() throws Exception {
 		ModifySecurityGroupAttributesRequest modifySecurityGroupAttributesRequest = new ModifySecurityGroupAttributesRequest();
 		
@@ -183,7 +183,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(modifySecurityGroupAttributesResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeSecurityGroupRules() throws Exception {
 		DescribeSecurityGroupRulesRequest describeSecurityGroupRulesRequest = new DescribeSecurityGroupRulesRequest();
 		
@@ -212,7 +212,7 @@ public class QingCloudSecurityGroupAPITest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void testAddSecurityGroupRules() throws Exception {
 		AddSecurityGroupRulesRequest addSecurityGroupRulesRequest = new AddSecurityGroupRulesRequest();
 		
@@ -256,7 +256,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(addSecurityGroupRulesResponse.getRet_code() == 0);
 	}
 
-	@Test
+	//@Test
 	public void testDeleteSecurityGroupRules() throws Exception {
 		DeleteSecurityGroupRulesRequest deleteSecurityGroupRulesRequest = new DeleteSecurityGroupRulesRequest();
 		
@@ -277,7 +277,7 @@ public class QingCloudSecurityGroupAPITest {
 		assertTrue(deleteSecurityGroupRulesResponse.getRet_code() == 0);
 	}
 	
-	@Test
+	//@Test
 	public void testModifySecurityGroupRuleAttributes() throws Exception {
 		ModifySecurityGroupRuleAttributesRequest modifySecurityGroupRuleAttributesRequest = new ModifySecurityGroupRuleAttributesRequest();
 		
