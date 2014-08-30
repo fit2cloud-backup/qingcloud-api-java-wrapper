@@ -1,20 +1,9 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
-import java.util.List;
-
 import com.google.gson.Gson;
 
 /**
- * {
- *  "action":"RunInstancesResponse",
- *  "instances":["i-5qyeem9d"],
- *  "job_id":"j-lz8jp11b",
- *  "ret_code":0
- *  }
- *  {
- *   "message":"PermissionDenied, access denied for zone [pek1]",
- *   "ret_code":1400
- *  }
+ * 
  * @author jason
  *
  */

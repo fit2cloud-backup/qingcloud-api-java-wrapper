@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -364,111 +365,314 @@ public class QingCloudAPIsIntegrationTest {
 		return describeVolumesRequest;
 	}
 	
-	@Test
-	public void testInstanceLifecylceManagementAPIs() throws Exception {
-		//create keypair
-		CreateKeyPairRequest createKeyPairRequest = this.getCreateKeyPairRequest();
-		CreateKeyPairResponse createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);
-		String keypair_id = createKeyPairResponse.getKeypair_id();
-		assertTrue(keypair_id!=null);
+	private String createKeyPair(){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to create KeyPair... ...");
+		System.out.println("---------------------------------------");
+		CreateKeyPairResponse createKeyPairResponse;
+		String keypair_id=null;
+		try {
+			CreateKeyPairRequest createKeyPairRequest = this.getCreateKeyPairRequest();
+			createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);
+			keypair_id = createKeyPairResponse.getKeypair_id();
+			String private_key = createKeyPairResponse.getPrivate_key();
+			String strPrivateKeyPath = "/tmp/key-"+System.currentTimeMillis()+".pem";
+			FileUtils.writeStringToFile(new File(strPrivateKeyPath), private_key);
+			System.out.println(String.format("    KeyPair %s created!", keypair_id));
+		} catch (QingCloudClientException e) {
+			e.printStackTrace();
+		} catch (QingCloudServiceException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		if(keypair_id!=null){
+			System.out.println("    Create KeyPair Successfully!");
+		}else{
+			System.out.println("    Failed to create KeyPair!");
+		}
+		return keypair_id;
+	}
+	
+	private String createSecurityGroup(){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to create Security Group... ...");
+		System.out.println("---------------------------------------");
+		String security_group_id=null;
+		try {
+			CreateSecurityGroupRequest createSecurityGroupRequest = this.getCreateSecurityGroupRequest();
+			CreateSecurityGroupResponse createSecurityGroupResponse = qingCloudWSClient.createSecurityGroup(createSecurityGroupRequest);
+			security_group_id = createSecurityGroupResponse.getSecurity_group_id();
+			System.out.println(String.format("    SecurityGroup %s created!", security_group_id));
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(security_group_id!=null){
+			System.out.println("    Create Security Group Successfully!");
+		}else{
+			System.out.println("    Failed to create Security Group!");
+		}
+		return security_group_id;
+	}
+	
+	private void applyRulesToSecurityGroup(String security_group_id){
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("Go to add rules to Security Group to open 22 and 80... ...");
+		System.out.println("----------------------------------------------------------------");
+		List<String> addedSecurityGroupRules = new ArrayList<String>();
+		try {
+			List<QingCloudSecurityGroupRule> rules = getSecurityGroupRules();
+			AddSecurityGroupRulesRequest addSecurityGroupRulesRequest = getAddSecurityGroupRulesRequest(security_group_id, rules);
+			AddSecurityGroupRulesResponse addSecurityGroupRulesResponse = qingCloudWSClient.addSecurityGroupRules(addSecurityGroupRulesRequest);
+			addedSecurityGroupRules = addSecurityGroupRulesResponse.getSecurity_group_rules();
+			if(addedSecurityGroupRules!=null && addedSecurityGroupRules.size()>0){
+				for(String rule : addedSecurityGroupRules){
+					System.out.println(String.format("    SecurityGroupRule %s added to SecurityGroup %s!", rule, security_group_id));
+				}
+			}
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(addedSecurityGroupRules!=null && addedSecurityGroupRules.size()>0){
+			System.out.println("    Add Security Rules opening 22,80 public Successfully!");
+		}else{
+			System.out.println("    Failed to add Security Rules opening 22,80 public!");
+		}
+	}
+	
+	private String createEIP(){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to create EIP ... ...");
+		System.out.println("---------------------------------------");
+		String eip_id=null;
+		try {
+			AllocateEipsRequest allocateEipsRequest = getAllocateEipsRequest();
+			AllocateEipsResponse allocateEipsResponse = qingCloudWSClient.allocateEips(allocateEipsRequest);
+			List<String> eips = allocateEipsResponse.getEips();
+			if(eips!=null && eips.size()>0){
+				eip_id = eips.get(0);
+				System.out.println(String.format("    EIP %s created!", eip_id));
+			}
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(eip_id!=null){
+			System.out.println("    Create EIP Successfully!");
+		}else{
+			System.out.println("    Fail to create EIP!");
+		}
+		return eip_id;
+	}
+	
+	public String createInstance(String keypair_id, String security_group_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to create VM instance ... ...");
+		System.out.println("---------------------------------------");
+		String instance_id=null;
+		try {
+			RunInstancesRequest runInstancesRequest = getRunInstancesRequest(keypair_id, security_group_id);
+			RunInstancesResponse runInstancesResponse = qingCloudWSClient.runInstances(runInstancesRequest);
+			List<String> instances = runInstancesResponse.getInstances();
+			if(instances!=null && instances.size()>0){
+				instance_id = instances.get(0);
+			}
+			System.out.println(String.format("    VM %s created!", instance_id));
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(instance_id!=null){
+		    System.out.println("    Create VM Instance Successfully!");
+		}else{
+			System.out.println("    Fail to create VM Instance!");
+		}
+		return instance_id;
+	}
+	
+	public void attachEIPToInstance(String eip_id, String instance_id){
+		System.out.println("---------------------------------------");
+        System.out.println("Go to attach EIP to VM instance ... ...");
+        System.out.println("---------------------------------------");
 		
-		String private_key = createKeyPairResponse.getPrivate_key();
-		String strPrivateKeyPath = "/tmp/key-"+System.currentTimeMillis()+".pem";
-		FileUtils.writeStringToFile(new File(strPrivateKeyPath), private_key);
-		System.out.println(String.format("KeyPair %s created!", keypair_id));
-		
-		//create security group
-		CreateSecurityGroupRequest createSecurityGroupRequest = this.getCreateSecurityGroupRequest();
-		CreateSecurityGroupResponse createSecurityGroupResponse = qingCloudWSClient.createSecurityGroup(createSecurityGroupRequest);
-		String security_group_id = createSecurityGroupResponse.getSecurity_group_id();
-		System.out.println(String.format("SecurityGroup %s created!", security_group_id));
-		assertTrue(security_group_id!=null);
-		
-		//Add security rules to security group
-		List<QingCloudSecurityGroupRule> rules = getSecurityGroupRules();
-		AddSecurityGroupRulesRequest addSecurityGroupRulesRequest = getAddSecurityGroupRulesRequest(security_group_id, rules);
-		AddSecurityGroupRulesResponse addSecurityGroupRulesResponse = qingCloudWSClient.addSecurityGroupRules(addSecurityGroupRulesRequest);
-		List<String> securityGroupRules = addSecurityGroupRulesResponse.getSecurity_group_rules();
-		for(String rule : securityGroupRules){
-			System.out.println(String.format("SecurityGroupRule %s added to SecurityGroup %s!", rule, security_group_id));
+		AssociateEipResponse associateEipResponse = null;
+		try {
+			AssociateEipRequest associateEipRequest = getAssociateEipRequest(eip_id, instance_id);
+			associateEipResponse = qingCloudWSClient.associateEip(associateEipRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(associateEipResponse.getRet_code()==0){
+			System.out.println("    Attach EIP to VM Instance Successfully!");
+		}else{
+			System.out.println("    Fail to attach EIP to VM Instance!");
+		}
+	}
+	
+	public void applySecurityGroupToInstance(String security_group_id, String instance_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to apply Security Group to VM instance ... ...");
+		System.out.println("---------------------------------------");
+		ApplySecurityGroupResponse applySecurityGroupResponse = null;
+		try {
+			ApplySecurityGroupRequest applySecurityGroupRequest = getApplySecurityGroupRequest(instance_id, security_group_id);
+			applySecurityGroupResponse = qingCloudWSClient.applySecurityGroup(applySecurityGroupRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(applySecurityGroupResponse.getRet_code()==0){
+			System.out.println("    Apply Security Group to VM request is sent successfully!");
+		}else{
+			System.out.println("    Apply Security Group to VM request is sent failed!");
+		}
+	}
+	
+	public void stopInstance(String instance_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to stop VM instance ... ...");
+		System.out.println("---------------------------------------");
+		StopInstancesResponse stopInstancesResponse = null;
+		try {
+			StopInstancesRequest stopInstancesRequest = getStopInstancesRequest(instance_id);
+			stopInstancesResponse = qingCloudWSClient.stopInstances(stopInstancesRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(stopInstancesResponse!=null && stopInstancesResponse.getRet_code()==0){
+			System.out.println("    Stop VM instance request is sent successfully!");
+		}else{
+			System.out.println("    Stop VM instance request is sent failed!");
+		}
+	}
+	
+	public void startInstance(String instance_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to start VM instance ... ...");
+		System.out.println("---------------------------------------");
+		StartInstancesResponse startInstancesResponse = null;
+		try {
+			StartInstancesRequest startInstancesRequest = getStartInstancesRequest(instance_id);
+			startInstancesResponse = qingCloudWSClient.startInstances(startInstancesRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(startInstancesResponse!=null && startInstancesResponse.getRet_code()==0){
+			System.out.println("    Start VM instance request is sent successfully!... ...");
+		}else{
+			System.out.println("    Start VM instance request is sent failed!");
+		}
+	}
+	
+	public String createVolume(){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to create volume... ...");
+		System.out.println("---------------------------------------");
+        List<String> volumes=new ArrayList<String>();
+		String volume_id=null;
+		try {
+			CreateVolumesRequest createVolumesRequest = getCreateVolumesRequest();
+			CreateVolumesResponse createVolumesResponse = qingCloudWSClient.createVolumes(createVolumesRequest);
+			assertTrue(createVolumesResponse!=null);
+			assertTrue(createVolumesResponse.getRet_code()==0);
+			volumes = createVolumesResponse.getVolumes();
+			if(volumes!=null && volumes.size()>0)
+			    volume_id = volumes.get(0);
+		} catch (QingCloudClientException e1) {
+			
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			
+			e1.printStackTrace();
+		}
+		if(volume_id!=null){
+		    System.out.println("    Create Volume request is sent successfully, waiting for volume to be available... ...");
+		}
+		return volume_id;
+	}
+	
+	public void attachVolume(String volume_id, String instance_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to attach volume to instance... ...");
+		System.out.println("---------------------------------------");
+		AttachVolumesResponse attachVolumesResponse = null;
+		try {
+			List<String> volumes = new ArrayList<String>();
+			volumes.add(volume_id);
+			AttachVolumesRequest attachVolumesRequest =  getAttachVolumesRequest(volumes, instance_id);
+			attachVolumesResponse = qingCloudWSClient.attachVolumes(attachVolumesRequest);
+			assertTrue(attachVolumesResponse!=null);
+			assertTrue(attachVolumesResponse.getRet_code()==0);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(attachVolumesResponse!=null && attachVolumesResponse.getRet_code()==0){
+			System.out.println("    Attach volume to VM instance request is sent successfully!... ...");
+		}else{
+			System.out.println("    Attach volume to VM instance request is sent failed!");
+		}
+	}
+	
+	public void deleteKeyPair(String keypair_id){
+		System.out.println("---------------------------------------------");
+		System.out.println("Go to detach and delete key pairs... ...");
+		System.out.println("---------------------------------------------");
+		DeleteKeyPairsResponse deleteKeyPairsResponse = null;
+		try {
+			DeleteKeyPairsRequest deleteKeyPairsRequest = getDeleteKeyPairsRequest(keypair_id);
+			deleteKeyPairsResponse = qingCloudWSClient.deleteKeyPairs(deleteKeyPairsRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+		}
+		if(deleteKeyPairsResponse!=null && deleteKeyPairsResponse.getRet_code() == 0){
+			System.out.println("    Detach and delete key pair successfully!");
+		}else{
+			System.out.println("    Detach and delete key pair failed!");
+		}
+	}
+	
+	public void terminateInstance(String instance_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to terminate instance... ...");
+		System.out.println("---------------------------------------");
+		TerminateInstancesResponse terminateInstancesResponse = null;
+		try {
+			TerminateInstancesRequest terminateInstancesRequest = getTerminateInstancesRequest(instance_id);
+			terminateInstancesResponse = qingCloudWSClient.terminateInstances(terminateInstancesRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
 		}
 		
-		//Create eip
-		AllocateEipsRequest allocateEipsRequest = getAllocateEipsRequest();
-		AllocateEipsResponse allocateEipsResponse = qingCloudWSClient.allocateEips(allocateEipsRequest);
-		List<String> eips = allocateEipsResponse.getEips();
-		String eip_id = eips.get(0);
-		assertTrue(eip_id!=null);
-		System.out.println(String.format("EIP %s created!", eip_id));
-		
-		//Start an instance with keypair and security group and userdata
-		RunInstancesRequest runInstancesRequest = getRunInstancesRequest(keypair_id, security_group_id);
-		RunInstancesResponse runInstancesResponse = qingCloudWSClient.runInstances(runInstancesRequest);
-		List<String> instances = runInstancesResponse.getInstances();
-		String instance_id = instances.get(0);
-		assertTrue(instance_id!=null);
-		System.out.println(String.format("VM %s created!", instance_id));
-		
-		//Attach eip to instance
-		waitingForInstance(instance_id, QingCloudInstanceStatus.RUNNING);
-		
-		AssociateEipRequest associateEipRequest = getAssociateEipRequest(eip_id, instance_id);
-		AssociateEipResponse associateEipResponse = qingCloudWSClient.associateEip(associateEipRequest);
-		assertTrue(associateEipResponse.getRet_code()==0);
-		
-		//Apply Security Group to instance
-		ApplySecurityGroupRequest applySecurityGroupRequest = getApplySecurityGroupRequest(instance_id, security_group_id);
-		ApplySecurityGroupResponse applySecurityGroupResponse = qingCloudWSClient.applySecurityGroup(applySecurityGroupRequest);
-		assertTrue(applySecurityGroupResponse.getRet_code()==0);
-		
-		StopInstancesRequest stopInstancesRequest = getStopInstancesRequest(instance_id);
-		StopInstancesResponse stopInstancesResponse = qingCloudWSClient.stopInstances(stopInstancesRequest);
-		assertTrue(stopInstancesResponse!=null);
-		assertTrue(stopInstancesResponse.getRet_code()==0);
-		
-		waitingForInstance(instance_id, QingCloudInstanceStatus.STOPPED);
-		
-		StartInstancesRequest startInstancesRequest = getStartInstancesRequest(instance_id);
-		StartInstancesResponse startInstancesResponse = qingCloudWSClient.startInstances(startInstancesRequest);
-		assertTrue(startInstancesResponse!=null);
-		assertTrue(startInstancesResponse.getRet_code()==0);
-		
-		waitingForInstance(instance_id, QingCloudInstanceStatus.RUNNING);
-				
-		//create volume
-        CreateVolumesRequest createVolumesRequest = getCreateVolumesRequest();
-		CreateVolumesResponse createVolumesResponse = qingCloudWSClient.createVolumes(createVolumesRequest);
-		assertTrue(createVolumesResponse!=null);
-		assertTrue(createVolumesResponse.getRet_code()==0);
-		List<String> volumes = createVolumesResponse.getVolumes();
-		String volume_id = volumes.get(0);
-		
-		waitingForVolume(volume_id, QingCloudVolumeStatus.AVAILABLE);
-		
-		//attach volume to instance
-		AttachVolumesRequest attachVolumesRequest =  getAttachVolumesRequest(volumes, instance_id);
-		AttachVolumesResponse attachVolumesResponse = qingCloudWSClient.attachVolumes(attachVolumesRequest);
-		assertTrue(attachVolumesResponse!=null);
-		assertTrue(attachVolumesResponse.getRet_code()==0);
-		
-		waitingForVolume(volume_id, QingCloudVolumeStatus.INUSE);
-		
-		
-		//terminate instance
-		TerminateInstancesRequest terminateInstancesRequest = getTerminateInstancesRequest(instance_id);
-		TerminateInstancesResponse terminateInstancesResponse = qingCloudWSClient.terminateInstances(terminateInstancesRequest);
-		assertTrue(terminateInstancesResponse!=null);
-		assertTrue(terminateInstancesResponse.getRet_code()==0);
-		
-		waitingForInstance(instance_id, QingCloudInstanceStatus.TERMINATED);
-		
-		//detach and delete keypair
-		DeleteKeyPairsRequest deleteKeyPairsRequest = getDeleteKeyPairsRequest(keypair_id);
-		DeleteKeyPairsResponse deleteKeyPairsResponse = qingCloudWSClient.deleteKeyPairs(deleteKeyPairsRequest);
-		assertTrue(deleteKeyPairsResponse!=null);
-		assertTrue(deleteKeyPairsResponse.getRet_code() == 0);
-		
-		//delete security group
+		if(terminateInstancesResponse!=null && terminateInstancesResponse.getRet_code()==0){
+			System.out.println("    Terminate VM instance request is sent successfully!... ...");
+		}else{
+			System.out.println("    Terminate VM instance request is sent failed!");
+		}
+	}
+	
+	public void deleteSecurityGroup(String security_group_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to delete security group ... ...");
+		System.out.println("---------------------------------------");
         DeleteSecurityGroupsRequest deleteSecurityGroupsRequest = new DeleteSecurityGroupsRequest();
 		
 		List<String> security_groups=new ArrayList<String>();
@@ -477,11 +681,27 @@ public class QingCloudAPIsIntegrationTest {
 		deleteSecurityGroupsRequest.setSecurity_groups(security_groups);
 		deleteSecurityGroupsRequest.setZone(QingCloudZone.PEK2);
 		
-		DeleteSecurityGroupsResponse deleteSecurityGroupsResponse = qingCloudWSClient.deleteSecurityGroups(deleteSecurityGroupsRequest);
-		assertTrue(deleteSecurityGroupsResponse!=null);
-		assertTrue(deleteSecurityGroupsResponse.getRet_code()==0);
-		
-		//delete eip
+		DeleteSecurityGroupsResponse deleteSecurityGroupsResponse = null;
+		try {
+			deleteSecurityGroupsResponse = qingCloudWSClient.deleteSecurityGroups(deleteSecurityGroupsRequest);
+		} catch (QingCloudClientException e1) {
+			
+			e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			
+			e1.printStackTrace();
+		}
+		if(deleteSecurityGroupsResponse!=null && deleteSecurityGroupsResponse.getRet_code() == 0){
+			System.out.println("    Delete security group successfully!");
+		}else{
+			System.out.println("    Delete security group failed!");
+		}
+	}
+	
+	public void deleteEIP(String eip_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to delete EIP ... ...");
+		System.out.println("---------------------------------------");
 		ReleaseEipsRequest releaseEipsRequest = new ReleaseEipsRequest();
 
 		List<String> toReleaseEips = new ArrayList<String>();
@@ -489,78 +709,244 @@ public class QingCloudAPIsIntegrationTest {
 		releaseEipsRequest.setEips(toReleaseEips);
 		releaseEipsRequest.setZone(QingCloudZone.PEK2);
 		
-		ReleaseEipsResponse releaseEipsResponse = qingCloudWSClient.releaseEips(releaseEipsRequest);
-		assertTrue(releaseEipsResponse!=null);
-		assertTrue(releaseEipsResponse.getRet_code()==0);
+		ReleaseEipsResponse releaseEipsResponse = null;
+		try {
+			releaseEipsResponse = qingCloudWSClient.releaseEips(releaseEipsRequest);
+		} catch (QingCloudClientException e1) {
+			e1.printStackTrace();
+			System.out.println("    Release EIP failed!");
+		} catch (QingCloudServiceException e1) {
+			e1.printStackTrace();
+			System.out.println("    Release EIP failed!");
+		}
+		if(releaseEipsResponse!=null && releaseEipsResponse.getRet_code() == 0){
+			System.out.println("    Release EIP successfully!");
+		}else{
+			System.out.println("    Release EIP failed!");
+		}
+	}
+	
+	public boolean deleteVolume(String volume_id){
+		System.out.println("---------------------------------------");
+		System.out.println("Go to delete volume ... ...");
+		System.out.println("---------------------------------------");
+		boolean success = false;
+		
+		DeleteVolumesRequest deleteVolumesRequest = new DeleteVolumesRequest();
+		
+		List<String> volumes = new ArrayList<String>();
+		volumes.add(volume_id);
+		deleteVolumesRequest.setVolumes(volumes);
+		deleteVolumesRequest.setZone(QingCloudZone.PEK2);
+		
+		DeleteVolumesResponse deleteVolumesResponse = null;
+		try {
+			deleteVolumesResponse = qingCloudWSClient.deleteVolumes(deleteVolumesRequest);
+		} catch (QingCloudClientException e1) {
+			//e1.printStackTrace();
+		} catch (QingCloudServiceException e1) {
+			//e1.printStackTrace();
+		}
+		if(deleteVolumesResponse!=null && deleteVolumesResponse.getRet_code() == 0){
+			System.out.println("   Delete Volume successfully!");
+		}else{
+			System.out.println("   Delete Volume failed!");
+		}
+		if(deleteVolumesResponse!=null){
+			int retCode =  deleteVolumesResponse.getRet_code();
+			if(retCode==0) success = true;
+		}
+		
+		return success;
+	}
+	
+	public QingCloudVolume getVolume(String volume_id) {
+        DescribeVolumesRequest describeVolumesRequest = new DescribeVolumesRequest();
+		
+		List<String> volumes = new ArrayList<String>();
+		volumes.add(volume_id);
+		describeVolumesRequest.setVolumes(volumes);
+		describeVolumesRequest.setZone(QingCloudZone.PEK2);
+		
+		DescribeVolumesResponse describeVolumesResponse = null;
+		try {
+			describeVolumesResponse = qingCloudWSClient.describeVolumes(describeVolumesRequest);
+		} catch (QingCloudClientException e) {
+			e.printStackTrace();
+		} catch (QingCloudServiceException e) {
+			e.printStackTrace();
+		}
+		QingCloudVolume volume = null;
+		List<QingCloudVolume> fetchedVolumes = describeVolumesResponse.getVolume_set();
+		if(fetchedVolumes!=null && fetchedVolumes.size()>0){
+			volume = fetchedVolumes.get(0);
+		}
+		return volume;
+		
+	}
+	
+	@Test
+	public void testInstanceLifecylceManagementAPIs() {
+		//Create keypair
+		String keypair_id = this.createKeyPair();
+		
+		//Create security group
+		String security_group_id = this.createSecurityGroup();
+		
+		//Add security rules to security group
+		this.applyRulesToSecurityGroup(security_group_id);
+		
+		//Create eip
+		String eip_id = this.createEIP();
+		
+		//Start an instance with keypair and security group and userdata
+		String instance_id = this.createInstance(keypair_id, security_group_id);
+		
+		//Waiting for instance because Running
+		waitingForInstance(instance_id, QingCloudInstanceStatus.RUNNING);
+		System.out.println("    VM Instance is runing now!");
+		
+		//Attach eip to instance
+		this.attachEIPToInstance(eip_id, instance_id);
+		
+		//Apply Security Group to instance
+		this.applySecurityGroupToInstance(security_group_id, instance_id);
+		
+		//Stop Instance
+		this.stopInstance(instance_id);
+		
+		//waiting for instance to stop
+		waitingForInstance(instance_id, QingCloudInstanceStatus.STOPPED);
+		System.out.println("    VM Instance is stopped successfully!");
+		
+		//Start instance that status is stoppd
+		this.startInstance(instance_id);
+		
+		//waiting for instance to running
+		waitingForInstance(instance_id, QingCloudInstanceStatus.RUNNING);
+		System.out.println("    VM Instance is started successfully!");
+				
+		//create volume
+		String volume_id = this.createVolume();
+		
+		//waiting for volume to be available
+		waitingForVolume(volume_id, QingCloudVolumeStatus.AVAILABLE);
+		System.out.println("    Volume is available now!");
+		
+		//Attach volume to instance
+		this.attachVolume(volume_id, instance_id);
+		
+		waitingForVolume(volume_id, QingCloudVolumeStatus.INUSE);
+		System.out.println("    Volume is attached successfully!");
+		
+		//terminate instance
+		this.terminateInstance(instance_id);
+		
+		//waiting for instance terminated
+		waitingForInstance(instance_id, QingCloudInstanceStatus.TERMINATED);
+		
+		System.out.println("    VM instance is terminated successfully!");
+		
+		//Delete keypair
+		this.deleteKeyPair(keypair_id);
+		
+		//delete security group
+		this.deleteSecurityGroup(security_group_id);
+		
+		//delete eip
+		this.deleteEIP(eip_id);
 		
 		//delete Volume
+		System.out.println("Go to delete volume ... ...");
 		waitingForVolume(volume_id, QingCloudVolumeStatus.AVAILABLE);
 		
 		int retries = 10;
 		
 		while(true){
-			DeleteVolumesRequest deleteVolumesRequest = new DeleteVolumesRequest();
-			
-			deleteVolumesRequest.setVolumes(volumes);
-			deleteVolumesRequest.setZone(QingCloudZone.PEK2);
-			
-			DeleteVolumesResponse deleteVolumesResponse = qingCloudWSClient.deleteVolumes(deleteVolumesRequest);
+			boolean success = this.deleteVolume(volume_id);
 			retries--;
 			if(retries==0){
 				break;
 			}
-			
-			System.out.println("deleteVolumesResponse.getRet_code()=" + deleteVolumesResponse.getRet_code());
-			
-			if(deleteVolumesResponse.getRet_code()==0)
+			if(success)
 				break;
 			else{
-				Thread.sleep(5000);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
 	
-	private void waitingForInstance(String instance_id, String status) throws Exception {
+	private void waitingForInstance(String instance_id, String status) {
 		int max_tries = 20;
 		int try_interval = 5000; //Unit ms
 		while(true){
+			System.out.println(String.format("    Check if instance status is %s... ...", status));
 			DescribeInstancesRequest describeInstancesRequest = getDescribeInstancesRequest(instance_id);
-			DescribeInstancesResponse describeInstancesResponse = qingCloudWSClient.describeInstances(describeInstancesRequest);
-			List<QingCloudInstance> instances = describeInstancesResponse.getInstance_set();
+			DescribeInstancesResponse describeInstancesResponse;
 			boolean isRunning = false;
-			for(QingCloudInstance instance : instances){
-				if(instance.getInstance_id().equals(instance_id) &&
-						instance.getStatus().equals(status) && 
-						instance.getTransition_status().equals("")){
-					isRunning = true;
-					break;
+			try {
+				describeInstancesResponse = qingCloudWSClient.describeInstances(describeInstancesRequest);
+				List<QingCloudInstance> instances = describeInstancesResponse.getInstance_set();
+				
+				for(QingCloudInstance instance : instances){
+					if(instance.getInstance_id().equals(instance_id) &&
+							instance.getStatus().equals(status) && 
+							instance.getTransition_status().equals("")){
+						isRunning = true;
+						break;
+					}
 				}
+			} catch (QingCloudClientException e) {
+				
+				e.printStackTrace();
+			} catch (QingCloudServiceException e) {
+				
+				e.printStackTrace();
 			}
+			
 			if(isRunning){
 				break;
 			}
 			max_tries--;
 			if(max_tries==0)
 				break;
-			Thread.sleep(try_interval);
+			
+			try {
+				Thread.sleep(try_interval);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
 		}
 	}
 	
-	private void waitingForVolume(String volume_id, String status) throws Exception {
+	private void waitingForVolume(String volume_id, String status) {
 		int max_tries = 20;
 		int try_interval = 5000; //Unit ms
 		while(true){
+			System.out.println(String.format("    Check if volume status is %s... ...", status));
 			DescribeVolumesRequest describeVolumesRequest = getDescribeVolumesRequest(volume_id);
-			DescribeVolumesResponse describeVolumesResponse = qingCloudWSClient.describeVolumes(describeVolumesRequest);
-			List<QingCloudVolume> volumes = describeVolumesResponse.getVolume_set();
 			boolean isRunning = false;
-			for(QingCloudVolume volume : volumes){
-				if(volume.getVolume_id().equals(volume_id) &&
-						volume.getStatus().equals(status) && 
-						volume.getTransition_status().equals("")){
-					isRunning = true;
-					break;
+			try {
+				DescribeVolumesResponse describeVolumesResponse = qingCloudWSClient.describeVolumes(describeVolumesRequest);
+				List<QingCloudVolume> volumes = describeVolumesResponse.getVolume_set();
+				
+				for(QingCloudVolume volume : volumes){
+					if(volume.getVolume_id().equals(volume_id) &&
+							volume.getStatus().equals(status) && 
+							volume.getTransition_status().equals("")){
+						isRunning = true;
+						break;
+					}
 				}
+			} catch (QingCloudClientException e) {
+				//e.printStackTrace();
+			} catch (QingCloudServiceException e) {
+				//e.printStackTrace();
 			}
 			if(isRunning){
 				break;
@@ -568,7 +954,12 @@ public class QingCloudAPIsIntegrationTest {
 			max_tries--;
 			if(max_tries==0)
 				break;
-			Thread.sleep(try_interval);
+			
+			try {
+				Thread.sleep(try_interval);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	

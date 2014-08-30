@@ -47,6 +47,8 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	private static final String ENDPOINT = "https://api.qingcloud.com/iaas/";
 	private static final String ISO8601_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
 	private static final String ENCODING = "UTF-8";
+	private static final boolean DEBUG = false;
+	
 
 	private String accessKeyId;
 	private String secretKey;
@@ -1751,22 +1753,50 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			String query = paramsToQueryString(parameters);
 			URL url = new URL(ENDPOINT + "?" + query);
 
-			System.out.println("url=" + url);
+			if(DEBUG) System.out.println("url=" + url);
+			
 			connection = (HttpURLConnection) url.openConnection();
 			connection.connect();
 			int code = connection.getResponseCode();
+			
+			if(DEBUG) System.out.println("code=" + code);
+			
 			if (code >= 400) {
 				content = connection.getErrorStream();
 				String message = readContent(content);
-				System.out.println("errorMessage=" + message);
+				
 				QingCloudServiceException exception = new QingCloudServiceException(
 						message);
+				exception.setServiceName(action);
 				exception.setStatusCode(code);
 				throw exception;
 			} else {
 				content = connection.getInputStream();
 				String message = readContent(content);
-				System.out.println("message=" + message);
+				if(DEBUG) System.out.println("message=" + message);
+				
+				//check retcode
+				Response response = Response.fromJson(message);
+				int retCode = response.getRet_code();
+				if(retCode!=0){
+					String errorMessage = response.getMessage();
+					if(retCode >= 5000){
+						QingCloudServiceException exception = new QingCloudServiceException(
+								errorMessage);
+						exception.setServiceName(action);
+						exception.setStatusCode(code);
+						exception.setErrorCode(retCode);
+						exception.setErrorMessage(errorMessage);
+						throw exception;
+					}else{
+						QingCloudClientException exception = new QingCloudClientException(
+								errorMessage);
+						exception.setServiceName(action);
+						exception.setErrorCode(retCode);
+						exception.setErrorMessage(errorMessage);
+						throw exception;
+					}
+				}
 				return message;
 			}
 		} catch (IOException e) {

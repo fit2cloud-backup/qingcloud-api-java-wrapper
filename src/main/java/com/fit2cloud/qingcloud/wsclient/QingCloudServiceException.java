@@ -7,15 +7,13 @@ public class QingCloudServiceException extends Exception {
 	 */
 	private static final long serialVersionUID = -1254426809813519599L;
 	
-	private String requestId;
+	private int statusCode;
+	
+	private String serviceName;
 
-    private String errorCode;
+    private int errorCode;
 
     private String errorMessage;
-
-    private int statusCode;
-
-    private String serviceName;
 
     public QingCloudServiceException(String errorMessage) {
         this.errorMessage = errorMessage;
@@ -26,48 +24,44 @@ public class QingCloudServiceException extends Exception {
         this.errorMessage = errorMessage;
     }
 
-    public void setRequestId(String requestId) {
-        this.requestId = requestId;
-    }
+    public int getStatusCode() {
+		return statusCode;
+	}
 
-    public String getRequestId() {
-        return requestId;
-    }
+	public void setStatusCode(int statusCode) {
+		this.statusCode = statusCode;
+	}
 
-    public void setServiceName(String serviceName) {
+	public String getServiceName() {
+	        return serviceName;
+	}
+	 
+	public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
 
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setErrorCode(String errorCode) {
+	public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
-
+  
     public String getErrorMessage() {
         return errorMessage;
     }
 
-    public void setStatusCode(int statusCode) {
-        this.statusCode = statusCode;
-    }
-
-    public int getStatusCode() {
-        return statusCode;
-    }
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
 
     @Override
     public String getMessage() {
         return getErrorMessage()
-            + "(Status Code: " + getStatusCode()
+            + "; Action : " + getServiceName()
             + "; Error Code: " + getErrorCode()
-            + "; Request ID: " + getRequestId() + ")";
+            + "; Error Message: " + getErrorMessage() + ")";
     }
 
 }
