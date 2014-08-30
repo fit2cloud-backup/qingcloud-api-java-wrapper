@@ -1,0 +1,7 @@
+DescribeVolumes
+CreateVolumes
+DeleteVolumes
+AttachVolumes
+DetachVolumes
+ResizeVolumes
+ModifyVolumeAttributes

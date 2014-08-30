@@ -1,0 +1,13 @@
+package com.qingcloud.wsclient.ui.model;
+
+import com.google.gson.Gson;
+
+public class TemplateResponse {
+	
+	public static TemplateResponse fromJson(String jsonTemplateResponse){
+		Gson gson = new Gson();
+		TemplateResponse templateResponse = gson.fromJson(jsonTemplateResponse, TemplateResponse.class);
+		return templateResponse;
+	}
+
+}

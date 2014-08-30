@@ -1,0 +1,10 @@
+package com.qingcloud.wsclient.ui.model;
+
+import java.util.List;
+
+import com.qingcloud.wsclient.Request;
+
+public class RequestTemplate extends Request {
+    
+
+}
