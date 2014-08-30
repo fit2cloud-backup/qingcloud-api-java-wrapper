@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.fit2cloud.qingcloud</groupId>
-  <artifactId>qingcloud-apisdk</artifactId>
+  <artifactId>qingcloud-api-sdk</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>wsclient</name>
+  <name>qingcloud-api-sdk</name>
   <url>http://maven.apache.org</url>
 
   <properties>
