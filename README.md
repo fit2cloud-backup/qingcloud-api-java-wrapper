@@ -67,9 +67,9 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 		createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);
 		keypair_id = createKeyPairResponse.getKeypair_id();		
 ```
-```
-以下是API列表:
 
+## 以下是API列表:
+```
 #映像 APIs
 describeImages
 captureInstance
@@ -182,7 +182,7 @@ createVolumeFromSnapshot
 
 ```
 
-每个API调用都会有三类异常：
+## 每个API调用都会有三类异常：
 
 1. AliyunClientException: 客戶端錯誤，比如参数不对
 2. AliyunServiceException: 服务器端错误，阿里云会返回错误代码和具体消息
