@@ -36,7 +36,7 @@ Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有�
 <!-- dependency -->
 <dependency>
   <groupId>com.fit2cloud</groupId>
-  <artifactId>qingyun-api-java-wrapper</artifactId>
+  <artifactId>qingcloud-api-sdk</artifactId>
   <version>1.0</version>
 </dependency>
 ```
