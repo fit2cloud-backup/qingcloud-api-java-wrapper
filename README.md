@@ -69,6 +69,8 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 ```
 
 ## 以下是API列表:
+API参数说明: https://docs.qingcloud.com/api/index.html
+
 ```
 #映像 APIs
 describeImages
