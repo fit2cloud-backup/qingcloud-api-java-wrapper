@@ -184,8 +184,8 @@ createVolumeFromSnapshot
 
 ## 每个API调用都会有三类异常：
 
-1. AliyunClientException: 客戶端錯誤，比如参数不对
-2. AliyunServiceException: 服务器端错误，阿里云会返回错误代码和具体消息
+1. QingCloudClientException: 客戶端錯誤，比如参数不对
+2. QingCloudServiceException: 服务器端错误，阿里云会返回错误代码和具体消息
 3. IOException: 网络IO问题
 
 
