@@ -1,360 +1,371 @@
 package com.fit2cloud.qingcloud.wsclient;
 
+import java.io.IOException;
+
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 
 public interface IQingCloudWSClient {
 
+	// -----------------------------------Instances-----------------------------------------------------
 	public DescribeInstancesResponse describeInstances(
 			DescribeInstancesRequest describeInstanceRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public RunInstancesResponse runInstances(
 			RunInstancesRequest runInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public TerminateInstancesResponse terminateInstances(
 			TerminateInstancesRequest terminateInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public StopInstancesResponse stopInstances(
 			StopInstancesRequest stopInstanceRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public StartInstancesResponse startInstances(
 			StartInstancesRequest startInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 	
 	public RestartInstancesResponse restartInstances(
 			RestartInstancesRequest restartInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ResizeInstancesResponse resizeInstances(
 			ResizeInstancesRequest resizeInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 	
 	public ResetInstancesResponse resetInstances(
 			ResetInstancesRequest resetInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 	
 	public ModifyInstanceAttributesResponse modifyInstanceAttributes(
 			ModifyInstanceAttributesRequest modifyInstanceAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 	
 	public UploadUserDataAttachmentResponse uploadUserDataAttachment(
 			UploadUserDataAttachmentRequest uploadUserDataAttachmentRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 
 	// -----------------------------------KeyPairs------------------------------------------------------
 	public CreateKeyPairResponse createKeyPair(
 			CreateKeyPairRequest createKeyPairRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DeleteKeyPairsResponse deleteKeyPairs(
 			DeleteKeyPairsRequest deleteKeyPairsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public AttachKeyPairsResponse attachKeyPairs(
 			AttachKeyPairsRequest attachKeyPairsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DettachKeyPairsResponse dettachKeyPairs(
 			DettachKeyPairsRequest dettachKeyPairsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DescribeKeyPairsResponse describeKeyPairs(
 			DescribeKeyPairsRequest describeKeyPairsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ModifyKeyPairAttributesResponse modifyKeyPairAttributes(
 			ModifyKeyPairAttributesRequest modifyKeyPairAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	// -----------------------------------Images------------------------------------------------------
 //	public DescribeImagesResponse describeImages(
 //			DescribeImagesRequest describeImagesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CaptureInstanceResponse captureInstance(
 //			CaptureInstanceRequest captureInstanceRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteImagesResponse deleteImages(
 //			DeleteImagesRequest deleteImagesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyImageAttributesResponse modifyImageAttributes(
 //			ModifyImageAttributesRequest modifyImageAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 
+	// -----------------------------------Volumes------------------------------------------------------
 	public DescribeVolumesResponse describeVolumes(
 			DescribeVolumesRequest describeVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public CreateVolumesResponse createVolumes(
 			CreateVolumesRequest createVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DeleteVolumesResponse deleteVolumes(
 			DeleteVolumesRequest deleteVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public AttachVolumesResponse attachVolumes(
 			AttachVolumesRequest attachVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DetachVolumesResponse detachVolumes(
 			DetachVolumesRequest detachVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ResizeVolumesResponse resizeVolumes(
 			ResizeVolumesRequest resizeVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ModifyVolumeAttributesResponse modifyVolumeAttributes(
 			ModifyVolumeAttributesRequest modifyVolumeAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	// -----------------------------------Security Group------------------------------------------------------
 	public DescribeSecurityGroupsResponse describeSecurityGroups(
 			DescribeSecurityGroupsRequest describeSecurityGroupsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public CreateSecurityGroupResponse createSecurityGroup(
 			CreateSecurityGroupRequest createSecurityGroupRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ModifySecurityGroupAttributesResponse modifySecurityGroupAttributes(
 			ModifySecurityGroupAttributesRequest modifySecurityGroupAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ApplySecurityGroupResponse applySecurityGroup(
 			ApplySecurityGroupRequest applySecurityGroupRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DeleteSecurityGroupsResponse deleteSecurityGroups(
 			DeleteSecurityGroupsRequest deleteSecurityGroupsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DescribeSecurityGroupRulesResponse describeSecurityGroupRules(
 			DescribeSecurityGroupRulesRequest describeSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public AddSecurityGroupRulesResponse addSecurityGroupRules(
 			AddSecurityGroupRulesRequest addSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DeleteSecurityGroupRulesResponse deleteSecurityGroupRules(
 			DeleteSecurityGroupRulesRequest deleteSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ModifySecurityGroupRuleAttributesResponse modifySecurityGroupRuleAttributes(
 			ModifySecurityGroupRuleAttributesRequest modifySecurityGroupRuleAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	// -----------------------------------Vxnets------------------------------------------------------
 //	public DescribeVxnetsResponse describeVxnets(
 //			DescribeVxnetsRequest describeVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CreateVxnetsResponse createVxnets(
 //			CreateVxnetsRequest createVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteVxnetsResponse deleteVxnets(
 //			DeleteVxnetsRequest deleteVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public JoinVxnetResponse joinVxnet(JoinVxnetRequest joinVxnetRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public LeaveVxnetResponse leaveVxnet(LeaveVxnetRequest leaveVxnetRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyVxnetAttributesResponse modifyVxnetAttributes(
 //			ModifyVxnetAttributesRequest modifyVxnetAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeVxnetInstancesResponse describeVxnetInstances(
 //			DescribeVxnetInstancesRequest describeVxnetInstancesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
+//  //-----------------------------------Routers------------------------------------------------------
 //	public CreateRoutersResponse createRouters(
 //			CreateRoutersRequest createRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public UpdateRoutersResponse updateRouters(
 //			UpdateRoutersRequest updateRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteRoutersResponse deleteRouters(
 //			DeleteRoutersRequest deleteRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public JoinRouterResponse joinRouter(JoinRouterRequest joinRouterRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public LeaveRouterResponse leaveRouter(LeaveRouterRequest leaveRouterRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public PowerOffRoutersResponse powerOffRouters(
 //			PowerOffRoutersRequest powerOffRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public PowerOnRoutersResponse powerOnRouters(
 //			PowerOnRoutersRequest powerOnRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeRoutersResponse describeRouters(
 //			DescribeRoutersRequest describeRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeRouterVxnetsResponse describeRouterVxnets(
 //			DescribeRouterVxnetsRequest describeRouterVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyRouterAttributesResponse modifyRouterAttributes(
 //			ModifyRouterAttributesRequest modifyRouterAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeRouterStaticsResponse describeRouterStatics(
 //			DescribeRouterStaticsRequest describeRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public AddRouterStaticsResponse addRouterStatics(
 //			AddRouterStaticsRequest addRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteRouterStaticsResponse deleteRouterStatics(
 //			DeleteRouterStaticsRequest deleteRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
+    //-----------------------------------EIPs------------------------------------------------------
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DissociateEipsResponse dissociateEips(
 			DissociateEipsRequest dissociateEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public AllocateEipsResponse allocateEips(
 			AllocateEipsRequest allocateEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ReleaseEipsResponse releaseEips(ReleaseEipsRequest releaseEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public DescribeEipsResponse describeEips(
 			DescribeEipsRequest describeEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ModifyEipAttributesResponse modifyEipAttributes(
 			ModifyEipAttributesRequest modifyEipAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	public ChangeEipsBandwidthResponse changeEipsBandwidth(
 			ChangeEipsBandwidthRequest changeEipsBandwidthRequest)
-			throws QingCloudClientException, QingCloudServiceException;
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	//-----------------------------------Load Balancers------------------------------------------------------
 //	public DescribeLoadBalancersResponse describeLoadBalancers(
 //			DescribeLoadBalancersRequest describeLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CreateLoadBalancerResponse createLoadBalancer(
 //			CreateLoadBalancerRequest createLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteLoadBalancersResponse deleteLoadBalancers(
 //			DeleteLoadBalancersRequest deleteLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public AssociateEipsToLoadBalancerResponse associateEipsToLoadBalancer(
 //			AssociateEipsToLoadBalancerRequest associateEipsToLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DissociateEipsFromLoadBalancerResponse dissociateEipsFromLoadBalancer(
 //			DissociateEipsFromLoadBalancerRequest dissociateEipsFromLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public UpdateLoadBalancersResponse updateLoadBalancers(
 //			UpdateLoadBalancersRequest updateLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public StopLoadBalancersResponse stopLoadBalancers(
 //			StopLoadBalancersRequest stopLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public StartLoadBalancersResponse startLoadBalancers(
 //			StartLoadBalancersRequest startLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributes(
 //			ModifyLoadBalancerAttributesRequest modifyLoadBalancerAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
 //			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public AddLoadBalancerListenersResponse addLoadBalancerListeners(
 //			AddLoadBalancerListenersRequest addLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteLoadBalancerListenersResponse deleteLoadBalancerListeners(
 //			DeleteLoadBalancerListenersRequest deleteLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyLoadBalancerListenerAttributesResponse modifyLoadBalancerListenerAttributes(
 //			ModifyLoadBalancerListenerAttributesRequest modifyLoadBalancerListenerAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public AddLoadBalancerBackendsResponse addLoadBalancerBackends(
 //			AddLoadBalancerBackendsRequest addLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteLoadBalancerBackendsResponse deleteLoadBalancerBackends(
 //			DeleteLoadBalancerBackendsRequest deleteLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifyLoadBalancerBackendAttributesResponse modifyLoadBalancerBackendAttributes(
 //			ModifyLoadBalancerBackendAttributesRequest modifyLoadBalancerBackendAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeLoadBalancerBackendsResponse describeLoadBalancerBackends(
 //			DescribeLoadBalancerBackendsRequest describeLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public GetMonitorResponse getMonitor(GetMonitorRequest getMonitorRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public GetLoadBalancerMonitorResponse getLoadBalancerMonitor(
 //			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
+//	//-----------------------------------Snapshots------------------------------------------------------
 //	public CreateSnapshotsResponse createSnapshots(
 //			CreateSnapshotsRequest createSnapshotsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DeleteSnapshotsResponse deleteSnapshots(
 //			DeleteSnapshotsRequest deleteSnapshotsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ApplySnapshotsResponse applySnapshots(
 //			ApplySnapshotsRequest applySnapshotsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public DescribeSnapshotsResponse describeSnapshots(
 //			DescribeSnapshotsRequest describeSnapshotsRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifySnapshotAttributesResponse modifySnapshotAttributes(
 //			ModifySnapshotAttributesRequest modifySnapshotAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CaptureInstanceFromSnapshotResponse captureInstanceFromSnapshot(
 //			CaptureInstanceFromSnapshotRequest captureInstanceFromSnapshotRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CreateVolumeFromSnapshotResponse createVolumeFromSnapshot(
 //			CreateVolumeFromSnapshotRequest createVolumeFromSnapshotRequest)
-//			throws QingCloudClientException, QingCloudServiceException;
+//			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 }

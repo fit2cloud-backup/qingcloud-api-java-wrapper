@@ -60,7 +60,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DescribeInstancesResponse describeInstances(
 			DescribeInstancesRequest describeInstanceRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		DescribeInstancesResponse describeInstancesResponse = null;
 		String httpMethod = "GET";
@@ -80,7 +80,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public RunInstancesResponse runInstances(
-			RunInstancesRequest runInstancesRequest) throws QingCloudClientException, QingCloudServiceException {
+			RunInstancesRequest runInstancesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		RunInstancesResponse runInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RUN_INSTANCES;
@@ -98,7 +98,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public TerminateInstancesResponse terminateInstances(
-			TerminateInstancesRequest terminateInstancesRequest) throws QingCloudClientException, QingCloudServiceException {
+			TerminateInstancesRequest terminateInstancesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		TerminateInstancesResponse terminateInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.TERMINATE_INSTANCES;
@@ -117,7 +117,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 	
 	public StopInstancesResponse stopInstances(
-			StopInstancesRequest stopInstancesRequest) throws QingCloudClientException, QingCloudServiceException {
+			StopInstancesRequest stopInstancesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		StopInstancesResponse stopInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.STOP_INSTANCES;
@@ -138,7 +138,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public StartInstancesResponse startInstances(
 			StartInstancesRequest startInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		StartInstancesResponse startInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.START_INSTANCES;
@@ -158,7 +158,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public RestartInstancesResponse restartInstances(
 			RestartInstancesRequest restartInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		RestartInstancesResponse restartInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RESTART_INSTANCES;
@@ -178,7 +178,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ResizeInstancesResponse resizeInstances(
 			ResizeInstancesRequest resizeInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		ResizeInstancesResponse resizeInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RESIZE_INSTANCES;
@@ -198,7 +198,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public ResetInstancesResponse resetInstances(
 			ResetInstancesRequest resetInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		ResetInstancesResponse resetInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RESET_INSTANCES;
@@ -218,7 +218,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public ModifyInstanceAttributesResponse modifyInstanceAttributes(
 			ModifyInstanceAttributesRequest modifyInstanceAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		ModifyInstanceAttributesResponse modifyInstanceAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_INSTANCE_ATTRIBUTES;
@@ -238,14 +238,14 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public UploadUserDataAttachmentResponse uploadUserDataAttachment(
 			UploadUserDataAttachmentRequest uploadUserDataAttachmentRequest)
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		return null;
 	}
 	
 	
 	public CreateKeyPairResponse createKeyPair(
 			CreateKeyPairRequest createKeyPairRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		CreateKeyPairResponse createKeyPairResponse = null;
 		String httpMethod = "GET";
@@ -266,7 +266,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DeleteKeyPairsResponse deleteKeyPairs(
 			DeleteKeyPairsRequest deleteKeyPairsRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		DeleteKeyPairsResponse deleteKeyPairsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_KEY_PAIRS;
@@ -287,7 +287,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public AttachKeyPairsResponse attachKeyPairs(
 			AttachKeyPairsRequest attachKeyPairsRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		AttachKeyPairsResponse attachKeyPairsResponse = null;
 		String httpMethod = "GET";
@@ -308,7 +308,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DettachKeyPairsResponse dettachKeyPairs(
 			DettachKeyPairsRequest dettachKeyPairsRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		DettachKeyPairsResponse dettachKeyPairsResponse = null;
 		String httpMethod = "GET";
@@ -329,7 +329,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DescribeKeyPairsResponse describeKeyPairs(
 			DescribeKeyPairsRequest describeKeyPairsRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		DescribeKeyPairsResponse describeKeyPairsResponse = null;
 		String httpMethod = "GET";
@@ -350,7 +350,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public ModifyKeyPairAttributesResponse modifyKeyPairAttributes(
 			ModifyKeyPairAttributesRequest modifyKeyPairAttributesRequest) 
-			throws QingCloudClientException, QingCloudServiceException{
+			throws QingCloudClientException, QingCloudServiceException, IOException{
 		
 		ModifyKeyPairAttributesResponse modifyKeyPairAttributesResponse = null;
 		String httpMethod = "GET";
@@ -372,7 +372,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DescribeSecurityGroupsResponse describeSecurityGroups(
 			DescribeSecurityGroupsRequest describeSecurityGroupsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeSecurityGroupsResponse describeSecurityGroupsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SECURITY_GROUPS;
@@ -392,7 +392,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateSecurityGroupResponse createSecurityGroup(
 			CreateSecurityGroupRequest createSecurityGroupRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateSecurityGroupResponse createSecurityGroupResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_SECURITY_GROUP;
@@ -412,7 +412,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifySecurityGroupAttributesResponse modifySecurityGroupAttributes(
 			ModifySecurityGroupAttributesRequest modifySecurityGroupAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifySecurityGroupAttributesResponse modifySecurityGroupAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_SECURITY_GROUP_ATTRIBUTES;
@@ -432,7 +432,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ApplySecurityGroupResponse applySecurityGroup(
 			ApplySecurityGroupRequest applySecurityGroupRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ApplySecurityGroupResponse applySecurityGroupResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.APPLY_SECURITY_GROUP;
@@ -451,7 +451,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteSecurityGroupsResponse deleteSecurityGroups(
 			DeleteSecurityGroupsRequest deleteSecurityGroupsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteSecurityGroupsResponse deleteSecurityGroupsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_SECURITY_GROUPS;
@@ -471,7 +471,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeSecurityGroupRulesResponse describeSecurityGroupRules(
 			DescribeSecurityGroupRulesRequest describeSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeSecurityGroupRulesResponse describeSecurityGroupRulesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SECURITY_GROUP_RULES;
@@ -491,7 +491,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AddSecurityGroupRulesResponse addSecurityGroupRules(
 			AddSecurityGroupRulesRequest addSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AddSecurityGroupRulesResponse addSecurityGroupRulesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ADD_SECURITY_GROUP_RULES;
@@ -511,7 +511,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteSecurityGroupRulesResponse deleteSecurityGroupRules(
 			DeleteSecurityGroupRulesRequest deleteSecurityGroupRulesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteSecurityGroupRulesResponse deleteSecurityGroupRulesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_SECURITY_GROUP_RULES;
@@ -531,7 +531,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifySecurityGroupRuleAttributesResponse modifySecurityGroupRuleAttributes(
 			ModifySecurityGroupRuleAttributesRequest modifySecurityGroupRuleAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifySecurityGroupRuleAttributesResponse modifySecurityGroupRuleAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_SECURITY_GROUP_RULE_ATTRIBUTES;
@@ -551,7 +551,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	public DescribeVolumesResponse describeVolumes(
 			DescribeVolumesRequest describeVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeVolumesResponse describeVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_VOLUMES;
@@ -571,7 +571,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateVolumesResponse createVolumes(
 			CreateVolumesRequest createVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateVolumesResponse createVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_VOLUMES;
@@ -591,7 +591,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteVolumesResponse deleteVolumes(
 			DeleteVolumesRequest deleteVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteVolumesResponse deleteVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_VOLUMES;
@@ -611,7 +611,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AttachVolumesResponse attachVolumes(
 			AttachVolumesRequest attachVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AttachVolumesResponse attachVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ATTACH_VOLUMES;
@@ -631,7 +631,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DetachVolumesResponse detachVolumes(
 			DetachVolumesRequest detachVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DetachVolumesResponse detachVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DETACH_VOLUMES;
@@ -651,7 +651,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ResizeVolumesResponse resizeVolumes(
 			ResizeVolumesRequest resizeVolumesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ResizeVolumesResponse resizeVolumesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RESIZE_VOLUMES;
@@ -671,7 +671,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyVolumeAttributesResponse modifyVolumeAttributes(
 			ModifyVolumeAttributesRequest modifyVolumeAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyVolumeAttributesResponse modifyVolumeAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_VOLUME_ATTRIBUTES;
@@ -692,7 +692,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeVxnetsResponse describeVxnets(
 			DescribeVxnetsRequest describeVxnetsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeVxnetsResponse describeVxnetsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_VXNETS;
@@ -712,7 +712,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateVxnetsResponse createVxnets(
 			CreateVxnetsRequest createVxnetsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateVxnetsResponse createVxnetsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_VXNETS;
@@ -731,7 +731,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteVxnetsResponse deleteVxnets(
 			DeleteVxnetsRequest deleteVxnetsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteVxnetsResponse deleteVxnetsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_VXNETS;
@@ -749,7 +749,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public JoinVxnetResponse joinVxnet(JoinVxnetRequest joinVxnetRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		JoinVxnetResponse joinVxnetResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.JOIN_VXNET;
@@ -767,7 +767,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public LeaveVxnetResponse leaveVxnet(LeaveVxnetRequest leaveVxnetRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		LeaveVxnetResponse leaveVxnetResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.LEAVE_VXNET;
@@ -786,7 +786,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyVxnetAttributesResponse modifyVxnetAttributes(
 			ModifyVxnetAttributesRequest modifyVxnetAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyVxnetAttributesResponse modifyVxnetAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_VXNET_ATTRIBUTES;
@@ -806,7 +806,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeVxnetInstancesResponse describeVxnetInstances(
 			DescribeVxnetInstancesRequest describeVxnetInstancesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeVxnetInstancesResponse describeVxnetInstancesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_VXNET_INSTANCES;
@@ -826,7 +826,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateRoutersResponse createRouters(
 			CreateRoutersRequest createRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateRoutersResponse createRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_ROUTERS;
@@ -846,7 +846,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public UpdateRoutersResponse updateRouters(
 			UpdateRoutersRequest updateRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		UpdateRoutersResponse updateRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.UPDATE_ROUTERS;
@@ -866,7 +866,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteRoutersResponse deleteRouters(
 			DeleteRoutersRequest deleteRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteRoutersResponse deleteRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_ROUTERS;
@@ -885,7 +885,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public JoinRouterResponse joinRouter(JoinRouterRequest joinRouterRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		JoinRouterResponse joinRouterResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.JOIN_ROUTER;
@@ -903,7 +903,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public LeaveRouterResponse leaveRouter(LeaveRouterRequest leaveRouterRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		LeaveRouterResponse leaveRouterResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.LEAVE_ROUTER;
@@ -922,7 +922,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public PowerOffRoutersResponse powerOffRouters(
 			PowerOffRoutersRequest powerOffRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		PowerOffRoutersResponse powerOffRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.POWEROFF_ROUTERS;
@@ -942,7 +942,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public PowerOnRoutersResponse powerOnRouters(
 			PowerOnRoutersRequest powerOnRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		PowerOnRoutersResponse powerOnRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.POWERON_ROUTERS;
@@ -962,7 +962,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeRoutersResponse describeRouters(
 			DescribeRoutersRequest describeRoutersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeRoutersResponse describeRoutersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_ROUTERS;
@@ -982,7 +982,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeRouterVxnetsResponse describeRouterVxnets(
 			DescribeRouterVxnetsRequest describeRouterVxnetsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeRouterVxnetsResponse describeRouterVxnetsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_ROUTER_VXNETS;
@@ -1002,7 +1002,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyRouterAttributesResponse modifyRouterAttributes(
 			ModifyRouterAttributesRequest modifyRouterAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyRouterAttributesResponse modifyRouterAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_ROUTER_ATTRIBUTES;
@@ -1022,7 +1022,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeRouterStaticsResponse describeRouterStatics(
 			DescribeRouterStaticsRequest describeRouterStaticsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeRouterStaticsResponse describeRouterStaticsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_ROUTER_STATICS;
@@ -1042,7 +1042,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AddRouterStaticsResponse addRouterStatics(
 			AddRouterStaticsRequest addRouterStaticsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AddRouterStaticsResponse addRouterStaticsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ADD_ROUTER_STATICS;
@@ -1062,7 +1062,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteRouterStaticsResponse deleteRouterStatics(
 			DeleteRouterStaticsRequest deleteRouterStaticsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteRouterStaticsResponse deleteRouterStaticsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_ROUTER_STATICS;
@@ -1082,7 +1082,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AssociateEipResponse associateEipResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ASSOCIATE_EIP;
@@ -1101,7 +1101,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DissociateEipsResponse dissociateEips(
 			DissociateEipsRequest dissociateEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DissociateEipsResponse dissociateEipsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DISSOCIATE_EIPS;
@@ -1121,7 +1121,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AllocateEipsResponse allocateEips(
 			AllocateEipsRequest allocateEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AllocateEipsResponse allocateEipsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ALLOCATE_EIPS;
@@ -1139,7 +1139,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public ReleaseEipsResponse releaseEips(ReleaseEipsRequest releaseEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ReleaseEipsResponse releaseEipsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.RELEASE_EIPS;
@@ -1158,7 +1158,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeEipsResponse describeEips(
 			DescribeEipsRequest describeEipsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeEipsResponse describeEipsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_EIPS;
@@ -1177,7 +1177,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyEipAttributesResponse modifyEipAttributes(
 			ModifyEipAttributesRequest modifyEipAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyEipAttributesResponse modifyEipAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_EIP_ATTRIBUTES;
@@ -1197,7 +1197,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ChangeEipsBandwidthResponse changeEipsBandwidth(
 			ChangeEipsBandwidthRequest changeEipsBandwidthRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ChangeEipsBandwidthResponse changeEipsBandwidthResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CHANGE_EIPS_BANDWIDTH;
@@ -1217,7 +1217,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeLoadBalancersResponse describeLoadBalancers(
 			DescribeLoadBalancersRequest describeLoadBalancersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeLoadBalancersResponse describeLoadBalancersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_LOADBALANCERS;
@@ -1237,7 +1237,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateLoadBalancerResponse createLoadBalancer(
 			CreateLoadBalancerRequest createLoadBalancerRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateLoadBalancerResponse createLoadBalancerResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_LOADBALANCER;
@@ -1257,7 +1257,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteLoadBalancersResponse deleteLoadBalancers(
 			DeleteLoadBalancersRequest deleteLoadBalancersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteLoadBalancersResponse deleteLoadBalancersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_LOADBALANCERS;
@@ -1277,7 +1277,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AssociateEipsToLoadBalancerResponse associateEipsToLoadBalancer(
 			AssociateEipsToLoadBalancerRequest associateEipsToLoadBalancerRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AssociateEipsToLoadBalancerResponse associateEipsToLoadBalancerResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ASSOCIATE_EIPS_TO_LOADBALANCER;
@@ -1297,7 +1297,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DissociateEipsFromLoadBalancerResponse dissociateEipsFromLoadBalancer(
 			DissociateEipsFromLoadBalancerRequest dissociateEipsFromLoadBalancerRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DissociateEipsFromLoadBalancerResponse dissociateEipsFromLoadBalancerResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DISSOCIATE_EIPS_FROM_LOADBALANCER;
@@ -1317,7 +1317,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public UpdateLoadBalancersResponse updateLoadBalancers(
 			UpdateLoadBalancersRequest updateLoadBalancersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		UpdateLoadBalancersResponse updateLoadBalancersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.UPDATE_LOADBALANCERS;
@@ -1337,7 +1337,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public StopLoadBalancersResponse stopLoadBalancers(
 			StopLoadBalancersRequest stopLoadBalancersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		StopLoadBalancersResponse stopLoadBalancersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.STOP_LOADBALANCERS;
@@ -1357,7 +1357,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public StartLoadBalancersResponse startLoadBalancers(
 			StartLoadBalancersRequest startLoadBalancersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		StartLoadBalancersResponse startLoadBalancersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.START_LOADBALANCERS;
@@ -1377,7 +1377,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributes(
 			ModifyLoadBalancerAttributesRequest modifyLoadBalancerAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_LOADBALANCER_ATTRIBUTES;
@@ -1397,7 +1397,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
 			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeLoadBalancerListenersResponse describeLoadBalancerListenersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_LOADBALANCER_LISTENERS;
@@ -1417,7 +1417,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AddLoadBalancerListenersResponse addLoadBalancerListeners(
 			AddLoadBalancerListenersRequest addLoadBalancerListenersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AddLoadBalancerListenersResponse addLoadBalancerListenersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ADD_LOADBALANCER_LISTENERS;
@@ -1437,7 +1437,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteLoadBalancerListenersResponse deleteLoadBalancerListeners(
 			DeleteLoadBalancerListenersRequest deleteLoadBalancerListenersRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteLoadBalancerListenersResponse deleteLoadBalancerListenersResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_LOADBALANCER_LISTENERS;
@@ -1457,7 +1457,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyLoadBalancerListenerAttributesResponse modifyLoadBalancerListenerAttributes(
 			ModifyLoadBalancerListenerAttributesRequest modifyLoadBalancerListenerAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyLoadBalancerListenerAttributesResponse modifyLoadBalancerListenerAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_LOADBALANCER_LISTENER_ATTRIBUTES;
@@ -1477,7 +1477,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public AddLoadBalancerBackendsResponse addLoadBalancerBackends(
 			AddLoadBalancerBackendsRequest addLoadBalancerBackendsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		AddLoadBalancerBackendsResponse addLoadBalancerBackendsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ADD_LOADBALANCER_BACKENDS;
@@ -1497,7 +1497,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteLoadBalancerBackendsResponse deleteLoadBalancerBackends(
 			DeleteLoadBalancerBackendsRequest deleteLoadBalancerBackendsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteLoadBalancerBackendsResponse deleteLoadBalancerBackendsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_LOADBALANCER_BACKENDS;
@@ -1517,7 +1517,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifyLoadBalancerBackendAttributesResponse modifyLoadBalancerBackendAttributes(
 			ModifyLoadBalancerBackendAttributesRequest modifyLoadBalancerBackendAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyLoadBalancerBackendAttributesResponse modifyLoadBalancerBackendAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_LOADBALANCER_BACKEND_ATTRIBUTES;
@@ -1537,7 +1537,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeLoadBalancerBackendsResponse describeLoadBalancerBackends(
 			DescribeLoadBalancerBackendsRequest describeLoadBalancerBackendsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeLoadBalancerBackendsResponse describeLoadBalancerBackendsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_LOADBALANCER_BACKENDS;
@@ -1556,7 +1556,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 	public GetMonitorResponse getMonitor(GetMonitorRequest getMonitorRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		GetMonitorResponse getMonitorResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.GET_MONITOR;
@@ -1575,7 +1575,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public GetLoadBalancerMonitorResponse getLoadBalancerMonitor(
 			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		GetLoadBalancerMonitorResponse getLoadBalancerMonitorResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.GET_LOADBALANCER_MONITOR;
@@ -1595,7 +1595,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateSnapshotsResponse createSnapshots(
 			CreateSnapshotsRequest createSnapshotsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateSnapshotsResponse createSnapshotsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_SNAPSHOTS;
@@ -1615,7 +1615,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DeleteSnapshotsResponse deleteSnapshots(
 			DeleteSnapshotsRequest deleteSnapshotsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteSnapshotsResponse deleteSnapshotsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DELETE_SNAPSHOTS;
@@ -1635,7 +1635,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ApplySnapshotsResponse applySnapshots(
 			ApplySnapshotsRequest applySnapshotsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ApplySnapshotsResponse applySnapshotsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.APPLY_SNAPSHOTS;
@@ -1655,7 +1655,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public DescribeSnapshotsResponse describeSnapshots(
 			DescribeSnapshotsRequest describeSnapshotsRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeSnapshotsResponse describeSnapshotsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SNAPSHOTS;
@@ -1675,7 +1675,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public ModifySnapshotAttributesResponse modifySnapshotAttributes(
 			ModifySnapshotAttributesRequest modifySnapshotAttributesRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifySnapshotAttributesResponse modifySnapshotAttributesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.MODIFY_SNAPSHOT_ATTRIBUTES;
@@ -1695,7 +1695,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CaptureInstanceFromSnapshotResponse captureInstanceFromSnapshot(
 			CaptureInstanceFromSnapshotRequest captureInstanceFromSnapshotRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CaptureInstanceFromSnapshotResponse captureInstanceFromSnapshotResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CAPTURE_INSTANCE_FROM_SNAPSHOT;
@@ -1715,7 +1715,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public CreateVolumeFromSnapshotResponse createVolumeFromSnapshot(
 			CreateVolumeFromSnapshotRequest createVolumeFromSnapshotRequest)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		CreateVolumeFromSnapshotResponse createVolumeFromSnapshotResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.CREATE_VOLUME_FROM_SNAPSHOT;
@@ -1736,7 +1736,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	
 	//==================================================================================================
 	private String sendRequest(String httpMethod, String action, Request request)
-			throws QingCloudClientException, QingCloudServiceException {
+			throws QingCloudClientException, QingCloudServiceException, IOException {
 		Map<String, String> parameters = request.toMap();
 		addCommonParams(httpMethod, action, parameters);
 
@@ -1744,7 +1744,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		for (Map.Entry<String, String> entry : parameters.entrySet()) {
 			String key = entry.getKey();
 			String value = entry.getValue();
-			//System.out.println(String.format("%s=%s", key, value));
+			if(DEBUG) System.out.println(String.format("%s=%s", key, value));
 		}
 
 		InputStream content = null;
@@ -1800,8 +1800,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 				return message;
 			}
 		} catch (IOException e) {
-			throw new QingCloudClientException("Failed to connect to Qingyun:"
-					+ e.getMessage());
+			throw e;
 		} finally {
 			safeClose(content);
 			connection.disconnect();

@@ -100,7 +100,7 @@ public class QingCloudAPIsIntegrationTest {
 	public void tearDown() throws Exception {
 	}
     
-	public static CreateKeyPairRequest getCreateKeyPairRequest(){
+	public CreateKeyPairRequest getCreateKeyPairRequest(){
         CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
 		
 		String keypair_name = KEYPAIR_NAME;
@@ -114,7 +114,7 @@ public class QingCloudAPIsIntegrationTest {
 		return createKeyPairRequest;
 	}
 	
-	public static CreateSecurityGroupRequest getCreateSecurityGroupRequest(){
+	public CreateSecurityGroupRequest getCreateSecurityGroupRequest(){
 		CreateSecurityGroupRequest createSecurityGroupRequest = new CreateSecurityGroupRequest();
 		
 		String security_group_name = SECURITY_GROUP_NAME;
@@ -401,9 +401,14 @@ public class QingCloudAPIsIntegrationTest {
 		String security_group_id=null;
 		try {
 			CreateSecurityGroupRequest createSecurityGroupRequest = this.getCreateSecurityGroupRequest();
-			CreateSecurityGroupResponse createSecurityGroupResponse = qingCloudWSClient.createSecurityGroup(createSecurityGroupRequest);
-			security_group_id = createSecurityGroupResponse.getSecurity_group_id();
-			System.out.println(String.format("    SecurityGroup %s created!", security_group_id));
+			CreateSecurityGroupResponse createSecurityGroupResponse;
+			try {
+				createSecurityGroupResponse = qingCloudWSClient.createSecurityGroup(createSecurityGroupRequest);
+				security_group_id = createSecurityGroupResponse.getSecurity_group_id();
+				System.out.println(String.format("    SecurityGroup %s created!", security_group_id));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		} catch (QingCloudClientException e1) {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
@@ -436,6 +441,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(addedSecurityGroupRules!=null && addedSecurityGroupRules.size()>0){
 			System.out.println("    Add Security Rules opening 22,80 public Successfully!");
@@ -461,6 +468,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(eip_id!=null){
 			System.out.println("    Create EIP Successfully!");
@@ -487,6 +496,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(instance_id!=null){
 		    System.out.println("    Create VM Instance Successfully!");
@@ -509,6 +520,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(associateEipResponse.getRet_code()==0){
 			System.out.println("    Attach EIP to VM Instance Successfully!");
@@ -529,6 +542,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(applySecurityGroupResponse.getRet_code()==0){
 			System.out.println("    Apply Security Group to VM request is sent successfully!");
@@ -549,6 +564,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(stopInstancesResponse!=null && stopInstancesResponse.getRet_code()==0){
 			System.out.println("    Stop VM instance request is sent successfully!");
@@ -569,6 +586,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(startInstancesResponse!=null && startInstancesResponse.getRet_code()==0){
 			System.out.println("    Start VM instance request is sent successfully!... ...");
@@ -592,11 +611,11 @@ public class QingCloudAPIsIntegrationTest {
 			if(volumes!=null && volumes.size()>0)
 			    volume_id = volumes.get(0);
 		} catch (QingCloudClientException e1) {
-			
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
-			
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(volume_id!=null){
 		    System.out.println("    Create Volume request is sent successfully, waiting for volume to be available... ...");
@@ -620,6 +639,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(attachVolumesResponse!=null && attachVolumesResponse.getRet_code()==0){
 			System.out.println("    Attach volume to VM instance request is sent successfully!... ...");
@@ -640,6 +661,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(deleteKeyPairsResponse!=null && deleteKeyPairsResponse.getRet_code() == 0){
 			System.out.println("    Detach and delete key pair successfully!");
@@ -660,6 +683,8 @@ public class QingCloudAPIsIntegrationTest {
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		
 		if(terminateInstancesResponse!=null && terminateInstancesResponse.getRet_code()==0){
@@ -685,11 +710,11 @@ public class QingCloudAPIsIntegrationTest {
 		try {
 			deleteSecurityGroupsResponse = qingCloudWSClient.deleteSecurityGroups(deleteSecurityGroupsRequest);
 		} catch (QingCloudClientException e1) {
-			
 			e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
-			
 			e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(deleteSecurityGroupsResponse!=null && deleteSecurityGroupsResponse.getRet_code() == 0){
 			System.out.println("    Delete security group successfully!");
@@ -718,6 +743,8 @@ public class QingCloudAPIsIntegrationTest {
 		} catch (QingCloudServiceException e1) {
 			e1.printStackTrace();
 			System.out.println("    Release EIP failed!");
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(releaseEipsResponse!=null && releaseEipsResponse.getRet_code() == 0){
 			System.out.println("    Release EIP successfully!");
@@ -746,6 +773,8 @@ public class QingCloudAPIsIntegrationTest {
 			//e1.printStackTrace();
 		} catch (QingCloudServiceException e1) {
 			//e1.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		if(deleteVolumesResponse!=null && deleteVolumesResponse.getRet_code() == 0){
 			System.out.println("   Delete Volume successfully!");
@@ -775,6 +804,9 @@ public class QingCloudAPIsIntegrationTest {
 			e.printStackTrace();
 		} catch (QingCloudServiceException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
 		}
 		QingCloudVolume volume = null;
 		List<QingCloudVolume> fetchedVolumes = describeVolumesResponse.getVolume_set();
@@ -785,7 +817,7 @@ public class QingCloudAPIsIntegrationTest {
 		
 	}
 	
-	@Test
+	//@Test
 	public void testInstanceLifecylceManagementAPIs() {
 		//Create keypair
 		String keypair_id = this.createKeyPair();
@@ -857,7 +889,6 @@ public class QingCloudAPIsIntegrationTest {
 		this.deleteEIP(eip_id);
 		
 		//delete Volume
-		System.out.println("Go to delete volume ... ...");
 		waitingForVolume(volume_id, QingCloudVolumeStatus.AVAILABLE);
 		
 		int retries = 10;
@@ -901,10 +932,10 @@ public class QingCloudAPIsIntegrationTest {
 					}
 				}
 			} catch (QingCloudClientException e) {
-				
 				e.printStackTrace();
 			} catch (QingCloudServiceException e) {
-				
+				e.printStackTrace();
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
 			
@@ -918,7 +949,6 @@ public class QingCloudAPIsIntegrationTest {
 			try {
 				Thread.sleep(try_interval);
 			} catch (InterruptedException e) {
-				
 				e.printStackTrace();
 			}
 		}
@@ -947,6 +977,8 @@ public class QingCloudAPIsIntegrationTest {
 				//e.printStackTrace();
 			} catch (QingCloudServiceException e) {
 				//e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 			if(isRunning){
 				break;
