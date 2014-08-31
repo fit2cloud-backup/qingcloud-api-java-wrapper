@@ -1,19 +1,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.fit2cloud.qingcloud</groupId>
   <artifactId>qingcloud-api-sdk</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
+  <version>1.0</version>
+  <name>Fit2Cloud for Qingyun Java SDK Lib</name>
 
-  <name>qingcloud-api-sdk</name>
-  <url>http://maven.apache.org</url>
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>http://github.com/fernandezpablo85/scribe-java/blob/master/LICENSE.txt</url>
+		</license>
+	</licenses>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<distributionManagement>
+		<repository>
+			<id>fit2cloud</id>
+			<name>fit2cloud</name>
+			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud/</url>
+		</repository>
+		<snapshotRepository>
+			<id>fit2cloud-snapshots</id>
+			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
+	<repositories>
+		<repository>
+			<id>scribe-java-mvn-repo</id>
+			<url>https://raw.github.com/fernandezpablo85/scribe-java/mvn-repo/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	
   <dependencies>
     <dependency>
 	    <groupId>junit</groupId>
@@ -43,4 +66,57 @@
 	</dependency>
   </dependencies>
   
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> 
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
