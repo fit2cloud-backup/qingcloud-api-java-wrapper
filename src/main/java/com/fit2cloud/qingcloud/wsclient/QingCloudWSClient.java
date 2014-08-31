@@ -37,8 +37,6 @@ import com.fit2cloud.qingcloud.wsclient.ui.model.*;
  * 5) Snapshot APIs
  * 6) Load Balancer APIs
  * 7) Monitor APIs
- * 8) QingCloudServiceException Refactor
- * 9) API Unit Test Refactor
  * @author jason
  *
  */
