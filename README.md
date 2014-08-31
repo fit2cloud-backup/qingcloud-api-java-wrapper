@@ -50,11 +50,12 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 
 ```java
  		String ACCESS_KEY_ID = "您的青云API Access key";
-    	String ACCESS_KEY_SECRET = "你青云API Secret key";
+    	String ACCESS_KEY_SECRET = "您的青云API Secret key";
         IQingCloudWSClient client = new QingCloudWSClient(ACCESS_KEY_ID, ACCESS_KEY_SECRET);
+        
         CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
 		
-		String keypair_name = KEYPAIR_NAME;
+		String keypair_name = "您的SSH密钥名称";
 		String mode = "system";
 		String encrypt_method = "ssh-rsa";
 		
