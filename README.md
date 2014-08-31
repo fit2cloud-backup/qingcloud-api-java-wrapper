@@ -67,6 +67,7 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 		createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);
 		keypair_id = createKeyPairResponse.getKeypair_id();		
 ```
+```
 以下是API列表:
 
 #映像 APIs
@@ -178,6 +179,8 @@ describeSnapshots
 modifySnapshotAttributes
 captureInstanceFromSnapshot
 createVolumeFromSnapshot
+
+```
 
 每个API调用都会有三类异常：
 
