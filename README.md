@@ -6,7 +6,7 @@ Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，帮助�
 转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。
 
 在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、
-Beanstalk、Rightscale、Scalr等，但是在阿里云生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
+Beanstalk、Rightscale、Scalr等，但是在阿里云和青云的生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
 
 我们在开发[**Fit2Cloud for 青云**](http://qingcloud.fit2cloud.com/)过程中，需要调用青云API进行各种操作。 
 我们的后端采用的是Java语言，所以我们使用java语言完整封装了青云的API。
@@ -187,7 +187,7 @@ createVolumeFromSnapshot
 ## 每个API调用都会有三类异常：
 
 1. QingCloudClientException: 客戶端錯誤，比如参数不对
-2. QingCloudServiceException: 服务器端错误，阿里云会返回错误代码和具体消息
+2. QingCloudServiceException: 服务器端错误，青云会返回错误代码和具体消息
 3. IOException: 网络IO问题
 
 
