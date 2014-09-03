@@ -5,7 +5,7 @@ public class CreateKeyPairRequest extends Request {
 	private String keypair_name;
 	private String mode;
 	private String encrypt_method;
-	private Integer public_key;	
+	private String public_key;	
 	private String zone;
 
 
@@ -43,12 +43,12 @@ public class CreateKeyPairRequest extends Request {
 	}
 
 
-	public Integer getPublic_key() {
+	public String getPublic_key() {
 		return public_key;
 	}
 
 
-	public void setPublic_key(Integer public_key) {
+	public void setPublic_key(String public_key) {
 		this.public_key = public_key;
 	}
 

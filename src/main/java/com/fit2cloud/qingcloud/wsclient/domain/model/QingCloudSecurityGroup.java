@@ -1,21 +1,51 @@
 package com.fit2cloud.qingcloud.wsclient.domain.model;
 
-public class QingCloudSecurityGroup {
-    private String security_group_id;
-    private Integer is_default;
-    
-	public String getSecurity_group_id() {
-		return security_group_id;
+public class QingCloudSecurityGroup extends QingCloudSecurityGroupBasic {
+
+	private Integer is_applied;
+	private String description;
+	private String security_group_name;
+	private String create_time;
+	private String owner;
+
+	public Integer getIs_applied() {
+		return is_applied;
 	}
-	public void setSecurity_group_id(String security_group_id) {
-		this.security_group_id = security_group_id;
+
+	public void setIs_applied(Integer is_applied) {
+		this.is_applied = is_applied;
 	}
-	public Integer getIs_default() {
-		return is_default;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setIs_default(Integer is_default) {
-		this.is_default = is_default;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-    
-    
+
+	public String getSecurity_group_name() {
+		return security_group_name;
+	}
+
+	public void setSecurity_group_name(String security_group_name) {
+		this.security_group_name = security_group_name;
+	}
+
+	public String getCreate_time() {
+		return create_time;
+	}
+
+	public void setCreate_time(String create_time) {
+		this.create_time = create_time;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
 }

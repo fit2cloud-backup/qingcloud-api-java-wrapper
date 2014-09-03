@@ -61,34 +61,6 @@ public class QingCloudSecurityGroupAPITest {
 	@After
 	public void tearDown() throws Exception {
 	}
-    
-	
-	//@Test
-	public void testDescribeSecurityGroups() throws Exception {
-		DescribeSecurityGroupsRequest describeSecurityGroupsRequest = new DescribeSecurityGroupsRequest();
-		
-		String security_group = "sg-y5o2pzjt";
-		List<String> security_groups = new ArrayList<String>();
-		security_groups.add(security_group);
-		Integer verbose = 1;
-		Integer limit = 20;
-		Integer offset = 0;
-		String search_word = "wordpress";
-		//describeSecurityGroupsRequest.setLimit(limit);
-		//describeSecurityGroupsRequest.setOffset(offset);
-		//describeSecurityGroupsRequest.setSearch_word(search_word);
-		describeSecurityGroupsRequest.setSecurity_groups(security_groups);
-		describeSecurityGroupsRequest.setVerbose(verbose);
-		describeSecurityGroupsRequest.setZone(QingCloudZone.PEK2);
-		
-		DescribeSecurityGroupsResponse describeSecurityGroupsResponse = qingCloudWSClient.describeSecurityGroups(describeSecurityGroupsRequest);
-		assertTrue(describeSecurityGroupsResponse!=null);
-		
-		List<QingCloudResource> resources = describeSecurityGroupsResponse.getResources();
-		for(QingCloudResource resource : resources){
-			System.out.println("resources="+resource.getResource_id());
-		}
-	}
 	
 	//@Test
 	public void testCreateSecurityGroup() throws Exception {
