@@ -158,33 +158,33 @@ public interface IQingCloudWSClient {
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	// -----------------------------------Vxnets------------------------------------------------------
-//	public DescribeVxnetsResponse describeVxnets(
-//			DescribeVxnetsRequest describeVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public CreateVxnetsResponse createVxnets(
-//			CreateVxnetsRequest createVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteVxnetsResponse deleteVxnets(
-//			DeleteVxnetsRequest deleteVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public JoinVxnetResponse joinVxnet(JoinVxnetRequest joinVxnetRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public LeaveVxnetResponse leaveVxnet(LeaveVxnetRequest leaveVxnetRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyVxnetAttributesResponse modifyVxnetAttributes(
-//			ModifyVxnetAttributesRequest modifyVxnetAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeVxnetInstancesResponse describeVxnetInstances(
-//			DescribeVxnetInstancesRequest describeVxnetInstancesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//  //-----------------------------------Routers------------------------------------------------------
+	public DescribeVxnetsResponse describeVxnets(
+			DescribeVxnetsRequest describeVxnetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateVxnetsResponse createVxnets(
+			CreateVxnetsRequest createVxnetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteVxnetsResponse deleteVxnets(
+			DeleteVxnetsRequest deleteVxnetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public JoinVxnetResponse joinVxnet(JoinVxnetRequest joinVxnetRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public LeaveVxnetResponse leaveVxnet(LeaveVxnetRequest leaveVxnetRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyVxnetAttributesResponse modifyVxnetAttributes(
+			ModifyVxnetAttributesRequest modifyVxnetAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeVxnetInstancesResponse describeVxnetInstances(
+			DescribeVxnetInstancesRequest describeVxnetInstancesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	//-----------------------------------Routers------------------------------------------------------
 	public CreateRoutersResponse createRouters(
 			CreateRoutersRequest createRoutersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
