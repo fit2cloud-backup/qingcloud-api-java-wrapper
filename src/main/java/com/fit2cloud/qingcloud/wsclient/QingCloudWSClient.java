@@ -1077,6 +1077,27 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return deleteRouterStaticsResponse;
 	}
+	
+	public ModifyRouterStaticAttributesResponse modifyRouterStaticAttributes(
+			ModifyRouterStaticAttributesRequest modifyRouterStaticAttributesRequest)
+					throws QingCloudClientException, QingCloudServiceException, IOException {
+		ModifyRouterStaticAttributesResponse modifyRouterStaticAttributesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.MODIFY_ROUTER_STATIC_ATTRIBUTES;
+		
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					modifyRouterStaticAttributesRequest);
+			modifyRouterStaticAttributesResponse = ModifyRouterStaticAttributesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return modifyRouterStaticAttributesResponse;
+	}
+	
 
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)
@@ -1795,6 +1816,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 						throw exception;
 					}
 				}
+				System.out.println("return code >>>>> "+message);
 				return message;
 			}
 		} catch (IOException e) {

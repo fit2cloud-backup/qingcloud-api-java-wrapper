@@ -185,56 +185,60 @@ public interface IQingCloudWSClient {
 //			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //  //-----------------------------------Routers------------------------------------------------------
-//	public CreateRoutersResponse createRouters(
-//			CreateRoutersRequest createRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public UpdateRoutersResponse updateRouters(
-//			UpdateRoutersRequest updateRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteRoutersResponse deleteRouters(
-//			DeleteRoutersRequest deleteRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public JoinRouterResponse joinRouter(JoinRouterRequest joinRouterRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public LeaveRouterResponse leaveRouter(LeaveRouterRequest leaveRouterRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public PowerOffRoutersResponse powerOffRouters(
-//			PowerOffRoutersRequest powerOffRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public PowerOnRoutersResponse powerOnRouters(
-//			PowerOnRoutersRequest powerOnRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeRoutersResponse describeRouters(
-//			DescribeRoutersRequest describeRoutersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeRouterVxnetsResponse describeRouterVxnets(
-//			DescribeRouterVxnetsRequest describeRouterVxnetsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyRouterAttributesResponse modifyRouterAttributes(
-//			ModifyRouterAttributesRequest modifyRouterAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeRouterStaticsResponse describeRouterStatics(
-//			DescribeRouterStaticsRequest describeRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public AddRouterStaticsResponse addRouterStatics(
-//			AddRouterStaticsRequest addRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteRouterStaticsResponse deleteRouterStatics(
-//			DeleteRouterStaticsRequest deleteRouterStaticsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
+	public CreateRoutersResponse createRouters(
+			CreateRoutersRequest createRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public UpdateRoutersResponse updateRouters(
+			UpdateRoutersRequest updateRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteRoutersResponse deleteRouters(
+			DeleteRoutersRequest deleteRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public JoinRouterResponse joinRouter(JoinRouterRequest joinRouterRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public LeaveRouterResponse leaveRouter(LeaveRouterRequest leaveRouterRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public PowerOffRoutersResponse powerOffRouters(
+			PowerOffRoutersRequest powerOffRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public PowerOnRoutersResponse powerOnRouters(
+			PowerOnRoutersRequest powerOnRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeRoutersResponse describeRouters(
+			DescribeRoutersRequest describeRoutersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeRouterVxnetsResponse describeRouterVxnets(
+			DescribeRouterVxnetsRequest describeRouterVxnetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyRouterAttributesResponse modifyRouterAttributes(
+			ModifyRouterAttributesRequest modifyRouterAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeRouterStaticsResponse describeRouterStatics(
+			DescribeRouterStaticsRequest describeRouterStaticsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AddRouterStaticsResponse addRouterStatics(
+			AddRouterStaticsRequest addRouterStaticsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteRouterStaticsResponse deleteRouterStatics(
+			DeleteRouterStaticsRequest deleteRouterStaticsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyRouterStaticAttributesResponse modifyRouterStaticAttributes(
+			ModifyRouterStaticAttributesRequest modifyRouterStaticAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+					
     //-----------------------------------EIPs------------------------------------------------------
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)

@@ -4,18 +4,16 @@ import java.util.List;
 
 import com.google.gson.Gson;
 
-public class CreateRoutersResponse {
-	
+public class ModifyRouterStaticAttributesResponse {
 	private String action;
-	private String job_id;
-	private List<String> routers;
+	private String router_static_id;
 	private Integer ret_code;
 	private String message;
 	
-	public static CreateRoutersResponse fromJson(String jsonCreateRoutersResponse){
+	public static ModifyRouterStaticAttributesResponse fromJson(String jsonModifyRouterStaticAttributesResponse){
 		Gson gson = new Gson();
-		CreateRoutersResponse createRoutersResponse = gson.fromJson(jsonCreateRoutersResponse, CreateRoutersResponse.class);
-		return createRoutersResponse;
+		ModifyRouterStaticAttributesResponse modifyRouterStaticAttributesResponse = gson.fromJson(jsonModifyRouterStaticAttributesResponse, ModifyRouterStaticAttributesResponse.class);
+		return modifyRouterStaticAttributesResponse;
 	}
 
 	public String getAction() {
@@ -26,20 +24,12 @@ public class CreateRoutersResponse {
 		this.action = action;
 	}
 
-	public String getJob_id() {
-		return job_id;
+	public String getRouter_static_id() {
+		return router_static_id;
 	}
 
-	public void setJob_id(String job_id) {
-		this.job_id = job_id;
-	}
-
-	public List<String> getRouters() {
-		return routers;
-	}
-
-	public void setRouters(List<String> routers) {
-		this.routers = routers;
+	public void setRouter_static_id(String router_static_id) {
+		this.router_static_id = router_static_id;
 	}
 
 	public Integer getRet_code() {

@@ -31,13 +31,31 @@ public class Request {
 			String key = entry.getKey();
 			Object objValue = entry.getValue();
 			if (objValue instanceof List) {
-				//This part require to deal with customized data type
-				List<String> strValues = (ArrayList<String>) objValue;
-				int count = 1;
-				for (String strValue : strValues) {
-					retParametersMap.put(String.format("%s.%s", key, count),
-							strValue);
-					count++;
+				@SuppressWarnings("rawtypes")
+				List list = (List) objValue;
+				for(int i = 0; i < list.size(); i++) {
+					Class<? extends Object> cls = list.get(i).getClass();
+					if(cls.equals(String.class) || cls.equals(Integer.class) || cls.equals(Double.class) || cls.equals(Long.class) || cls.equals(Float.class)) {
+						retParametersMap.put(String.format("%s.%s", key, i), list.get(i).toString());
+					}else {
+						try {
+							BeanInfo info = Introspector.getBeanInfo(list.get(i).getClass());
+							for (PropertyDescriptor pd : info.getPropertyDescriptors()) {
+								if(pd.getName().equals("class")) {
+									continue;
+								}
+								Method reader = pd.getReadMethod();
+								if (reader != null) {
+									Object v = reader.invoke(list.get(i));
+									if(v != null) {
+										retParametersMap.put(String.format("%s.%s.%s", key, i+1, pd.getName()), v.toString());
+									}
+								}
+							}
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
 				}
 			} else if (objValue instanceof Integer) {
 				retParametersMap.put(key, String.valueOf((Integer) objValue));

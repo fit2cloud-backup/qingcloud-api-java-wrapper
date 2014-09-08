@@ -3,7 +3,7 @@ package com.fit2cloud.qingcloud.wsclient.ui.model;
 import com.google.gson.Gson;
 
 public class ModifySecurityGroupRuleAttributesResponse {
-	private Integer action;
+	private String action;
 	private String security_group_rule_id;
 	private Integer ret_code;
 	private String message;
@@ -14,11 +14,11 @@ public class ModifySecurityGroupRuleAttributesResponse {
 		return modifySecurityGroupRuleAttributesResponse;
 	}
 
-	public Integer getAction() {
+	public String getAction() {
 		return action;
 	}
 
-	public void setAction(Integer action) {
+	public void setAction(String action) {
 		this.action = action;
 	}
 
