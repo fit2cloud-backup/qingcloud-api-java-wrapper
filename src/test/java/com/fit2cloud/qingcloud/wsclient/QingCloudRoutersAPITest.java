@@ -70,7 +70,7 @@ public class QingCloudRoutersAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testDescribeRouters() throws Exception {
 		DescribeRoutersRequest describeRoutersRequest = new DescribeRoutersRequest();
 		describeRoutersRequest.setZone(ZONE);
@@ -92,7 +92,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testCreateRouters() throws Exception {
 		CreateRoutersRequest request = new CreateRoutersRequest();
 		request.setZone(ZONE);
@@ -112,7 +112,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteRouters() throws Exception {
 		DeleteRoutersRequest request = new DeleteRoutersRequest();
 		List<String> routers = new ArrayList<String>();
@@ -128,7 +128,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testUpdateRouters() throws Exception {
 		UpdateRoutersRequest request = new UpdateRoutersRequest();
 		request.setZone(ZONE);
@@ -144,7 +144,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testPowerOffRouters() throws Exception {
 		PowerOffRoutersRequest request = new PowerOffRoutersRequest();
 		request.setZone(ZONE);
@@ -160,7 +160,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testPowerOnRouters() throws Exception {
 		PowerOnRoutersRequest request = new PowerOnRoutersRequest();
 		request.setZone(ZONE);
@@ -176,7 +176,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testJoinRouter() throws Exception {
 		JoinRouterRequest request = new JoinRouterRequest();
 		request.setVxnet("vxnet-abusv1l");
@@ -192,7 +192,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testLeaveRouter() throws Exception {
 		LeaveRouterRequest request = new LeaveRouterRequest();
 		List<String> vxnets = new ArrayList<String>();
@@ -209,7 +209,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void testModifyRouterAttributes() throws Exception{
 		ModifyRouterAttributesRequest request = new ModifyRouterAttributesRequest();
 		request.setZone(ZONE);
@@ -226,7 +226,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeRouterStatics() throws Exception{
 		DescribeRouterStaticsRequest request = new DescribeRouterStaticsRequest();
 		request.setZone(ZONE);
@@ -244,7 +244,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAddRouterStatics() throws Exception{
 		AddRouterStaticsRequest request = new AddRouterStaticsRequest();
 		request.setZone(ZONE);
@@ -272,7 +272,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteRouterStatics() throws Exception{
 		DeleteRouterStaticsRequest request = new DeleteRouterStaticsRequest();
 		request.setZone(ZONE);
@@ -292,7 +292,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeRouterVxnets() throws Exception{
 		DescribeRouterVxnetsRequest request = new DescribeRouterVxnetsRequest();
 		request.setZone(ZONE);
@@ -310,7 +310,7 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testModifyRouterStaticAttributes() throws Exception{
 		ModifyRouterStaticAttributesRequest request = new ModifyRouterStaticAttributesRequest();
 		request.setZone(ZONE);

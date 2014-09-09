@@ -1816,7 +1816,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 						throw exception;
 					}
 				}
-				System.out.println("return code >>>>> "+message);
 				return message;
 			}
 		} catch (IOException e) {

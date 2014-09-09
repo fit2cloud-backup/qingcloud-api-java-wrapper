@@ -87,7 +87,7 @@ public class QingCloudVxnetsAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testDescribeVxnets() throws Exception {
 		DescribeVxnetsRequest request = new DescribeVxnetsRequest();
 		request.setZone(ZONE);
@@ -109,7 +109,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testCreateVxnets() throws Exception {
 		CreateVxnetsRequest request = new CreateVxnetsRequest();
 		request.setZone(ZONE);
@@ -131,7 +131,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteVxnets() throws Exception {
 		DeleteVxnetsRequest request = new DeleteVxnetsRequest();
 		request.setZone(ZONE);
@@ -153,7 +153,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testJoinVxnet() throws Exception {
 		JoinVxnetRequest request = new JoinVxnetRequest();
 		request.setZone(ZONE);
@@ -171,7 +171,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testLeaveVxnet() throws Exception {
 		LeaveVxnetRequest request = new LeaveVxnetRequest();
 		request.setZone(ZONE);
@@ -189,7 +189,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testModifyVxnetAttributes() throws Exception {
 		ModifyVxnetAttributesRequest request = new ModifyVxnetAttributesRequest();
 		request.setZone(ZONE);
@@ -206,7 +206,7 @@ public class QingCloudVxnetsAPITest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void testDescribeVxnetInstances() throws Exception {
 		DescribeVxnetInstancesRequest request = new DescribeVxnetInstancesRequest();
 		request.setZone(ZONE);
