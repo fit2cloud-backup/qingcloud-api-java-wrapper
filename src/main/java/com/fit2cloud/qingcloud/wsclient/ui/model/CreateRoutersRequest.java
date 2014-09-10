@@ -7,6 +7,7 @@ public class CreateRoutersRequest extends Request {
 	private Integer count;
 	private String security_group;
 	private String zone;
+	private Integer router_type;
 
 	public String getRouter_name() {
 		return router_name;
@@ -38,5 +39,13 @@ public class CreateRoutersRequest extends Request {
 
 	public void setZone(String zone) {
 		this.zone = zone;
+	}
+
+	public Integer getRouter_type() {
+		return router_type;
+	}
+
+	public void setRouter_type(Integer router_type) {
+		this.router_type = router_type;
 	}
 }

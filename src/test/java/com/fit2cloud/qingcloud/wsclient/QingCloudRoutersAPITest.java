@@ -97,6 +97,7 @@ public class QingCloudRoutersAPITest {
 		CreateRoutersRequest request = new CreateRoutersRequest();
 		request.setZone(ZONE);
 		request.setCount(1);
+		request.setRouter_type(0);
 		CreateRoutersResponse response = qingCloudWSClient.createRouters(request);
 		assertTrue(response!=null);
 		System.out.println("CreateRoutersResponse.getRet_code()=" + response.getRet_code());
