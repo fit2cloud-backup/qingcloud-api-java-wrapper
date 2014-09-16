@@ -16,9 +16,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>fit2cloud</id>
-			<name>fit2cloud</name>
-			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud/</url>
+			<id>public</id>
+			<url>http://repository.fit2cloud.com/content/repositories/fit2cloud-public</url>
 		</repository>
 		<snapshotRepository>
 			<id>fit2cloud-snapshots</id>

@@ -268,81 +268,81 @@ public interface IQingCloudWSClient {
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	//-----------------------------------Load Balancers------------------------------------------------------
-//	public DescribeLoadBalancersResponse describeLoadBalancers(
-//			DescribeLoadBalancersRequest describeLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public CreateLoadBalancerResponse createLoadBalancer(
-//			CreateLoadBalancerRequest createLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteLoadBalancersResponse deleteLoadBalancers(
-//			DeleteLoadBalancersRequest deleteLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public AssociateEipsToLoadBalancerResponse associateEipsToLoadBalancer(
-//			AssociateEipsToLoadBalancerRequest associateEipsToLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DissociateEipsFromLoadBalancerResponse dissociateEipsFromLoadBalancer(
-//			DissociateEipsFromLoadBalancerRequest dissociateEipsFromLoadBalancerRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public UpdateLoadBalancersResponse updateLoadBalancers(
-//			UpdateLoadBalancersRequest updateLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public StopLoadBalancersResponse stopLoadBalancers(
-//			StopLoadBalancersRequest stopLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public StartLoadBalancersResponse startLoadBalancers(
-//			StartLoadBalancersRequest startLoadBalancersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributes(
-//			ModifyLoadBalancerAttributesRequest modifyLoadBalancerAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
-//			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public AddLoadBalancerListenersResponse addLoadBalancerListeners(
-//			AddLoadBalancerListenersRequest addLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteLoadBalancerListenersResponse deleteLoadBalancerListeners(
-//			DeleteLoadBalancerListenersRequest deleteLoadBalancerListenersRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyLoadBalancerListenerAttributesResponse modifyLoadBalancerListenerAttributes(
-//			ModifyLoadBalancerListenerAttributesRequest modifyLoadBalancerListenerAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public AddLoadBalancerBackendsResponse addLoadBalancerBackends(
-//			AddLoadBalancerBackendsRequest addLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteLoadBalancerBackendsResponse deleteLoadBalancerBackends(
-//			DeleteLoadBalancerBackendsRequest deleteLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyLoadBalancerBackendAttributesResponse modifyLoadBalancerBackendAttributes(
-//			ModifyLoadBalancerBackendAttributesRequest modifyLoadBalancerBackendAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DescribeLoadBalancerBackendsResponse describeLoadBalancerBackends(
-//			DescribeLoadBalancerBackendsRequest describeLoadBalancerBackendsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public GetMonitorResponse getMonitor(GetMonitorRequest getMonitorRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public GetLoadBalancerMonitorResponse getLoadBalancerMonitor(
-//			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
+	public DescribeLoadBalancersResponse describeLoadBalancers(
+			DescribeLoadBalancersRequest describeLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateLoadBalancerResponse createLoadBalancer(
+			CreateLoadBalancerRequest createLoadBalancerRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteLoadBalancersResponse deleteLoadBalancers(
+			DeleteLoadBalancersRequest deleteLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AssociateEipsToLoadBalancerResponse associateEipsToLoadBalancer(
+			AssociateEipsToLoadBalancerRequest associateEipsToLoadBalancerRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DissociateEipsFromLoadBalancerResponse dissociateEipsFromLoadBalancer(
+			DissociateEipsFromLoadBalancerRequest dissociateEipsFromLoadBalancerRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public UpdateLoadBalancersResponse updateLoadBalancers(
+			UpdateLoadBalancersRequest updateLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public StopLoadBalancersResponse stopLoadBalancers(
+			StopLoadBalancersRequest stopLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public StartLoadBalancersResponse startLoadBalancers(
+			StartLoadBalancersRequest startLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyLoadBalancerAttributesResponse modifyLoadBalancerAttributes(
+			ModifyLoadBalancerAttributesRequest modifyLoadBalancerAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
+			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AddLoadBalancerListenersResponse addLoadBalancerListeners(
+			AddLoadBalancerListenersRequest addLoadBalancerListenersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteLoadBalancerListenersResponse deleteLoadBalancerListeners(
+			DeleteLoadBalancerListenersRequest deleteLoadBalancerListenersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyLoadBalancerListenerAttributesResponse modifyLoadBalancerListenerAttributes(
+			ModifyLoadBalancerListenerAttributesRequest modifyLoadBalancerListenerAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AddLoadBalancerBackendsResponse addLoadBalancerBackends(
+			AddLoadBalancerBackendsRequest addLoadBalancerBackendsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteLoadBalancerBackendsResponse deleteLoadBalancerBackends(
+			DeleteLoadBalancerBackendsRequest deleteLoadBalancerBackendsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyLoadBalancerBackendAttributesResponse modifyLoadBalancerBackendAttributes(
+			ModifyLoadBalancerBackendAttributesRequest modifyLoadBalancerBackendAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DescribeLoadBalancerBackendsResponse describeLoadBalancerBackends(
+			DescribeLoadBalancerBackendsRequest describeLoadBalancerBackendsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public GetMonitorResponse getMonitor(GetMonitorRequest getMonitorRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public GetLoadBalancerMonitorResponse getLoadBalancerMonitor(
+			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 //	//-----------------------------------Snapshots------------------------------------------------------
 //	public CreateSnapshotsResponse createSnapshots(
 //			CreateSnapshotsRequest createSnapshotsRequest)
