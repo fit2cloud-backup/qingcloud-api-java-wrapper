@@ -81,7 +81,7 @@ public class QingCloudLoadBalancerAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
+	//@Test
 	public void testDescribeLoadBalancers() throws Exception {
 		DescribeLoadBalancersRequest request = new DescribeLoadBalancersRequest();
 		request.setZone(ZONE);
@@ -102,7 +102,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testCreateLoadBalancer() throws Exception {
 		CreateLoadBalancerRequest request = new CreateLoadBalancerRequest();
 		request.setZone(ZONE);
@@ -123,7 +123,7 @@ public class QingCloudLoadBalancerAPITest {
 		System.out.println("loadbalancer id :: "+response.getLoadbalancer_id());
 	}
 	
-	@Test
+	//@Test
 	public void testModifyLoadBalancerAttributes() throws Exception {
 		ModifyLoadBalancerAttributesRequest request = new ModifyLoadBalancerAttributesRequest();
 		request.setDescription("test description");
@@ -140,7 +140,7 @@ public class QingCloudLoadBalancerAPITest {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testStopLoadBalancers() throws Exception {
 		StopLoadBalancersRequest request = new StopLoadBalancersRequest();
 		request.setZone(ZONE);
@@ -156,7 +156,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testStartLoadBalancers() throws Exception {
 		StartLoadBalancersRequest request = new StartLoadBalancersRequest();
 		request.setZone(ZONE);
@@ -173,7 +173,7 @@ public class QingCloudLoadBalancerAPITest {
 	}
 	
 	
-	@Test
+	//@Test
 	public void testUpdateLoadBalancers() throws Exception {
 		UpdateLoadBalancersRequest request = new UpdateLoadBalancersRequest();
 		request.setZone(ZONE);
@@ -189,7 +189,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDissociateEipsFromLoadBalancer() throws Exception {
 		DissociateEipsFromLoadBalancerRequest request = new DissociateEipsFromLoadBalancerRequest();
 		request.setZone(ZONE);
@@ -206,7 +206,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAssociateEipsToLoadBalancer() throws Exception {
 		AssociateEipsToLoadBalancerRequest request = new AssociateEipsToLoadBalancerRequest();
 		request.setZone(ZONE);
@@ -223,7 +223,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAddLoadBalancerListeners() throws Exception {
 		AddLoadBalancerListenersRequest request = new AddLoadBalancerListenersRequest();
 		request.setZone(ZONE);
@@ -255,7 +255,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeLoadBalancerListeners() throws Exception {
 		DescribeLoadBalancerListenersRequest request = new DescribeLoadBalancerListenersRequest();
 		request.setZone(ZONE);
@@ -278,7 +278,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testModifyLoadBalancerListenerAttributes() throws Exception {
 		ModifyLoadBalancerListenerAttributesRequest request = new ModifyLoadBalancerListenerAttributesRequest();
 		request.setZone(ZONE);
@@ -297,7 +297,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testAddLoadBalancerBackends() throws Exception {
 		AddLoadBalancerBackendsRequest request = new AddLoadBalancerBackendsRequest();
 		request.setZone(ZONE);
@@ -324,7 +324,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDescribeLoadBalancerBackends() throws Exception {
 		DescribeLoadBalancerBackendsRequest request = new DescribeLoadBalancerBackendsRequest();
 		request.setZone(ZONE);
@@ -344,7 +344,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testModifyLoadBalancerBackendAttributes() throws Exception {
 		ModifyLoadBalancerBackendAttributesRequest request = new ModifyLoadBalancerBackendAttributesRequest();
 		request.setZone(ZONE);
@@ -360,7 +360,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteLoadBalancerBackends() throws Exception {
 		DeleteLoadBalancerBackendsRequest request = new DeleteLoadBalancerBackendsRequest();
 		request.setZone(ZONE);
@@ -376,7 +376,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteLoadBalancerListeners() throws Exception {
 		DeleteLoadBalancerListenersRequest request = new DeleteLoadBalancerListenersRequest();
 		request.setZone(ZONE);
@@ -392,7 +392,7 @@ public class QingCloudLoadBalancerAPITest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testDeleteLoadBalancers() throws Exception {
 		DeleteLoadBalancersRequest request = new DeleteLoadBalancersRequest();
 		request.setZone(ZONE);
