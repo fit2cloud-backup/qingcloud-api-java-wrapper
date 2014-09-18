@@ -1752,6 +1752,24 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return createVolumeFromSnapshotResponse;
 	}
 	
+	public DescribeJobsResponse DescribeJobs(
+			DescribeJobsRequest describeJobsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		DescribeJobsResponse describeJobsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_JOBS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeJobsRequest);
+			describeJobsResponse = DescribeJobsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeJobsResponse;
+	}
 	
 	//==================================================================================================
 	private String sendRequest(String httpMethod, String action, Request request)
@@ -1960,7 +1978,5 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			}
 		}
 	}
-
-	
 
 }

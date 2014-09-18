@@ -372,4 +372,9 @@ public interface IQingCloudWSClient {
 //			CreateVolumeFromSnapshotRequest createVolumeFromSnapshotRequest)
 //			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	//-----------------------------------Jobs------------------------------------------------------
+	public DescribeJobsResponse DescribeJobs(
+			DescribeJobsRequest describeJobsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;	
+	
 }

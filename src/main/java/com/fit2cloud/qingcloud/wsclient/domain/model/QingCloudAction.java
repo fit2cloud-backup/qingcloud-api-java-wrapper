@@ -115,5 +115,8 @@ public class QingCloudAction {
     public static String MODIFY_SNAPSHOT_ATTRIBUTES = "ModifySnapshotAttributes";
     public static String CAPTURE_INSTANCE_FROM_SNAPSHOT = "CaptureInstanceFromSnapshot";
     public static String CREATE_VOLUME_FROM_SNAPSHOT = "CreateVolumeFromSnapshot";
+    
+    // job
+    public static String DESCRIBE_JOBS = "DescribeJobs";
 
 }
