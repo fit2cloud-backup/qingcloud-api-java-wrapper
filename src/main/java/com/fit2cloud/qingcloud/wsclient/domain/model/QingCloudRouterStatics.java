@@ -1,12 +1,10 @@
 package com.fit2cloud.qingcloud.wsclient.domain.model;
 
-import java.util.Map;
-
-import com.google.gson.Gson;
 
 public class QingCloudRouterStatics {
 	private String router_id;
 	private String vxnet_id;
+	private String router_static_name;
 	private Integer static_type;
 	private String router_static_id;
 	private String create_time;
@@ -87,12 +85,11 @@ public class QingCloudRouterStatics {
 		this.static_type = static_type;
 	}
 
-	@Override
-	public String toString() {
-		return "QingCloudRouterStatics [router_id=" + router_id + ", vxnet_id="
-				+ vxnet_id + ", static_type=" + static_type
-				+ ", router_static_id=" + router_static_id + ", create_time="
-				+ create_time + ", val1=" + val1 + ", val2=" + val2 + ", val3="
-				+ val3 + ", val4=" + val4 + "]";
+	public String getRouter_static_name() {
+		return router_static_name;
+	}
+
+	public void setRouter_static_name(String router_static_name) {
+		this.router_static_name = router_static_name;
 	}
 }

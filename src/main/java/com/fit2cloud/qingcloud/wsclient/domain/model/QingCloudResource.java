@@ -24,7 +24,4 @@ public class QingCloudResource {
 	public void setResource_type(String resource_type) {
 		this.resource_type = resource_type;
 	}
-    
-    
-    
 }
