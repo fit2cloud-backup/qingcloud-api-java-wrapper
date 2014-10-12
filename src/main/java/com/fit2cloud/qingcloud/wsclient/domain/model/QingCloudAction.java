@@ -93,6 +93,7 @@ public class QingCloudAction {
     public static String STOP_LOADBALANCERS = "StopLoadBalancers";
     public static String START_LOADBALANCERS = "StartLoadBalancers";
     public static String MODIFY_LOADBALANCER_ATTRIBUTES = "ModifyLoadBalancerAttributes";
+    public static String RESIZE_LOADBALANCERS = "ResizeLoadBalancers";
 
     public static String DESCRIBE_LOADBALANCER_LISTENERS = "DescribeLoadBalancerListeners";
     public static String ADD_LOADBALANCER_LISTENERS = "AddLoadBalancerListeners";

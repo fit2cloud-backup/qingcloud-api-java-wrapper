@@ -304,6 +304,10 @@ public interface IQingCloudWSClient {
 			ModifyLoadBalancerAttributesRequest modifyLoadBalancerAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	public ResizeLoadBalancersResponse resizeLoadBalancers(
+			ResizeLoadBalancersRequest resizeLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+	
 	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
 			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;

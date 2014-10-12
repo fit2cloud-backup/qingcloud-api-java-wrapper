@@ -1414,6 +1414,27 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return modifyLoadBalancerAttributesResponse;
 	}
 
+	public ResizeLoadBalancersResponse resizeLoadBalancers(
+			ResizeLoadBalancersRequest resizeLoadBalancersRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		ResizeLoadBalancersResponse resizeLoadBalancersResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.RESIZE_LOADBALANCERS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					resizeLoadBalancersRequest);
+			resizeLoadBalancersResponse = ResizeLoadBalancersResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return resizeLoadBalancersResponse;
+	}
+	
 	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
 			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {
