@@ -6,7 +6,7 @@ public class AllocateEipsRequest extends Request {
     private String eip_name;
     private Integer count;
     private Integer need_icp;
-    
+    private String billing_mode;
     private String zone;
 
 	public Integer getBandwidth() {
@@ -49,4 +49,11 @@ public class AllocateEipsRequest extends Request {
 		this.zone = zone;
 	}
 
+	public String getBilling_mode() {
+		return billing_mode;
+	}
+
+	public void setBilling_mode(String billing_mode) {
+		this.billing_mode = billing_mode;
+	}
 }

@@ -16,6 +16,7 @@ import org.junit.Test;
 import com.fit2cloud.qingcloud.wsclient.IQingCloudWSClient;
 import com.fit2cloud.qingcloud.wsclient.QingCloudWSClient;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudEIP;
+import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudEIPBillingMode;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
 import com.fit2cloud.qingcloud.wsclient.ui.model.AllocateEipsRequest;
 import com.fit2cloud.qingcloud.wsclient.ui.model.AllocateEipsResponse;
@@ -89,7 +90,7 @@ public class QingCloudEIPAPITest {
 		}
 	}
 	
-	//@Test
+//	@Test
 	public void testAllocateEipsRequest() throws Exception {
 		AllocateEipsRequest allocateEipsRequest = new AllocateEipsRequest();
 		
@@ -102,7 +103,8 @@ public class QingCloudEIPAPITest {
 		allocateEipsRequest.setCount(count);
 		allocateEipsRequest.setEip_name(eip_name);
 		allocateEipsRequest.setNeed_icp(need_icp);
-		allocateEipsRequest.setZone(QingCloudZone.PEK2);
+		allocateEipsRequest.setBilling_mode(QingCloudEIPBillingMode.TRAFFIC);
+		allocateEipsRequest.setZone(QingCloudZone.GD1);
 		
 		AllocateEipsResponse allocateEipsResponse = qingCloudWSClient.allocateEips(allocateEipsRequest);
 		assertTrue(allocateEipsResponse!=null);
