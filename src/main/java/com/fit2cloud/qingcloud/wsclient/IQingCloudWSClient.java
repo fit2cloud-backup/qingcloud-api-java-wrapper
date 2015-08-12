@@ -74,23 +74,31 @@ public interface IQingCloudWSClient {
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 	// -----------------------------------Images------------------------------------------------------
-//	public DescribeImagesResponse describeImages(
-//			DescribeImagesRequest describeImagesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public CaptureInstanceResponse captureInstance(
-//			CaptureInstanceRequest captureInstanceRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public DeleteImagesResponse deleteImages(
-//			DeleteImagesRequest deleteImagesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
-//	public ModifyImageAttributesResponse modifyImageAttributes(
-//			ModifyImageAttributesRequest modifyImageAttributesRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
-//
+	public DescribeImagesResponse describeImages(
+			DescribeImagesRequest describeImagesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	public CaptureInstanceResponse captureInstance(
+			CaptureInstanceRequest captureInstanceRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteImagesResponse deleteImages(
+			DeleteImagesRequest deleteImagesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyImageAttributesResponse modifyImageAttributes(
+			ModifyImageAttributesRequest modifyImageAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public GrantImageToUsersResponse grantImageToUsers(
+			GrantImageToUsersRequest grantImageToUsersRequest)
+					throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public RevokeImageFromUsersResponse revokeImageFromUsers(
+			RevokeImageFromUsersRequest revokeImageFromUsersRequest)
+					throws QingCloudClientException, QingCloudServiceException, IOException;
+	
+	
 	// -----------------------------------Volumes------------------------------------------------------
 	public DescribeVolumesResponse describeVolumes(
 			DescribeVolumesRequest describeVolumesRequest)
@@ -381,4 +389,8 @@ public interface IQingCloudWSClient {
 			DescribeJobsRequest describeJobsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;	
 	
+	//-----------------------------------Zones------------------------------------------------------
+	public DescribeZonesResponse describeZones(
+			DescribeZonesRequest describeZonesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 }

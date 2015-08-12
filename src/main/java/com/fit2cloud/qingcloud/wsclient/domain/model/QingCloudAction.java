@@ -6,6 +6,8 @@ public class QingCloudAction {
 	public static String CAPTURE_INSTANCE = "CaptureInstance";
 	public static String DELETE_IMAGES = "DeleteImages";
     public static String MODIFY_IMAGE_ATTRIBUTES = "ModifyImageAttributes";
+    public static String GRANT_IMAGE_TO_USERS = "GrantImageToUsers";
+    public static String REVOKE_IMAGE_FROM_USERS = "RevokeImageFromUsers";
     
     // instances
     public static String DESCRIBE_INSTANCES = "DescribeInstances";
@@ -119,5 +121,8 @@ public class QingCloudAction {
     
     // job
     public static String DESCRIBE_JOBS = "DescribeJobs";
+    
+    // zone
+    public static String DESCRIBE_ZONES = "DescribeZones";
 
 }

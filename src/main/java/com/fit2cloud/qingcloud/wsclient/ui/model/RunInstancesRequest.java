@@ -1,14 +1,9 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.lang.reflect.*;
 
 public class RunInstancesRequest extends Request {
 	private String image_id;
@@ -24,11 +19,12 @@ public class RunInstancesRequest extends Request {
 	private String login_passwd = null;
 	
 	private Integer need_newsid=0;
-	private String volumes = null;
+	private List<String> volumes = null;
 	private Integer need_userdata = 0;
 	private String userdata_type = null;
 	private String userdata_value = null;
 	private String userdata_path = null;
+	private String userdata_file = null;
 	
 	private String zone;
 
@@ -155,21 +151,17 @@ public class RunInstancesRequest extends Request {
 		this.need_newsid = need_newsid;
 	}
 
-
-	public String getVolumes() {
+	public List<String> getVolumes() {
 		return volumes;
 	}
 
-
-	public void setVolumes(String volumes) {
+	public void setVolumes(List<String> volumes) {
 		this.volumes = volumes;
 	}
-
 
 	public Integer getNeed_userdata() {
 		return need_userdata;
 	}
-
 
 	public void setNeed_userdata(Integer need_userdata) {
 		this.need_userdata = need_userdata;
@@ -215,6 +207,14 @@ public class RunInstancesRequest extends Request {
 		this.zone = zone;
 	}
 	
+	public String getUserdata_file() {
+		return userdata_file;
+	}
+
+	public void setUserdata_file(String userdata_file) {
+		this.userdata_file = userdata_file;
+	}
+
 	public String toJson(){
 		Gson gson = new GsonBuilder().create();
 		String jsonRequest = gson.toJson(this);

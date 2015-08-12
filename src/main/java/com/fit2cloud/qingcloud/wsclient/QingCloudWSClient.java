@@ -2000,4 +2000,144 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 	}
 
+	public DescribeZonesResponse describeZones(
+			DescribeZonesRequest describeZonesRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		DescribeZonesResponse describeZonesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_ZONES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeZonesRequest);
+			describeZonesResponse = DescribeZonesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		
+		return describeZonesResponse;
+	}
+
+	public DescribeImagesResponse describeImages(
+			DescribeImagesRequest describeImagesRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		DescribeImagesResponse describeImagesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_IMAGES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeImagesRequest);
+			describeImagesResponse = DescribeImagesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeImagesResponse;
+	}
+
+	public CaptureInstanceResponse captureInstance(
+			CaptureInstanceRequest captureInstanceRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		CaptureInstanceResponse captureInstanceResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CAPTURE_INSTANCE;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					captureInstanceRequest);
+			captureInstanceResponse = CaptureInstanceResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return captureInstanceResponse;
+	}
+
+	public DeleteImagesResponse deleteImages(
+			DeleteImagesRequest deleteImagesRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		DeleteImagesResponse deleteImagesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DELETE_IMAGES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					deleteImagesRequest);
+			deleteImagesResponse = DeleteImagesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return deleteImagesResponse;
+	}
+
+	public ModifyImageAttributesResponse modifyImageAttributes(
+			ModifyImageAttributesRequest modifyImageAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		ModifyImageAttributesResponse modifyImageAttributesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.MODIFY_IMAGE_ATTRIBUTES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					modifyImageAttributesRequest);
+			modifyImageAttributesResponse = ModifyImageAttributesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return modifyImageAttributesResponse;
+	}
+
+	public GrantImageToUsersResponse grantImageToUsers(
+			GrantImageToUsersRequest grantImageToUsersRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		GrantImageToUsersResponse grantImageToUsersResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.GRANT_IMAGE_TO_USERS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					grantImageToUsersRequest);
+			grantImageToUsersResponse = GrantImageToUsersResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return grantImageToUsersResponse;
+	}
+
+	public RevokeImageFromUsersResponse revokeImageFromUsers(
+			RevokeImageFromUsersRequest revokeImageFromUsersRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		RevokeImageFromUsersResponse revokeImageFromUsersResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.REVOKE_IMAGE_FROM_USERS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					revokeImageFromUsersRequest);
+			revokeImageFromUsersResponse = RevokeImageFromUsersResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return revokeImageFromUsersResponse;
+	}
 }

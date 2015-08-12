@@ -2,21 +2,21 @@ package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 import java.util.List;
 
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudImage;
+import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZoneItem;
 import com.google.gson.Gson;
 
-public class DescribeImagesResponse {
+public class DescribeZonesResponse {
 	
 	private String action;
 	private Integer total_count;
+	private List<QingCloudZoneItem> zone_set;
 	private Integer ret_code;
 	private String message;
-	private List<QingCloudImage> image_set;
 	
-	public static DescribeImagesResponse fromJson(String jsonDescribeImagesResponse){
+	public static DescribeZonesResponse fromJson(String jsonDescribeZonesResponse){
 		Gson gson = new Gson();
-		DescribeImagesResponse describeImagesResponse = gson.fromJson(jsonDescribeImagesResponse, DescribeImagesResponse.class);
-		return describeImagesResponse;
+		DescribeZonesResponse detachVolumesResponse = gson.fromJson(jsonDescribeZonesResponse, DescribeZonesResponse.class);
+		return detachVolumesResponse;
 	}
 
 	public String getAction() {
@@ -35,6 +35,14 @@ public class DescribeImagesResponse {
 		this.total_count = total_count;
 	}
 
+	public List<QingCloudZoneItem> getZone_set() {
+		return zone_set;
+	}
+
+	public void setZone_set(List<QingCloudZoneItem> zone_set) {
+		this.zone_set = zone_set;
+	}
+
 	public Integer getRet_code() {
 		return ret_code;
 	}
@@ -51,11 +59,11 @@ public class DescribeImagesResponse {
 		this.message = message;
 	}
 
-	public List<QingCloudImage> getImage_set() {
-		return image_set;
+	@Override
+	public String toString() {
+		return "DescribeZonesResponse [action=" + action + ", total_count="
+				+ total_count + ", zone_set=" + zone_set + ", ret_code="
+				+ ret_code + ", message=" + message + "]";
 	}
-
-	public void setImage_set(List<QingCloudImage> image_set) {
-		this.image_set = image_set;
-	}
+	
 }

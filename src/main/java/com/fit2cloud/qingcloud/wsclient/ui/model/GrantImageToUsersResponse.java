@@ -2,17 +2,16 @@ package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 import com.google.gson.Gson;
 
-public class DeleteImagesResponse {
+public class GrantImageToUsersResponse {
 	
 	private String action;
-	private String job_id;
 	private Integer ret_code;
 	private String message;
 	
-	public static DeleteImagesResponse fromJson(String jsonDeleteImagesResponse){
+	public static GrantImageToUsersResponse fromJson(String jsonDescribeImagesResponse){
 		Gson gson = new Gson();
-		DeleteImagesResponse deleteImagesResponse = gson.fromJson(jsonDeleteImagesResponse, DeleteImagesResponse.class);
-		return deleteImagesResponse;
+		GrantImageToUsersResponse describeImagesResponse = gson.fromJson(jsonDescribeImagesResponse, GrantImageToUsersResponse.class);
+		return describeImagesResponse;
 	}
 
 	public String getAction() {
@@ -21,14 +20,6 @@ public class DeleteImagesResponse {
 
 	public void setAction(String action) {
 		this.action = action;
-	}
-
-	public String getJob_id() {
-		return job_id;
-	}
-
-	public void setJob_id(String job_id) {
-		this.job_id = job_id;
 	}
 
 	public Integer getRet_code() {

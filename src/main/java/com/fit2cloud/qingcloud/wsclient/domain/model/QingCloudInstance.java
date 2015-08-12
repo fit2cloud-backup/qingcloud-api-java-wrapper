@@ -23,6 +23,15 @@ public class QingCloudInstance {
     private List<String> volume_ids;
     private List<String> keypair_ids;
     
+    private String graphics_passwd;
+    private String alert_status;
+    private String owner;
+    private Integer sub_code;
+    private String graphics_protocol;
+    private Integer instance_class;
+    private String cpu_topology;
+    private String lastest_snapshot_time;
+    
 	public String getInstance_id() {
 		return instance_id;
 	}
@@ -119,6 +128,52 @@ public class QingCloudInstance {
 	public void setKeypair_ids(List<String> keypair_ids) {
 		this.keypair_ids = keypair_ids;
 	}
-    
-    
+	public String getGraphics_passwd() {
+		return graphics_passwd;
+	}
+	public void setGraphics_passwd(String graphics_passwd) {
+		this.graphics_passwd = graphics_passwd;
+	}
+	public String getAlert_status() {
+		return alert_status;
+	}
+	public void setAlert_status(String alert_status) {
+		this.alert_status = alert_status;
+	}
+	public String getOwner() {
+		return owner;
+	}
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+	public Integer getSub_code() {
+		return sub_code;
+	}
+	public void setSub_code(Integer sub_code) {
+		this.sub_code = sub_code;
+	}
+	public String getGraphics_protocol() {
+		return graphics_protocol;
+	}
+	public void setGraphics_protocol(String graphics_protocol) {
+		this.graphics_protocol = graphics_protocol;
+	}
+	public Integer getInstance_class() {
+		return instance_class;
+	}
+	public void setInstance_class(Integer instance_class) {
+		this.instance_class = instance_class;
+	}
+	public String getCpu_topology() {
+		return cpu_topology;
+	}
+	public void setCpu_topology(String cpu_topology) {
+		this.cpu_topology = cpu_topology;
+	}
+	public String getLastest_snapshot_time() {
+		return lastest_snapshot_time;
+	}
+	public void setLastest_snapshot_time(String lastest_snapshot_time) {
+		this.lastest_snapshot_time = lastest_snapshot_time;
+	}
 }

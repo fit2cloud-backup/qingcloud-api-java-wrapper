@@ -1,5 +1,7 @@
 package com.fit2cloud.qingcloud.wsclient.domain.model;
 
+import java.util.List;
+
 public class QingCloudSecurityGroup extends QingCloudSecurityGroupBasic {
 
 	private Integer is_applied;
@@ -7,6 +9,7 @@ public class QingCloudSecurityGroup extends QingCloudSecurityGroupBasic {
 	private String security_group_name;
 	private String create_time;
 	private String owner;
+	private List<QingCloudResource> resources;
 
 	public Integer getIs_applied() {
 		return is_applied;
@@ -48,4 +51,11 @@ public class QingCloudSecurityGroup extends QingCloudSecurityGroupBasic {
 		this.owner = owner;
 	}
 
+	public List<QingCloudResource> getResources() {
+		return resources;
+	}
+
+	public void setResources(List<QingCloudResource> resources) {
+		this.resources = resources;
+	}
 }

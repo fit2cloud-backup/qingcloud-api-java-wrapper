@@ -6,6 +6,7 @@ import java.util.List;
 public class StopInstancesRequest extends Request {
 	private List<String> instances;
     private String zone;
+    private Integer force;
 
 	public List<String> getInstances() {
 		return instances;
@@ -21,5 +22,13 @@ public class StopInstancesRequest extends Request {
 
 	public void setZone(String zone) {
 		this.zone = zone;
+	}
+
+	public Integer getForce() {
+		return force;
+	}
+
+	public void setForce(Integer force) {
+		this.force = force;
 	}
 }
