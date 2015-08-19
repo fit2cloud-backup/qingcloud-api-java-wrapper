@@ -125,4 +125,9 @@ public class QingCloudAction {
     // zone
     public static String DESCRIBE_ZONES = "DescribeZones";
 
+    //app
+    public static final String DESCRIBE_USERS = "DescribeUsers";
+    public static final String LEASE_APP = "LeaseApp";
+    public static final String UNLEASE_APP = "UnLeaseApp";
+
 }
