@@ -1,16 +1,9 @@
 # 青云 API Java封装库 使用指南
 
 ## 背景介绍
-Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，帮助开发人员、测试人员以及运维人员实现应用全生命周期的
-自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等。Fit2Cloud打通了从代码到服务的
-转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。
+Fit2Cloud是一个建立在IaaS之上的云管理及DevOps协作平台，帮助开发人员、测试人员以及运维人员实现应用全生命周期的自动化管理，包括创建环境、软件安装、代码部署、自动配置、监控告警和自动伸缩等。Fit2Cloud打通了从代码到服务的转化通道，实现了云应用的持续交付和自动化运维，极大地提高了开发和运维的效率。
 
-在亚马逊(AWS)云生态圈中，AWS及其合作伙伴提供了多种应用部署和管理工具，比如CloudFormation、Opsworks、
-Beanstalk、Rightscale、Scalr等，但是在阿里云和青云的生态圈中目前没有这样的工具，可以说Fit2Cloud填补了这个空白。
-
-我们在开发[**Fit2Cloud for 青云**](http://qingcloud.fit2cloud.com/)过程中，需要调用青云API进行各种操作。 
-我们的后端采用的是Java语言，所以我们使用java语言完整封装了青云的API。
-我们相信云计算的使用哲学是通过API(或者基于API的第三方工具)来动态管理资源，
+在集成青云的过程中，需要调用青云API进行各种操作。我们使用java语言完整封装了青云的API。我们相信云计算的使用哲学是通过API(或者基于API的第三方工具)来动态管理资源，
 因此我们决定将我们封装好的青云API Java SDK开源出去。
 
 ## 第一步：引用Jar包
@@ -35,7 +28,7 @@ Beanstalk、Rightscale、Scalr等，但是在阿里云和青云的生态圈中�
 
 <!-- dependency -->
 <dependency>
-  <groupId>com.fit2cloud</groupId>
+  <groupId>com.fit2cloud.qingcloud</groupId>
   <artifactId>qingcloud-api-sdk</artifactId>
   <version>1.0</version>
 </dependency>
@@ -53,7 +46,7 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
     	String ACCESS_KEY_SECRET = "您的青云API Secret key";
         IQingCloudWSClient client = new QingCloudWSClient(ACCESS_KEY_ID, ACCESS_KEY_SECRET);
         
-        CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
+       CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
 		
 		String keypair_name = "您的SSH密钥名称";
 		String mode = "system";
@@ -72,11 +65,17 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 API参数说明: https://docs.qingcloud.com/api/index.html
 
 ```
+
+#区域 APIs
+describeZones
+
 #映像 APIs
 describeImages
 captureInstance
 deleteImages
 modifyImageAttributes
+grantImageToUsers
+revokeImageFromUsers
 
 #主机 APIs
 describeInstances
@@ -88,7 +87,6 @@ stopInstances
 resizeInstances
 resetInstances
 modifyInstanceAttributes
-
 uploadUserDataAttachment
 
 #硬盘 APIs
@@ -159,6 +157,7 @@ deleteLoadBalancers
 associateEipsToLoadBalancer
 dissociateEipsFromLoadBalancer
 updateLoadBalancers
+resizeLoadBalancers
 stopLoadBalancers
 startLoadBalancers
 modifyLoadBalancerAttributes
@@ -181,6 +180,9 @@ describeSnapshots
 modifySnapshotAttributes
 captureInstanceFromSnapshot
 createVolumeFromSnapshot
+
+#操作日志 APIs
+DescribeJobs
 
 ```
 
