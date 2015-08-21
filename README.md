@@ -183,7 +183,26 @@ captureInstanceFromSnapshot
 createVolumeFromSnapshot
 
 ```
+##青云应用API
+```java
 
+        String ACCESS_KEY_ID = "您的青云APP ID";
+ 		String SECRET_APP_KEY = "您的青云APP Secret key";
+    	String ACCESS_TOKEN = "访问资源需要用到的access token";
+        IQingCloudAppClient qingCloudAppClient = new QingCloudAppClient(ACCESS_KEY_ID, SECRET_APP_KEY,ACCESS_TOKEN);
+
+        DescribeUsersRequest describeUsersRequest = new DescribeUsersRequest();
+        DescribeUsersResponse response = qingCloudAppClient.describeUsers(describeUsersRequest);
+```
+
+```
+## 以下是API列表:
+API参数说明: https://api.qingcloud.com/app/
+
+#用户信息 API
+describeUsers
+
+```
 ## 每个API调用都会有三类异常：
 
 1. QingCloudClientException: 客戶端錯誤，比如参数不对
