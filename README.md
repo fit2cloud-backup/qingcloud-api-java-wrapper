@@ -189,7 +189,10 @@ createVolumeFromSnapshot
         String ACCESS_KEY_ID = "您的青云APP ID";
  		String SECRET_APP_KEY = "您的青云APP Secret key";
     	String ACCESS_TOKEN = "访问资源需要用到的access token";
-        IQingCloudAppClient qingCloudAppClient = new QingCloudAppClient(ACCESS_KEY_ID, SECRET_APP_KEY,ACCESS_TOKEN);
+        IQingCloudAppClient qingCloudAppClient = new QingCloudAppClient(ACCESS_KEY_ID, SECRET_APP_KEY);
+		QingCloudAppPayload qingCloudAppPayload = iQingCloudAppClient.extractPayload(pyaload, signature);
+        ACCESS_TOKEN = qingCloudAppPayload.getAccess_token();
+        iQingCloudAppClient.setAccessToken(ACCESS_TOKEN);
 
         DescribeUsersRequest describeUsersRequest = new DescribeUsersRequest();
         DescribeUsersResponse response = qingCloudAppClient.describeUsers(describeUsersRequest);

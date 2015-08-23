@@ -17,7 +17,7 @@ public class ModifyKeyPairAttributesResponse {
 		  "action":"ModifyKeyPairAttributesResponse",
 		  "ret_code":0
 		}
-	 * @param jsonRunInstancesResponse
+	 * @param jsonModifyKeyPairAttributesResponse
 	 * @return CreateKeyPairResponse
 	 */
 	public static ModifyKeyPairAttributesResponse fromJson(String jsonModifyKeyPairAttributesResponse){

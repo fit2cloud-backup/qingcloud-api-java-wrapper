@@ -21,7 +21,7 @@ public class CreateKeyPairResponse {
 		  "keypair_id":"kp-z0goby7d",
 		  "ret_code":0
 		}
-	 * @param jsonRunInstancesResponse
+	 * @param jsonCreateKeyPairResponse
 	 * @return CreateKeyPairResponse
 	 */
 	public static CreateKeyPairResponse fromJson(String jsonCreateKeyPairResponse){

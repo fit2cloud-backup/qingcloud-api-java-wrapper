@@ -20,7 +20,7 @@ public class AttachKeyPairsResponse {
 		  "job_id":"j-bm6ym3r8",
 		  "ret_code":0
 		}
-	 * @param jsonDeleteKeyPairsResponse
+	 * @param jsonAttachKeyPairsResponse
 	 * @return DeleteKeyPairsResponse
 	 */
 	public static AttachKeyPairsResponse fromJson(String jsonAttachKeyPairsResponse){
