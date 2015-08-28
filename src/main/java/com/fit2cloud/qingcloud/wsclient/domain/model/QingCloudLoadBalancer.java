@@ -14,6 +14,12 @@ public class QingCloudLoadBalancer {
 	private String create_time;
 	private String status_time;
 	private String security_group_id;
+	
+	private Integer loadbalancer_type;
+	private Integer sub_code;
+	private QingCloudVxnet vxnet;
+	private String vxnet_id;
+	
 	public String getLoadbalancer_id() {
 		return loadbalancer_id;
 	}
@@ -80,5 +86,28 @@ public class QingCloudLoadBalancer {
 	public void setSecurity_group_id(String security_group_id) {
 		this.security_group_id = security_group_id;
 	}
-	
+	public Integer getLoadbalancer_type() {
+		return loadbalancer_type;
+	}
+	public void setLoadbalancer_type(Integer loadbalancer_type) {
+		this.loadbalancer_type = loadbalancer_type;
+	}
+	public QingCloudVxnet getVxnet() {
+		return vxnet;
+	}
+	public void setVxnet(QingCloudVxnet vxnet) {
+		this.vxnet = vxnet;
+	}
+	public Integer getSub_code() {
+		return sub_code;
+	}
+	public void setSub_code(Integer sub_code) {
+		this.sub_code = sub_code;
+	}
+	public String getVxnet_id() {
+		return vxnet_id;
+	}
+	public void setVxnet_id(String vxnet_id) {
+		this.vxnet_id = vxnet_id;
+	}
 }
