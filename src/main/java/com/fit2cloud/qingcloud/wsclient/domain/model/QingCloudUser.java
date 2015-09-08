@@ -18,7 +18,7 @@ public class QingCloudUser {
     private String user_name;
     private String email;
     private String phone;
-    private Date birthday;
+    private String birthday;
     private String address;
     private String lang;
     private String gender;
@@ -144,11 +144,11 @@ public class QingCloudUser {
         this.create_time = create_time;
     }
 
-    public Date getBirthday() {
-        return birthday;
-    }
+	public String getBirthday() {
+		return birthday;
+	}
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
 }
