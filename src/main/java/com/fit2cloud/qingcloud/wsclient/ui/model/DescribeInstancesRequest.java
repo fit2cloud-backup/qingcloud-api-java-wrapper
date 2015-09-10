@@ -5,9 +5,9 @@ import java.util.List;
 
 public class DescribeInstancesRequest extends Request {
     private List<String> instances;
-    private String image_id;
-    private String instance_type;
-    private String status;
+    private List<String> image_id;
+    private List<String> instance_type;
+    private List<String> status;
     private String search_word;
     
     private Integer offset;
@@ -24,27 +24,27 @@ public class DescribeInstancesRequest extends Request {
 		this.instances = instances;
 	}
 
-	public String getImage_id() {
+	public List<String> getImage_id() {
 		return image_id;
 	}
 
-	public void setImage_id(String image_id) {
+	public void setImage_id(List<String> image_id) {
 		this.image_id = image_id;
 	}
 
-	public String getInstance_type() {
+	public List<String> getInstance_type() {
 		return instance_type;
 	}
 
-	public void setInstance_type(String instance_type) {
+	public void setInstance_type(List<String> instance_type) {
 		this.instance_type = instance_type;
 	}
 
-	public String getStatus() {
+	public List<String> getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(List<String> status) {
 		this.status = status;
 	}
 
