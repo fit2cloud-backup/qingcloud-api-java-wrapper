@@ -42,11 +42,11 @@ import com.fit2cloud.qingcloud.wsclient.ui.model.*;
  */
 public class QingCloudWSClient implements IQingCloudWSClient {
 	private static final String API_VERSION = "1";
-	private static final String ENDPOINT = "https://api.qingcloud.com/iaas/";
 	private static final String ISO8601_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
 	private static final String ENCODING = "UTF-8";
 	private static final boolean DEBUG = false;
 	
+	private String endpoint = "https://api.qingcloud.com/iaas/";
 
 	private String accessKeyId;
 	private String secretKey;
@@ -54,6 +54,14 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	public QingCloudWSClient(String accessKeyId, String secretKey) {
 		this.accessKeyId = accessKeyId;
 		this.secretKey = secretKey;
+	}
+	
+	public QingCloudWSClient(String accessKeyId, String secretKey, String endPoint) {
+		this.accessKeyId = accessKeyId;
+		this.secretKey = secretKey;
+		if(endPoint != null && endPoint.trim().length() > 0) {
+			this.endpoint = endPoint.trim();
+		}
 	}
 	
 	public DescribeInstancesResponse describeInstances(
@@ -1809,7 +1817,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		HttpURLConnection connection = null;
 		try {
 			String query = paramsToQueryString(parameters);
-			URL url = new URL(ENDPOINT + "?" + query);
+			URL url = new URL(endpoint + "?" + query);
 
 			if(DEBUG) System.out.println("url=" + url);
 			
