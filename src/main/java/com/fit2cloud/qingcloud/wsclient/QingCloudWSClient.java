@@ -61,6 +61,9 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		this.secretKey = secretKey;
 		if(endPoint != null && endPoint.trim().length() > 0) {
 			this.endpoint = endPoint.trim();
+			if(!this.endpoint.endsWith("/")) {
+				this.endpoint += "/";
+			}
 		}
 	}
 	
@@ -1869,7 +1872,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			throw e;
 		} finally {
 			safeClose(content);
-			connection.disconnect();
 		}
 	}
 

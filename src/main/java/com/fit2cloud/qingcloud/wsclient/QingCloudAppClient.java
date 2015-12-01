@@ -141,7 +141,6 @@ public class QingCloudAppClient implements IQingCloudAppClient {
             throw e;
         } finally {
             safeClose(content);
-            connection.disconnect();
         }
     }
 
