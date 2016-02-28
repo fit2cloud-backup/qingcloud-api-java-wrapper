@@ -84,6 +84,7 @@ public class QingCloudAction {
     public static String DESCRIBE_EIPS = "DescribeEips";
     public static String MODIFY_EIP_ATTRIBUTES = "ModifyEipAttributes";
     public static String CHANGE_EIPS_BANDWIDTH = "ChangeEipsBandwidth";
+    public static String DESCRIBE_EIPS_GROUPS = "DescribeEipGroups";
 
     // lb
     public static String DESCRIBE_LOADBALANCERS = "DescribeLoadBalancers";

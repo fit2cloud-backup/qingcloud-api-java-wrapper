@@ -8,6 +8,8 @@ public class AllocateEipsRequest extends Request {
     private Integer need_icp;
     private String billing_mode;
     private String zone;
+    private String eip_group;
+    private Integer associate_mode;
 
 	public Integer getBandwidth() {
 		return bandwidth;
@@ -55,5 +57,21 @@ public class AllocateEipsRequest extends Request {
 
 	public void setBilling_mode(String billing_mode) {
 		this.billing_mode = billing_mode;
+	}
+
+	public String getEip_group() {
+		return eip_group;
+	}
+
+	public void setEip_group(String eip_group) {
+		this.eip_group = eip_group;
+	}
+
+	public Integer getAssociate_mode() {
+		return associate_mode;
+	}
+
+	public void setAssociate_mode(Integer associate_mode) {
+		this.associate_mode = associate_mode;
 	}
 }

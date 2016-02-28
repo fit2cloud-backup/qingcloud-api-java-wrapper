@@ -274,7 +274,11 @@ public interface IQingCloudWSClient {
 	public ChangeEipsBandwidthResponse changeEipsBandwidth(
 			ChangeEipsBandwidthRequest changeEipsBandwidthRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-
+	
+	public DescribeEipGroupsResponse describeEipGroups(
+			DescribeEipGroupsRequest describeEipGroupsRequest)
+					throws QingCloudClientException, QingCloudServiceException, IOException;
+	
 	//-----------------------------------Load Balancers------------------------------------------------------
 	public DescribeLoadBalancersResponse describeLoadBalancers(
 			DescribeLoadBalancersRequest describeLoadBalancersRequest)

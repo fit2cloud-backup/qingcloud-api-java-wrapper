@@ -1245,6 +1245,26 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return changeEipsBandwidthResponse;
 	}
 
+	public DescribeEipGroupsResponse describeEipGroups(
+			DescribeEipGroupsRequest describeEipGroupsRequest)
+			throws QingCloudClientException, QingCloudServiceException,
+			IOException {
+		DescribeEipGroupsResponse describeEipGroupsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_EIPS_GROUPS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeEipGroupsRequest);
+			describeEipGroupsResponse = DescribeEipGroupsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeEipGroupsResponse;
+	}
+
 	public DescribeLoadBalancersResponse describeLoadBalancers(
 			DescribeLoadBalancersRequest describeLoadBalancersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {
