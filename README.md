@@ -46,7 +46,7 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
     	String ACCESS_KEY_SECRET = "您的青云API Secret key";
         IQingCloudWSClient client = new QingCloudWSClient(ACCESS_KEY_ID, ACCESS_KEY_SECRET);
         
-       CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
+        CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest();
 		
 		String keypair_name = "您的SSH密钥名称";
 		String mode = "system";
@@ -57,8 +57,8 @@ http://repository.fit2cloud.com/content/repositories/fit2cloud/com/fit2cloud/qin
 		createKeyPairRequest.setEncrypt_method(encrypt_method);
 		createKeyPairRequest.setZone(QingCloudZone.PEK2);
 		
-		createKeyPairResponse = qingCloudWSClient.createKeyPair(createKeyPairRequest);
-		keypair_id = createKeyPairResponse.getKeypair_id();		
+		CreateKeyPairResponse createKeyPairResponse = client.createKeyPair(createKeyPairRequest);
+		String keypair_id = createKeyPairResponse.getKeypair_id();
 ```
 
 ## 以下是API列表:
