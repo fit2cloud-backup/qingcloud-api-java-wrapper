@@ -1,6 +1,13 @@
 package com.fit2cloud.qingcloud.wsclient;
 
-import static org.junit.Assert.*;
+import com.fit2cloud.qingcloud.wsclient.domain.model.*;
+import com.fit2cloud.qingcloud.wsclient.ui.model.*;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,42 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.fit2cloud.qingcloud.wsclient.IQingCloudWSClient;
-import com.fit2cloud.qingcloud.wsclient.QingCloudWSClient;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudImageId;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudInstance;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudInstanceStatus;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudLoginMode;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudPEK2InstanceType;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyInstanceAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyInstanceAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ResetInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ResetInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ResizeInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ResizeInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.RestartInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.RestartInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.RunInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.RunInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StartInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StartInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StopInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StopInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.TerminateInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.TerminateInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UploadUserDataAttachmentRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UploadUserDataAttachmentResponse;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import static org.junit.Assert.assertTrue;
 
 public class QingCloudInstancesAPITest {
 	
@@ -106,6 +78,35 @@ public class QingCloudInstancesAPITest {
 			String jsonInstance = gson.toJson(instance);
 			System.out.println(jsonInstance);
 		}
+		System.out.println("QingCloudWSClientTest");
+	}
+
+	//@Test
+	public void testRunInstancesWithInstanceClass() throws Exception {
+		RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
+		runInstancesRequest.setImage_id(QingCloudImageId.CENTOS64_X86a);
+		runInstancesRequest.setInstance_type(QingCloudPEK2InstanceType.C1M1);
+		runInstancesRequest.setInstance_class(QingCloudInstanceClass.PERFORMANCE_SUPER);
+		runInstancesRequest.setCount(1);
+		runInstancesRequest.setInstance_name("test@"+System.currentTimeMillis());
+		List<String> vxnets = new ArrayList<String>();
+		vxnets.add("vxnet-0");
+		//vxnets.add("vxnet-1");
+		runInstancesRequest.setVxnets(vxnets);
+		//runInstancesRequest.setSecurity_group(security_group);
+		runInstancesRequest.setLogin_mode("passwd");
+		runInstancesRequest.setLogin_passwd("Ff8802616");
+		runInstancesRequest.setZone(QingCloudZone.PEK2);
+
+		String jsonRequest = runInstancesRequest.toJson();
+		System.out.println(jsonRequest);
+
+		Gson gson = new GsonBuilder().create();
+		RunInstancesRequest request = gson.fromJson(jsonRequest, RunInstancesRequest.class);
+		System.out.println(request.toJson());
+		RunInstancesResponse runInstancesResponse = qingCloudWSClient.runInstances(runInstancesRequest);
+		assertTrue(runInstancesResponse!=null);
+		assertTrue(runInstancesResponse.getRet_code() == 0);
 		System.out.println("QingCloudWSClientTest");
 	}
 

@@ -1,13 +1,14 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
-import java.util.List;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.List;
 
 public class RunInstancesRequest extends Request {
 	private String image_id;
 	private String instance_type=null;
+	private Integer instance_class=null;
 	private Integer cpu=null;
 	private Integer memory=null;
 	private Integer count=1;
@@ -51,6 +52,13 @@ public class RunInstancesRequest extends Request {
 		this.instance_type = instance_type;
 	}
 
+	public Integer getInstance_class() {
+		return instance_class;
+	}
+
+	public void setInstance_class(Integer instance_class) {
+		this.instance_class = instance_class;
+	}
 
 	public Integer getCpu() {
 		return cpu;
