@@ -180,6 +180,10 @@ stopRDBs
 startMongos
 stopMongos
 
+#Cache APIs
+startCaches
+stopCaches
+
 #备份 APIs
 createSnapshots
 deleteSnapshots

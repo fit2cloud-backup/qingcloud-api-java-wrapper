@@ -1726,6 +1726,41 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return stopMongosResponse;
 	}
 
+	public StartCachesResponse startCaches(StartCachesRequest startCachesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StartCachesResponse startCachesResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.START_CACHES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					startCachesRequest);
+			startCachesResponse = StartCachesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return startCachesResponse;
+	}
+
+	public StopCachesResponse stopCaches(StopCachesRequest stopCachesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StopCachesResponse stopCachesResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.STOP_CACHES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					stopCachesRequest);
+			stopCachesResponse = StopCachesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return stopCachesResponse;
+	}
+
 	public CreateSnapshotsResponse createSnapshots(
 			CreateSnapshotsRequest createSnapshotsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {

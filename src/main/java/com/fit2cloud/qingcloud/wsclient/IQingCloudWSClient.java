@@ -26,7 +26,7 @@ public interface IQingCloudWSClient {
 	public StartInstancesResponse startInstances(
 			StartInstancesRequest startInstancesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public RestartInstancesResponse restartInstances(
 			RestartInstancesRequest restartInstancesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
@@ -34,15 +34,15 @@ public interface IQingCloudWSClient {
 	public ResizeInstancesResponse resizeInstances(
 			ResizeInstancesRequest resizeInstancesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public ResetInstancesResponse resetInstances(
 			ResetInstancesRequest resetInstancesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public ModifyInstanceAttributesResponse modifyInstanceAttributes(
 			ModifyInstanceAttributesRequest modifyInstanceAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public UploadUserDataAttachmentResponse uploadUserDataAttachment(
 			UploadUserDataAttachmentRequest uploadUserDataAttachmentRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
@@ -97,8 +97,8 @@ public interface IQingCloudWSClient {
 	public RevokeImageFromUsersResponse revokeImageFromUsers(
 			RevokeImageFromUsersRequest revokeImageFromUsersRequest)
 					throws QingCloudClientException, QingCloudServiceException, IOException;
-	
-	
+
+
 	// -----------------------------------Volumes------------------------------------------------------
 	public DescribeVolumesResponse describeVolumes(
 			DescribeVolumesRequest describeVolumesRequest)
@@ -246,7 +246,7 @@ public interface IQingCloudWSClient {
 	public ModifyRouterStaticAttributesResponse modifyRouterStaticAttributes(
 			ModifyRouterStaticAttributesRequest modifyRouterStaticAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-					
+
     //-----------------------------------EIPs------------------------------------------------------
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)
@@ -274,11 +274,11 @@ public interface IQingCloudWSClient {
 	public ChangeEipsBandwidthResponse changeEipsBandwidth(
 			ChangeEipsBandwidthRequest changeEipsBandwidthRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public DescribeEipGroupsResponse describeEipGroups(
 			DescribeEipGroupsRequest describeEipGroupsRequest)
 					throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	//-----------------------------------Load Balancers------------------------------------------------------
 	public DescribeLoadBalancersResponse describeLoadBalancers(
 			DescribeLoadBalancersRequest describeLoadBalancersRequest)
@@ -319,7 +319,7 @@ public interface IQingCloudWSClient {
 	public ResizeLoadBalancersResponse resizeLoadBalancers(
 			ResizeLoadBalancersRequest resizeLoadBalancersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-	
+
 	public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(
 			DescribeLoadBalancerListenersRequest describeLoadBalancerListenersRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
@@ -377,6 +377,14 @@ public interface IQingCloudWSClient {
 			StopMongosRequest stopMongosRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	//-----------------------------------Caches------------------------------------------------------
+	public StartCachesResponse startCaches(
+			StartCachesRequest startCachesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public StopCachesResponse stopCaches(
+			StopCachesRequest stopCachesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 
 //	//-----------------------------------Snapshots------------------------------------------------------
 //	public CreateSnapshotsResponse createSnapshots(
@@ -410,8 +418,8 @@ public interface IQingCloudWSClient {
 	//-----------------------------------Jobs------------------------------------------------------
 	public DescribeJobsResponse DescribeJobs(
 			DescribeJobsRequest describeJobsRequest)
-			throws QingCloudClientException, QingCloudServiceException, IOException;	
-	
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 	//-----------------------------------Zones------------------------------------------------------
 	public DescribeZonesResponse describeZones(
 			DescribeZonesRequest describeZonesRequest)
