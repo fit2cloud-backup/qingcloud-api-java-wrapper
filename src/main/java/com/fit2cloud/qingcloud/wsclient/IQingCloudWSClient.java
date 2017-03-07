@@ -1,8 +1,8 @@
 package com.fit2cloud.qingcloud.wsclient;
 
-import java.io.IOException;
-
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
+
+import java.io.IOException;
 
 public interface IQingCloudWSClient {
 
@@ -358,6 +358,25 @@ public interface IQingCloudWSClient {
 	public GetLoadBalancerMonitorResponse getLoadBalancerMonitor(
 			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	//-----------------------------------RDBs------------------------------------------------------
+	public StartRDBsResponse startRDBs(
+			StartRDBsRequest startRDBsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public StopRDBsResponse stopRDBs(
+			StopRDBsRequest stopRDBsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	//-----------------------------------Mongos------------------------------------------------------
+	public StartMongosResponse startMongos(
+			StartMongosRequest startMongosRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public StopMongosResponse stopMongos(
+			StopMongosRequest stopMongosRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 
 //	//-----------------------------------Snapshots------------------------------------------------------
 //	public CreateSnapshotsResponse createSnapshots(

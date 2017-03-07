@@ -1,13 +1,12 @@
 package com.fit2cloud.qingcloud.wsclient;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
+import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAction;
+import com.fit2cloud.qingcloud.wsclient.ui.model.*;
+import org.apache.commons.codec.binary.Base64;
+
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -18,14 +17,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
 import java.util.SimpleTimeZone;
-
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-
-import org.apache.commons.codec.binary.Base64;
-
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAction;
-import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 
 
 /**
@@ -1662,6 +1653,77 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			throw e;
 		}
 		return getLoadBalancerMonitorResponse;
+	}
+
+	public StartRDBsResponse startRDBs(StartRDBsRequest startRDBsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StartRDBsResponse startRDBsResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.START_RDBS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					startRDBsRequest);
+			startRDBsResponse = StartRDBsResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return startRDBsResponse;
+	}
+
+	public StopRDBsResponse stopRDBs(StopRDBsRequest stopRDBsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StopRDBsResponse stopRDBsResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.STOP_RDBS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					stopRDBsRequest);
+			stopRDBsResponse = StopRDBsResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return stopRDBsResponse;
+	}
+
+	public StartMongosResponse startMongos(StartMongosRequest startMongosRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StartMongosResponse startMongosResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.START_MONGOS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					startMongosRequest);
+			startMongosResponse = StartMongosResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return startMongosResponse;
+	}
+
+	public StopMongosResponse stopMongos(StopMongosRequest stopMongosRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		StopMongosResponse stopMongosResponse;
+		String httpMethod = "GET";
+		String action = QingCloudAction.STOP_MONGOS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					stopMongosRequest);
+			stopMongosResponse = StopMongosResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return stopMongosResponse;
 	}
 
 	public CreateSnapshotsResponse createSnapshots(
