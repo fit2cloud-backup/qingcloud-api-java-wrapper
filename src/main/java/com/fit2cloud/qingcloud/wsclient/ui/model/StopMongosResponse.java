@@ -18,7 +18,6 @@ public class StopMongosResponse {
 
     public static StopMongosResponse fromJson(String jsonStopMongosResponse) {
         Gson gson = new Gson();
-        System.out.println(jsonStopMongosResponse);
         StopMongosResponse stopMongosResponse = gson.fromJson(jsonStopMongosResponse, StopMongosResponse.class);
         return stopMongosResponse;
     }

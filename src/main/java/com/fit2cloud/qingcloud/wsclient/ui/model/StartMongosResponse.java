@@ -18,7 +18,6 @@ public class StartMongosResponse {
 
     public static StartMongosResponse fromJson(String jsonStartMongosResponse) {
         Gson gson = new Gson();
-        System.out.println(jsonStartMongosResponse);
         StartMongosResponse startMongosResponse = gson.fromJson(jsonStartMongosResponse, StartMongosResponse.class);
         return startMongosResponse;
     }
