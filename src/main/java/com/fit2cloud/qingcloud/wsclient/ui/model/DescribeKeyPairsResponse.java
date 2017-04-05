@@ -22,7 +22,7 @@ public class DescribeKeyPairsResponse {
 	
 	private String action;
 	private List<QingCloudKeyPair> keypair_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	

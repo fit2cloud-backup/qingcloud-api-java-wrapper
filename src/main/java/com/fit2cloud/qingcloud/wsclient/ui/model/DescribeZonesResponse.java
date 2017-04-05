@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 public class DescribeZonesResponse {
 	
 	private String action;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private List<QingCloudZoneItem> zone_set;
 	private Integer ret_code;
 	private String message;

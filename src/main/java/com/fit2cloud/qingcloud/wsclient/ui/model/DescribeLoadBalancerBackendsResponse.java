@@ -7,7 +7,7 @@ import com.google.gson.Gson;
 
 public class DescribeLoadBalancerBackendsResponse {
 	private String action;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	private List<QingCloudLoadBalancerBackendDetail> loadbalancer_backend_set;

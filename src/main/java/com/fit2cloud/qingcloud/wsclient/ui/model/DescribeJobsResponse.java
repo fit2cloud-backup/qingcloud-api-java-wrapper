@@ -9,7 +9,7 @@ public class DescribeJobsResponse {
 	private String action;
 	private List<QingCloudJob> job_set;
 	private Integer ret_code;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private String message;
 	
 	public String getAction() {

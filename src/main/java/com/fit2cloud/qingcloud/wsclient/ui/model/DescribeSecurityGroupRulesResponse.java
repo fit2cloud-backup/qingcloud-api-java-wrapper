@@ -17,7 +17,7 @@ public class DescribeSecurityGroupRulesResponse {
 	
 	private String action;
 	private List<QingCloudSecurityGroupRule> security_group_rule_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	

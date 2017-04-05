@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 public class DescribeRouterStaticsResponse {
 	private String action;
 	private List<QingCloudRouterStatics> router_static_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	public static DescribeRouterStaticsResponse fromJson(String jsonDescribeRouterStaticsResponse){

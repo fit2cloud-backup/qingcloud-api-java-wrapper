@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 public class DescribeVxnetsResponse {
 	private String action;
 	private List<QingCloudVxnetDetail> vxnet_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	public static DescribeVxnetsResponse fromJson(String jsonDescribeVxnetsResponse){

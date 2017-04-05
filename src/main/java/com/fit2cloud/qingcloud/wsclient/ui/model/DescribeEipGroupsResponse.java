@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 public class DescribeEipGroupsResponse {
 	private String action;
 	private List<QingCloudEIPGroup> eip_group_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	

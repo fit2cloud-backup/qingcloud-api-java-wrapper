@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 public class DescribeLoadBalancerListenersResponse {
 	private String action;
 	private List<QingCloudLoadBalancerListenerDetail> loadbalancer_listener_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 	

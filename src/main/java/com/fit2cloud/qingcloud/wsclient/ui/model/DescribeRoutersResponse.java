@@ -9,7 +9,7 @@ public class DescribeRoutersResponse {
 
 	private String action;
 	private List<QingcloudRouter> router_set;
-	private Integer total_count;
+	private Integer total_count = 0;
 	private Integer ret_code;
 	private String message;
 
