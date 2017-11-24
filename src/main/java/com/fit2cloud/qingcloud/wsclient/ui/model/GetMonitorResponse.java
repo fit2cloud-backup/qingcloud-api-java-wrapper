@@ -1,13 +1,78 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
+import org.omg.PortableInterceptor.INACTIVE;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class GetMonitorResponse {
+
+	private String action;
+	private String resource_id;
+	private List<Map<String, Object>> meter_set;
+	private Integer ret_code;
+
 	
 	public static GetMonitorResponse fromJson(String jsonGetMonitorResponse){
 		Gson gson = new Gson();
-		GetMonitorResponse getMonitorResponse = gson.fromJson(jsonGetMonitorResponse, GetMonitorResponse.class);
+		//GetMonitorResponse getMonitorResponse = gson.fromJson(jsonGetMonitorResponse, GetMonitorResponse.class);
+		GetMonitorResponse getMonitorResponse = new GetMonitorResponse();
+		JsonObject jsonObject = new JsonParser().parse(jsonGetMonitorResponse).getAsJsonObject();
+		String action = jsonObject.get("action").getAsString();
+		getMonitorResponse.setAction(action);
+		String resource_id = jsonObject.get("resource_id").getAsString();
+		getMonitorResponse.setResource_id(resource_id);
+		Integer ret_code = jsonObject.get("ret_code").getAsInt();
+		getMonitorResponse.setRet_code(ret_code);
+		JsonArray jsonArray = jsonObject.getAsJsonArray("meter_set");
+		List<Map<String, Object>> meter_set = new ArrayList<Map<String, Object>>();
+
+		for(JsonElement element : jsonArray){
+			Map<String,Object> meterMap = new HashMap<String,Object>();
+			JsonObject jsonObj1  = element.getAsJsonObject();
+			String meter = jsonObj1.get("meter_id").getAsString();
+			JsonArray jsonArr = jsonObj1.getAsJsonArray("data");
+			BigDecimal bigDecimal = jsonArr.get(0).getAsJsonArray().get(1).getAsBigDecimal().divide(new BigDecimal(10));
+			meterMap.put(meter,bigDecimal);
+			meter_set.add(meterMap);
+		}
+		getMonitorResponse.setMeter_set(meter_set);
 		return getMonitorResponse;
 	}
 
+	public String getAction() {
+		return action;
+	}
+
+	public void setAction(String action) {
+		this.action = action;
+	}
+
+	public String getResource_id() {
+		return resource_id;
+	}
+
+	public void setResource_id(String resource_id) {
+		this.resource_id = resource_id;
+	}
+
+	public List<Map<String, Object>> getMeter_set() {
+		return meter_set;
+	}
+
+	public void setMeter_set(List<Map<String, Object>> meter_set) {
+		this.meter_set = meter_set;
+	}
+
+	public Integer getRet_code() {
+		return ret_code;
+	}
+
+	public void setRet_code(Integer ret_code) {
+		this.ret_code = ret_code;
+	}
 }
