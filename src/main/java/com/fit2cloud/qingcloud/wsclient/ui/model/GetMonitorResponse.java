@@ -13,7 +13,7 @@ public class GetMonitorResponse {
 
 	private String action;
 	private String resource_id;
-	private List<Map<String, Object>> meter_set;
+	private Map<String, Object> meter_set;
 	private Integer ret_code;
 
 	
@@ -29,16 +29,13 @@ public class GetMonitorResponse {
 		Integer ret_code = jsonObject.get("ret_code").getAsInt();
 		getMonitorResponse.setRet_code(ret_code);
 		JsonArray jsonArray = jsonObject.getAsJsonArray("meter_set");
-		List<Map<String, Object>> meter_set = new ArrayList<Map<String, Object>>();
-
+		Map<String,Object> meter_set = new HashMap<String,Object>();
 		for(JsonElement element : jsonArray){
-			Map<String,Object> meterMap = new HashMap<String,Object>();
 			JsonObject jsonObj1  = element.getAsJsonObject();
 			String meter = jsonObj1.get("meter_id").getAsString();
 			JsonArray jsonArr = jsonObj1.getAsJsonArray("data");
 			BigDecimal bigDecimal = jsonArr.get(0).getAsJsonArray().get(1).getAsBigDecimal().divide(new BigDecimal(10));
-			meterMap.put(meter,bigDecimal);
-			meter_set.add(meterMap);
+			meter_set.put(meter,bigDecimal);
 		}
 		getMonitorResponse.setMeter_set(meter_set);
 		return getMonitorResponse;
@@ -60,11 +57,11 @@ public class GetMonitorResponse {
 		this.resource_id = resource_id;
 	}
 
-	public List<Map<String, Object>> getMeter_set() {
+	public Map<String, Object> getMeter_set() {
 		return meter_set;
 	}
 
-	public void setMeter_set(List<Map<String, Object>> meter_set) {
+	public void setMeter_set(Map<String, Object> meter_set) {
 		this.meter_set = meter_set;
 	}
 
