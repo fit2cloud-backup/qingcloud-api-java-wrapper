@@ -1,12 +1,8 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 import com.google.gson.*;
-import org.omg.PortableInterceptor.INACTIVE;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class GetMonitorResponse {
@@ -18,8 +14,6 @@ public class GetMonitorResponse {
 
 	
 	public static GetMonitorResponse fromJson(String jsonGetMonitorResponse){
-		Gson gson = new Gson();
-		//GetMonitorResponse getMonitorResponse = gson.fromJson(jsonGetMonitorResponse, GetMonitorResponse.class);
 		GetMonitorResponse getMonitorResponse = new GetMonitorResponse();
 		JsonObject jsonObject = new JsonParser().parse(jsonGetMonitorResponse).getAsJsonObject();
 		String action = jsonObject.get("action").getAsString();
@@ -34,8 +28,7 @@ public class GetMonitorResponse {
 			JsonObject jsonObj1  = element.getAsJsonObject();
 			String meter = jsonObj1.get("meter_id").getAsString();
 			JsonArray jsonArr = jsonObj1.getAsJsonArray("data");
-			BigDecimal bigDecimal = jsonArr.get(0).getAsJsonArray().get(1).getAsBigDecimal().divide(new BigDecimal(10));
-			meter_set.put(meter,bigDecimal);
+			meter_set.put(meter,jsonArr.get(0).getAsJsonArray().get(1).getAsInt());
 		}
 		getMonitorResponse.setMeter_set(meter_set);
 		return getMonitorResponse;

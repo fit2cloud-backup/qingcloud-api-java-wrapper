@@ -60,8 +60,6 @@ public class QingCloudAppClient implements IQingCloudAppClient {
         DescribeUsersResponse describeUsersResponse = null;
         String httpMethod = "GET";
         String action = QingCloudAction.DESCRIBE_USERS;
-
-
         try {
             String jsonResponse = this.sendRequest(httpMethod, action, describeUsersRequest);
             describeUsersResponse = DescribeUsersResponse.fromJson(jsonResponse);
