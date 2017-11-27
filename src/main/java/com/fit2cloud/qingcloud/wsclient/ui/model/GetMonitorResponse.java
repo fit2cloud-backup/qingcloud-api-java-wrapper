@@ -28,7 +28,17 @@ public class GetMonitorResponse {
 			JsonObject jsonObj1  = element.getAsJsonObject();
 			String meter = jsonObj1.get("meter_id").getAsString();
 			JsonArray jsonArr = jsonObj1.getAsJsonArray("data");
-			meter_set.put(meter,jsonArr.get(0).getAsJsonArray().get(1).getAsInt());
+			if(meter.startsWith("disk") && !meter.startsWith("disk-us")){
+				meter_set.put(meter+"-read",jsonArr.get(0).getAsJsonArray().get(1).getAsJsonArray().get(0));
+				meter_set.put(meter+"-write",jsonArr.get(0).getAsJsonArray().get(1).getAsJsonArray().get(1));
+			}
+			if(meter.startsWith("if-")){
+				meter_set.put(meter+"-in",jsonArr.get(0).getAsJsonArray().get(1).getAsJsonArray().get(0));
+				meter_set.put(meter+"-out",jsonArr.get(0).getAsJsonArray().get(1).getAsJsonArray().get(1));
+			}
+			if("cpu".equalsIgnoreCase(meter) || "memory".equalsIgnoreCase(meter)){
+				meter_set.put(meter,jsonArr.get(0).getAsJsonArray().get(1).getAsInt());
+			}
 		}
 		getMonitorResponse.setMeter_set(meter_set);
 		return getMonitorResponse;

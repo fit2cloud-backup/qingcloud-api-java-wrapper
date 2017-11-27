@@ -49,10 +49,22 @@ public class QingCloudMonitorAPITest {
 	@Test
 	public void testGetMonitor(){
 		com.fit2cloud.qingcloud.wsclient.ui.model.GetMonitorRequest request = new com.fit2cloud.qingcloud.wsclient.ui.model.GetMonitorRequest();
-		request.setResource("i-gdw5nqea");
+		//request.setResource("vxnet-3ay9sob");
+		request.setResource("i-voyly6s5");
 		List<String> meters = new ArrayList<String>();
 		meters.add("cpu");
 		meters.add("memory");
+		meters.add("disk-os");
+		meters.add("disk-vol-0rzimnwa");
+		meters.add("disk-iops-os");
+		meters.add("disk-us-os");
+		meters.add("if-52:54:cc:ca:b9:15");
+		meters.add("if-pps-52:54:cc:ca:b9:15");
+		meters.add("memory");
+
+		//meters.add("52:54:CC:CA:B9:15");
+
+
 		request.setMeters(meters);
 		request.setStep("15m");
 		// 1、取得本地时间：
@@ -69,7 +81,7 @@ public class QingCloudMonitorAPITest {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 		request.setStart_time(format.format(before));
 		request.setEnd_time(format.format(now));
-		request.setZone(QingCloudZone.PEK1);
+		request.setZone(QingCloudZone.GD1);
 		try {
 			GetMonitorResponse getMonitorResponse = qingCloudWSClient.getMonitor(request);
 			System.out.println(getMonitorResponse);
