@@ -1,6 +1,7 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudHyperNodeSet;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -12,6 +13,12 @@ public class DescribeHyperNodesResponse {
     private Integer total_count;
     private Integer ret_code;
     List<QingCloudHyperNodeSet> hyper_node_set;
+
+    public static DescribeHyperNodesResponse fromJson(String jsonDescribeHyperNodesResponse){
+        Gson gson = new Gson();
+        DescribeHyperNodesResponse describeHyperNodesResponse = gson.fromJson(jsonDescribeHyperNodesResponse,DescribeHyperNodesResponse.class);
+        return describeHyperNodesResponse;
+    }
 
     public String getAction() {
         return action;
