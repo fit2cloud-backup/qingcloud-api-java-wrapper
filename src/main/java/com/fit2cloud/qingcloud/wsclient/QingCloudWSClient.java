@@ -2172,10 +2172,22 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 
-	public DescribeHyperNodesResponse describeHyperNodes(
+	public DescribeHyperNodesResponse DescribeHyperNodes(
 			DescribeHyperNodesRequest describeHyperNodesRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException{
-          return null;
+		DescribeHyperNodesResponse describeHyperNodesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_HUPERNODES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeHyperNodesRequest);
+			describeHyperNodesResponse = describeHyperNodesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeHyperNodesResponse;
 	}
 
 	public DescribeBotsResponse DescribeBots(
@@ -2187,8 +2199,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeBotsRequest);
-			describeBotsResponse = describeBotsResponse
-					.fromJson(jsonResponse);
+			describeBotsResponse = describeBotsResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
 		} catch (QingCloudServiceException e) {

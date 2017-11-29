@@ -398,7 +398,7 @@ public interface IQingCloudWSClient {
 			DescribeZonesRequest describeZonesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
-    public DescribeHyperNodesResponse describeHyperNodes(
+    public DescribeHyperNodesResponse DescribeHyperNodes(
     		DescribeHyperNodesRequest describeHyperNodesRequest)
 		     throws QingCloudClientException,QingCloudServiceException,IOException;
 
