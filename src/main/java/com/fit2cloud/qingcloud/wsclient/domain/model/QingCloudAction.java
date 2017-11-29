@@ -131,4 +131,7 @@ public class QingCloudAction {
     public static final String LEASE_APP = "LeaseApp";
     public static final String UNLEASE_APP = "UnLeaseApp";
 
+    //Physical resource
+    public static final String DESCRIBE_HUPERNODES = "DescribeHyperNodes";
+    public static final String DESCRIBE_BOTS="DescribeBots";
 }

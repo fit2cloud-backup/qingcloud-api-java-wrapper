@@ -2170,4 +2170,31 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return revokeImageFromUsersResponse;
 	}
+
+
+	public DescribeHyperNodesResponse describeHyperNodes(
+			DescribeHyperNodesRequest describeHyperNodesRequest)
+			throws QingCloudClientException,QingCloudServiceException,IOException{
+          return null;
+	}
+
+	public DescribeBotsResponse DescribeBots(
+			DescribeBotsRequest describeBotsRequest)
+			throws QingCloudClientException,QingCloudServiceException,IOException{
+		DescribeBotsResponse describeBotsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_BOTS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeBotsRequest);
+			describeBotsResponse = describeBotsResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeBotsResponse;
+	}
+
 }
