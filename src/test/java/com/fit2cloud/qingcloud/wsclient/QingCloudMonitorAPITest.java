@@ -44,7 +44,7 @@ public class QingCloudMonitorAPITest {
 	public void tearDown() throws Exception {
 	}
 
-	/*@Test
+	@Test
 	public void testGetMonitor(){
 		com.fit2cloud.qingcloud.wsclient.ui.model.GetMonitorRequest request = new com.fit2cloud.qingcloud.wsclient.ui.model.GetMonitorRequest();
 		//request.setResource("vxnet-3ay9sob");
@@ -52,12 +52,12 @@ public class QingCloudMonitorAPITest {
 		List<String> meters = new ArrayList<String>();
 		meters.add("cpu");
 		meters.add("memory");
-*//*		meters.add("disk-os");
+		meters.add("disk-os");
 		meters.add("disk-vol-0rzimnwa");
 		meters.add("disk-iops-os");
 		meters.add("disk-us-os");
 		meters.add("if-52:54:cc:ca:b9:15");
-		meters.add("if-pps-52:54:cc:ca:b9:15");*//*
+		meters.add("if-pps-52:54:cc:ca:b9:15");
 
 		//meters.add("52:54:CC:CA:B9:15");
 		request.setMeters(meters);
@@ -149,7 +149,7 @@ public class QingCloudMonitorAPITest {
 			System.out.println(jsonArr.get(0).getAsJsonArray().get(1).getAsBigDecimal().divide(new BigDecimal(10)));
 		}
 		System.out.println(jsonArray);
-	}*/
+	}
 
 
 }
