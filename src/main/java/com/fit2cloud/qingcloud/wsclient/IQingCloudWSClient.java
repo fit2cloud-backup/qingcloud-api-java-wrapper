@@ -398,11 +398,11 @@ public interface IQingCloudWSClient {
 			DescribeZonesRequest describeZonesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
-    public DescribeHyperNodesResponse DescribeHyperNodes(
+    public DescribeHyperNodesResponse describeHyperNodes(
     		DescribeHyperNodesRequest describeHyperNodesRequest)
 		     throws QingCloudClientException,QingCloudServiceException,IOException;
 
-    public DescribeBotsResponse DescribeBots(
+    public DescribeBotsResponse describeBots(
 			DescribeBotsRequest describeBotsRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException;
 

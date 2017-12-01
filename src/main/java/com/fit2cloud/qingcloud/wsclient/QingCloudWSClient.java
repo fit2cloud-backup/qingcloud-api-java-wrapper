@@ -2172,7 +2172,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	}
 
 
-	public DescribeHyperNodesResponse DescribeHyperNodes(
+	public DescribeHyperNodesResponse describeHyperNodes(
 			DescribeHyperNodesRequest describeHyperNodesRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException{
 		DescribeHyperNodesResponse describeHyperNodesResponse = null;
@@ -2190,7 +2190,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return describeHyperNodesResponse;
 	}
 
-	public DescribeBotsResponse DescribeBots(
+	public DescribeBotsResponse describeBots(
 			DescribeBotsRequest describeBotsRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException{
 		DescribeBotsResponse describeBotsResponse = null;
