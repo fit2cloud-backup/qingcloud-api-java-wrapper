@@ -107,7 +107,7 @@ public class QingCloudInstancesAPITest {
 		System.out.println("QingCloudWSClientTest");
 	}
 
-	@Test
+	//@Test
 	public void testRunInstancesWithCustomOSSize() throws Exception {
 		RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
 		runInstancesRequest.setImage_id("centos68x64a");
