@@ -25,8 +25,10 @@ public class RunInstancesRequest extends Request {
 	private String userdata_type = null;
 	private String userdata_value = null;
 	private String userdata_path = null;
+	private String hypervisor=null;
+	private Integer os_disk_size = null;
 	private String userdata_file = null;
-	
+
 	private String zone;
 
 
@@ -221,6 +223,23 @@ public class RunInstancesRequest extends Request {
 
 	public void setUserdata_file(String userdata_file) {
 		this.userdata_file = userdata_file;
+	}
+
+	public Integer getOs_disk_size() {
+		return os_disk_size;
+	}
+
+	public void setOs_disk_size(Integer os_disk_size) {
+		this.os_disk_size = os_disk_size;
+	}
+
+
+	public String getHypervisor() {
+		return hypervisor;
+	}
+
+	public void setHypervisor(String hypervisor) {
+		this.hypervisor = hypervisor;
 	}
 
 	public String toJson(){
