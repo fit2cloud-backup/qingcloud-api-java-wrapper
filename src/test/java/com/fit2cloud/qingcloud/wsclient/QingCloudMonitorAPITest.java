@@ -135,6 +135,57 @@ public class QingCloudMonitorAPITest {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void testDiskList(){
+		DescribeVolumesRequest describeVolumesRequest = new DescribeVolumesRequest();
+		describeVolumesRequest.setZone("pek3a");
+		try {
+			DescribeVolumesResponse describeVolumesResponse = qingCloudWSClient.describeVolumes(describeVolumesRequest);
+			System.out.println(describeVolumesResponse);
+		} catch (QingCloudClientException e) {
+			e.printStackTrace();
+		} catch (QingCloudServiceException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+	public void testDiskByInstance(){
+		DescribeInstancesRequest describeInstancesRequest = new DescribeInstancesRequest();
+		List<String> instances = new ArrayList<String>();
+		instances.add("i-b95eouf8");
+		describeInstancesRequest.setZone("pek3a");
+		describeInstancesRequest.setVerbose(1);
+		describeInstancesRequest.setInstances(instances);
+		try {
+			DescribeInstancesResponse describeInstancesResponse = qingCloudWSClient.describeInstances(describeInstancesRequest);
+			List<QingCloudInstance> instance_set  = describeInstancesResponse.getInstance_set();
+			if(instance_set!=null && instance_set.size()>0){
+				QingCloudInstance qingCloudInstance = instance_set.get(0);
+				List<String>  volume_ids = qingCloudInstance.getVolume_ids();
+				for(String vid : volume_ids){
+					DescribeVolumesRequest request = new DescribeVolumesRequest();
+					List<String> volumes = new ArrayList<String>();
+					volumes.add(vid);
+					request.setVolumes(volumes);
+					request.setZone("pek3a");
+					DescribeVolumesResponse describeVolumesResponse = qingCloudWSClient.describeVolumes(request);
+					System.out.println(describeVolumesResponse);
+
+				}
+			}
+		} catch (QingCloudClientException e) {
+			e.printStackTrace();
+		} catch (QingCloudServiceException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	@Test
 	public void testGjson(){
 		String jsonStr = "{\"action\":\"GetMonitorResponse\",\"resource_id\":\"i-gdw5nqea\",\"ret_code\":0,\"meter_set\":[{\"data\":[[1511505900,5]],\"meter_id\":\"cpu\"},{\"data\":[[1511505900,64]],\"meter_id\":\"memory\"}]}";

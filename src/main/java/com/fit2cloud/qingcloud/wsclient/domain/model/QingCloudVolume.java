@@ -4,12 +4,16 @@ package com.fit2cloud.qingcloud.wsclient.domain.model;
 public class QingCloudVolume {
 	private String volume_id;
     private String volume_name;
+    private String volume_type;
+    private String repl;
     private String description;
     private Integer size;
     private String status;
     private String transition_status;
-    
+    private String sub_code;
+    private String lastest_snapshot_time;
     private String create_time;
+    private String owner;
     private String status_time;
     private QingCloudInstance instance;
     
@@ -67,5 +71,44 @@ public class QingCloudVolume {
 	public void setInstance(QingCloudInstance instance) {
 		this.instance = instance;
 	}
-    
+
+	public String getVolume_type() {
+		return volume_type;
+	}
+
+	public void setVolume_type(String volume_type) {
+		this.volume_type = volume_type;
+	}
+
+	public String getRepl() {
+		return repl;
+	}
+
+	public void setRepl(String repl) {
+		this.repl = repl;
+	}
+
+	public String getSub_code() {
+		return sub_code;
+	}
+
+	public void setSub_code(String sub_code) {
+		this.sub_code = sub_code;
+	}
+
+	public String getLastest_snapshot_time() {
+		return lastest_snapshot_time;
+	}
+
+	public void setLastest_snapshot_time(String lastest_snapshot_time) {
+		this.lastest_snapshot_time = lastest_snapshot_time;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
 }

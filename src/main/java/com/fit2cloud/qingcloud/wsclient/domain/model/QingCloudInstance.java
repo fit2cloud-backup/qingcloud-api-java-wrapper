@@ -31,6 +31,7 @@ public class QingCloudInstance {
     private Integer instance_class;
     private String cpu_topology;
     private String lastest_snapshot_time;
+    private String device;
     
 	public String getInstance_id() {
 		return instance_id;
@@ -175,5 +176,13 @@ public class QingCloudInstance {
 	}
 	public void setLastest_snapshot_time(String lastest_snapshot_time) {
 		this.lastest_snapshot_time = lastest_snapshot_time;
+	}
+
+	public String getDevice() {
+		return device;
+	}
+
+	public void setDevice(String device) {
+		this.device = device;
 	}
 }
