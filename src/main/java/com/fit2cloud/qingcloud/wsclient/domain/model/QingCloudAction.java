@@ -107,6 +107,18 @@ public class QingCloudAction {
     public static String MODIFY_LOADBALANCER_BACKEND_ATTRIBUTES = "ModifyLoadBalancerBackendAttributes";
     public static String DESCRIBE_LOADBALANCER_BACKENDS = "DescribeLoadBalancerBackends";
 
+    // rdb
+    public static String START_RDBS = "StartRDBs";
+    public static String STOP_RDBS = "StopRDBs";
+
+    // mongo
+    public static String START_MONGOS = "StartMongos";
+    public static String STOP_MONGOS = "StopMongos";
+
+    // cache
+    public static String START_CACHES = "StartCaches";
+    public static String STOP_CACHES = "StopCaches";
+
     // monitor
     public static String GET_MONITOR = "GetMonitor";
     public static String GET_LOADBALANCER_MONITOR = "GetLoadBalancerMonitor";

@@ -172,6 +172,18 @@ describeLoadBalancerBackends
 getMonitor
 getLoadBalancerMonitor
 
+#RDB APIs
+startRDBs
+stopRDBs
+
+#Mongo APIs
+startMongos
+stopMongos
+
+#Cache APIs
+startCaches
+stopCaches
+
 #备份 APIs
 createSnapshots
 deleteSnapshots

@@ -4,10 +4,7 @@ import com.fit2cloud.qingcloud.wsclient.domain.model.*;
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.*;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -89,6 +86,37 @@ public class QingCloudInstancesAPITest {
 		runInstancesRequest.setInstance_class(QingCloudInstanceClass.PERFORMANCE_SUPER);
 		runInstancesRequest.setCount(1);
 		runInstancesRequest.setInstance_name("test@"+System.currentTimeMillis());
+		List<String> vxnets = new ArrayList<String>();
+		vxnets.add("vxnet-0");
+		//vxnets.add("vxnet-1");
+		runInstancesRequest.setVxnets(vxnets);
+		//runInstancesRequest.setSecurity_group(security_group);
+		runInstancesRequest.setLogin_mode("passwd");
+		runInstancesRequest.setLogin_passwd("Ff8802616");
+		runInstancesRequest.setZone(QingCloudZone.PEK2);
+
+		String jsonRequest = runInstancesRequest.toJson();
+		System.out.println(jsonRequest);
+
+		Gson gson = new GsonBuilder().create();
+		RunInstancesRequest request = gson.fromJson(jsonRequest, RunInstancesRequest.class);
+		System.out.println(request.toJson());
+		RunInstancesResponse runInstancesResponse = qingCloudWSClient.runInstances(runInstancesRequest);
+		assertTrue(runInstancesResponse!=null);
+		assertTrue(runInstancesResponse.getRet_code() == 0);
+		System.out.println("QingCloudWSClientTest");
+	}
+
+	//@Test
+	public void testRunInstancesWithCustomOSSize() throws Exception {
+		RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
+		runInstancesRequest.setImage_id("centos68x64a");
+		runInstancesRequest.setInstance_type(QingCloudPEK2InstanceType.C1M1);
+		runInstancesRequest.setInstance_class(QingCloudInstanceClass.PERFORMANCE);
+		runInstancesRequest.setCount(1);
+		runInstancesRequest.setInstance_name("test@"+System.currentTimeMillis());
+		runInstancesRequest.setHypervisor("kvm");
+		runInstancesRequest.setOs_disk_size(40);
 		List<String> vxnets = new ArrayList<String>();
 		vxnets.add("vxnet-0");
 		//vxnets.add("vxnet-1");
