@@ -2208,4 +2208,21 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return describeBotsResponse;
 	}
 
+	public DescribeReplPolicysResponse describeReplPolicys(
+			DescribeReplPolicysRequest describeReplPolicysRequest)
+			throws QingCloudClientException,QingCloudServiceException,IOException{
+		DescribeReplPolicysResponse describeReplPolicysResponse = null;
+		String httpMethod = "GET";
+		String action = "DescribeReplPolicys";
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeReplPolicysRequest);
+			describeReplPolicysResponse = describeReplPolicysResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeReplPolicysResponse;
+	}
 }

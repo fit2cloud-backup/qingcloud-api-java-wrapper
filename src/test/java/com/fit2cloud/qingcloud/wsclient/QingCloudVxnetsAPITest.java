@@ -4,64 +4,17 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.fit2cloud.qingcloud.wsclient.domain.model.*;
+import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudRouterStatics;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudRouterVxnet;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudVxnet;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudVxnetDetail;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudVxnetInstance;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingcloudRouter;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddRouterStaticsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddRouterStaticsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateRoutersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateVxnetsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateVxnetsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteRouterStaticsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteRouterStaticsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteRoutersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteVxnetsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteVxnetsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRouterStaticsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRouterStaticsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRouterVxnetsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRouterVxnetsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeRoutersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeVxnetInstancesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeVxnetInstancesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeVxnetsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeVxnetsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.JoinRouterRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.JoinRouterResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.JoinVxnetRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.JoinVxnetResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.LeaveRouterRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.LeaveRouterResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.LeaveVxnetRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.LeaveVxnetResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyRouterAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyRouterAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyRouterStaticAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyRouterStaticAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyVxnetAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyVxnetAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.PowerOffRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.PowerOffRoutersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.PowerOnRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.PowerOnRoutersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UpdateRoutersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UpdateRoutersResponse;
 
 public class QingCloudVxnetsAPITest {
 
@@ -225,4 +178,16 @@ public class QingCloudVxnetsAPITest {
 			System.out.println("instance :: "+instance);
 		}
 	}
+
+	@Test
+	public void testDescribeReplPolicys() throws IOException, QingCloudClientException, QingCloudServiceException {
+		DescribeReplPolicysRequest request = new DescribeReplPolicysRequest();
+		request.setVerbose(0);
+		request.setLimit(20);
+		request.setOffset(0);
+		request.setZone("qg2");
+		DescribeReplPolicysResponse jsonResponse = qingCloudWSClient.describeReplPolicys(request);
+		System.out.println(jsonResponse);
+	}
+
 }

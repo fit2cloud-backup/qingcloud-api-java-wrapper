@@ -32,6 +32,7 @@ public class QingCloudInstance {
     private String cpu_topology;
     private String lastest_snapshot_time;
     private String device;
+    private String repl;
     
 	public String getInstance_id() {
 		return instance_id;
@@ -184,5 +185,13 @@ public class QingCloudInstance {
 
 	public void setDevice(String device) {
 		this.device = device;
+	}
+
+	public String getRepl() {
+		return repl;
+	}
+
+	public void setRepl(String repl) {
+		this.repl = repl;
 	}
 }

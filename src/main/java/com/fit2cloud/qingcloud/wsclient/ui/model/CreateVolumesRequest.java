@@ -6,7 +6,8 @@ public class CreateVolumesRequest extends Request {
 	private Integer size;
 	private Integer count;	
 	private String zone;
-	
+	private String repl = null;
+
 	public String getVolume_name() {
 		return volume_name;
 	}
@@ -37,7 +38,12 @@ public class CreateVolumesRequest extends Request {
 	public void setZone(String zone) {
 		this.zone = zone;
 	}
-	
-	
 
+	public String getRepl() {
+		return repl;
+	}
+
+	public void setRepl(String repl) {
+		this.repl = repl;
+	}
 }

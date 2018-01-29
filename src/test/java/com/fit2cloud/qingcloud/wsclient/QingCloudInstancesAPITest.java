@@ -4,10 +4,7 @@ import com.fit2cloud.qingcloud.wsclient.domain.model.*;
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.*;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -88,7 +85,7 @@ public class QingCloudInstancesAPITest {
 		runInstancesRequest.setInstance_type(QingCloudPEK2InstanceType.C1M1);
 		runInstancesRequest.setInstance_class(QingCloudInstanceClass.PERFORMANCE_SUPER);
 		runInstancesRequest.setCount(1);
-		runInstancesRequest.setInstance_name("test@"+System.currentTimeMillis());
+		runInstancesRequest.setInstance_name("fit2cloud@"+System.currentTimeMillis());
 		List<String> vxnets = new ArrayList<String>();
 		vxnets.add("vxnet-0");
 		//vxnets.add("vxnet-1");
@@ -110,7 +107,7 @@ public class QingCloudInstancesAPITest {
 		System.out.println("QingCloudWSClientTest");
 	}
 
-	//@Test
+	@Test
 	public void testRunInstances() throws Exception {
 		RunInstancesRequest runInstancesRequest = new RunInstancesRequest();
 		runInstancesRequest.setImage_id(QingCloudImageId.CENTOS64_X86a);
@@ -123,8 +120,9 @@ public class QingCloudInstancesAPITest {
 		runInstancesRequest.setVxnets(vxnets);
 		//runInstancesRequest.setSecurity_group(security_group);
 		runInstancesRequest.setLogin_mode("passwd");
-		runInstancesRequest.setLogin_passwd("Ff8802616");
-		runInstancesRequest.setZone(QingCloudZone.PEK2);
+		runInstancesRequest.setLogin_passwd("passwd@123");
+		runInstancesRequest.setZone("qg2");
+		runInstancesRequest.setRepl("rpp-00000001");
 		
 		String jsonRequest = runInstancesRequest.toJson();
 		System.out.println(jsonRequest);

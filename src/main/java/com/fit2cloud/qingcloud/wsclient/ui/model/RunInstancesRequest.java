@@ -26,6 +26,7 @@ public class RunInstancesRequest extends Request {
 	private String userdata_value = null;
 	private String userdata_path = null;
 	private String userdata_file = null;
+	private String repl = null;
 	
 	private String zone;
 
@@ -221,6 +222,14 @@ public class RunInstancesRequest extends Request {
 
 	public void setUserdata_file(String userdata_file) {
 		this.userdata_file = userdata_file;
+	}
+
+	public String getRepl() {
+		return repl;
+	}
+
+	public void setRepl(String repl) {
+		this.repl = repl;
 	}
 
 	public String toJson(){

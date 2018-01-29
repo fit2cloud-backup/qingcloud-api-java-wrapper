@@ -406,4 +406,7 @@ public interface IQingCloudWSClient {
 			DescribeBotsRequest describeBotsRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException;
 
+	public DescribeReplPolicysResponse describeReplPolicys(
+			DescribeReplPolicysRequest describeReplPolicysRequest)
+			throws QingCloudClientException,QingCloudServiceException,IOException;
 }
