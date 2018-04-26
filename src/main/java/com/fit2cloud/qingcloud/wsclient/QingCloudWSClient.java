@@ -2195,12 +2195,10 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			throws QingCloudClientException,QingCloudServiceException,IOException{
 		DescribeBotsResponse describeBotsResponse = null;
 		String httpMethod = "GET";
-		System.out.println("zhengkunTest---------------------");
 		String action = QingCloudAction.DESCRIBE_BOTS;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeBotsRequest);
-			System.out.println("zhengkun: "+jsonResponse);
 			describeBotsResponse = describeBotsResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
