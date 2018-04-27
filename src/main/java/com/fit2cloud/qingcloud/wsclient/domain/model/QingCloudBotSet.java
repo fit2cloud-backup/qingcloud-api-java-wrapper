@@ -7,9 +7,9 @@ public class QingCloudBotSet {
     private String bot_id;
     private String hyper_node_name;
     private String host_machine;
-    private Integer virtual_disk;
-    private Integer free_disk;
-    private Integer use_disk;
+    private Double virtual_disk;
+    private Double free_disk;
+    private Double use_disk;
     private Integer memory_max;
     private Integer used_memory;
     private Integer free_memory;
@@ -49,27 +49,27 @@ public class QingCloudBotSet {
         this.host_machine = host_machine;
     }
 
-    public Integer getVirtual_disk() {
+    public Double getVirtual_disk() {
         return virtual_disk;
     }
 
-    public void setVirtual_disk(Integer virtual_disk) {
+    public void setVirtual_disk(Double virtual_disk) {
         this.virtual_disk = virtual_disk;
     }
 
-    public Integer getFree_disk() {
+    public Double getFree_disk() {
         return free_disk;
     }
 
-    public void setFree_disk(Integer free_disk) {
+    public void setFree_disk(Double free_disk) {
         this.free_disk = free_disk;
     }
 
-    public Integer getUse_disk() {
+    public Double getUse_disk() {
         return use_disk;
     }
 
-    public void setUse_disk(Integer use_disk) {
+    public void setUse_disk(Double use_disk) {
         this.use_disk = use_disk;
     }
 
