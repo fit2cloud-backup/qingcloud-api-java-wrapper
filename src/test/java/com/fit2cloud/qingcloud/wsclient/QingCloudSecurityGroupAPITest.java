@@ -4,10 +4,12 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -18,24 +20,6 @@ import com.fit2cloud.qingcloud.wsclient.QingCloudWSClient;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudResource;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudSecurityGroupRule;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddSecurityGroupRulesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddSecurityGroupRulesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ApplySecurityGroupRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ApplySecurityGroupResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateSecurityGroupRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateSecurityGroupResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteSecurityGroupRulesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteSecurityGroupRulesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteSecurityGroupsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteSecurityGroupsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeSecurityGroupRulesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeSecurityGroupRulesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeSecurityGroupsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeSecurityGroupsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifySecurityGroupAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifySecurityGroupAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifySecurityGroupRuleAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifySecurityGroupRuleAttributesResponse;
 
 
 public class QingCloudSecurityGroupAPITest {
@@ -271,6 +255,63 @@ public class QingCloudSecurityGroupAPITest {
 		}
 		
 		assertTrue(modifySecurityGroupRuleAttributesResponse.getRet_code() == 0);
+	}
+
+	@Test
+	public void testDescribeSecurityGroupIPSets() throws Exception{
+		DescribeSecurityGroupIPSetsRequest describeSecurityGroupIPSetsRequest = new DescribeSecurityGroupIPSetsRequest();
+		describeSecurityGroupIPSetsRequest.setZone(QingCloudZone.PEK1);
+		DescribeSecurityGroupIPSetsResponse describeSecurityGroupIPSetsResponse = qingCloudWSClient.describeSecurityGroupIPSets(describeSecurityGroupIPSetsRequest);
+		assertTrue(describeSecurityGroupIPSetsResponse.getRet_code() == 0);
+	}
+
+	@Test
+	public void testCreateSecurityGroupIPSet() throws Exception{
+		CreateSecurityGroupIPSetRequest createSecurityGroupIPSetRequest = new  CreateSecurityGroupIPSetRequest();
+		createSecurityGroupIPSetRequest.setZone(QingCloudZone.PEK1);
+		createSecurityGroupIPSetRequest.setIpset_type(0);
+		createSecurityGroupIPSetRequest.setSecurity_group_ipset_name("test");
+		createSecurityGroupIPSetRequest.setVal("192.168.0.9/32");
+		CreateSecurityGroupIPSetResponse createSecurityGroupIPSetResponse = qingCloudWSClient.createSecurityGroupIPSet(createSecurityGroupIPSetRequest);
+		assertTrue(createSecurityGroupIPSetResponse.getRet_code() == 0);
+	}
+
+	@Test
+	public void testDeleteSecurityGroupIPSets() throws Exception{
+		DeleteSecurityGroupIPSetsRequest deleteSecurityGroupIPSetsRequest = new DeleteSecurityGroupIPSetsRequest();
+		deleteSecurityGroupIPSetsRequest.setZone(QingCloudZone.PEK1);
+		List<String> securityGroupIpsetSets = new ArrayList<String>();
+		securityGroupIpsetSets.add("sgi-ldivbudf");
+		deleteSecurityGroupIPSetsRequest.setSecurity_group_ipsets(securityGroupIpsetSets);
+		DeleteSecurityGroupIPSetsResponse deleteSecurityGroupIPSetsResponse = qingCloudWSClient.deleteSecurityGroupIPSets(deleteSecurityGroupIPSetsRequest);
+		assertTrue(deleteSecurityGroupIPSetsResponse.getRet_code() == 0);
+
+	}
+
+	@Test
+	public void testModifySecurityGroupIPSetAttributes() throws Exception{
+		ModifySecurityGroupIPSetAttributesRequest modifySecurityGroupIPSetAttributesRequest = new ModifySecurityGroupIPSetAttributesRequest();
+		modifySecurityGroupIPSetAttributesRequest.setZone(QingCloudZone.PEK1);
+		modifySecurityGroupIPSetAttributesRequest.setSecurity_group_ipset("sgi-o9gpyylu");
+		modifySecurityGroupIPSetAttributesRequest.setDescription("hahahah");
+		modifySecurityGroupIPSetAttributesRequest.setVal("192.168.1.1/32,192.168.2.0/24,192.168.3.1-192.168.3.7");
+		modifySecurityGroupIPSetAttributesRequest.setSecurity_group_ipset_name("test_update");
+		ModifySecurityGroupIPSetAttributesResponse modifySecurityGroupIPSetAttributesResponse = qingCloudWSClient.modifySecurityGroupIPSetAttributes(modifySecurityGroupIPSetAttributesRequest);
+		assertTrue(modifySecurityGroupIPSetAttributesResponse.getRet_code() == 0);
+
+	}
+
+	@Test
+	public void testApplySecurityGroupIPSets() throws IOException, QingCloudClientException, QingCloudServiceException {
+		ApplySecurityGroupIPSetsRequest applySecurityGroupIPSetsRequest = new ApplySecurityGroupIPSetsRequest();
+		applySecurityGroupIPSetsRequest.setZone(QingCloudZone.PEK1);
+		applySecurityGroupIPSetsRequest.setOwner("usr-Kat0jsC6");
+		List<String> security_group_ipsets = new ArrayList<String>();
+		security_group_ipsets.add("sgi-o9gpyylu");
+		applySecurityGroupIPSetsRequest.setSecurity_group_ipsets(security_group_ipsets);
+		ApplySecurityGroupIPSetsResponse applySecurityGroupIPSetsResponse = qingCloudWSClient.applySecurityGroupIPSets(applySecurityGroupIPSetsRequest);
+		assertTrue(applySecurityGroupIPSetsResponse.getRet_code() == 0);
+
 	}
 
 }

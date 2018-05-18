@@ -2225,4 +2225,82 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return describeReplPolicysResponse;
 	}
+
+	public DescribeSecurityGroupIPSetsResponse describeSecurityGroupIPSets(DescribeSecurityGroupIPSetsRequest describeSecurityGroupIPSetsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		DescribeSecurityGroupIPSetsResponse describeSecurityGroupIPSetsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_SECURIRY_GROUP_IP_SETS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, describeSecurityGroupIPSetsRequest);
+
+			describeSecurityGroupIPSetsResponse = DescribeSecurityGroupIPSetsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeSecurityGroupIPSetsResponse;
+	}
+
+	public CreateSecurityGroupIPSetResponse createSecurityGroupIPSet(CreateSecurityGroupIPSetRequest createSecurityGroupIPSetRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		CreateSecurityGroupIPSetResponse createSecurityGroupIPSetResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CREATE_SECURIRY_GROUP_IP_SETS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, createSecurityGroupIPSetRequest);
+			createSecurityGroupIPSetResponse = CreateSecurityGroupIPSetResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return createSecurityGroupIPSetResponse;
+	}
+
+	public DeleteSecurityGroupIPSetsResponse deleteSecurityGroupIPSets(DeleteSecurityGroupIPSetsRequest deleteSecurityGroupIPSetsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		DeleteSecurityGroupIPSetsResponse deleteSecurityGroupIPSetsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DELETE_SECURIRY_GROUP_IP_SETS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, deleteSecurityGroupIPSetsRequest);
+			deleteSecurityGroupIPSetsResponse = DeleteSecurityGroupIPSetsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return deleteSecurityGroupIPSetsResponse;
+	}
+
+	public ModifySecurityGroupIPSetAttributesResponse modifySecurityGroupIPSetAttributes(ModifySecurityGroupIPSetAttributesRequest modifySecurityGroupIPSetAttributesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		ModifySecurityGroupIPSetAttributesResponse modifySecurityGroupIPSetAttributesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.MODIFY_SECURIRY_GROUP_IP_SETS_ATTRIBUTE;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, modifySecurityGroupIPSetAttributesRequest);
+			modifySecurityGroupIPSetAttributesResponse = ModifySecurityGroupIPSetAttributesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return modifySecurityGroupIPSetAttributesResponse;
+	}
+
+	public ApplySecurityGroupIPSetsResponse applySecurityGroupIPSets(ApplySecurityGroupIPSetsRequest applySecurityGroupIPSetsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		ApplySecurityGroupIPSetsResponse applySecurityGroupIPSetsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.APPLY_SECURIRY_GROUP_IP_SETS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, applySecurityGroupIPSetsRequest);
+			applySecurityGroupIPSetsResponse = ApplySecurityGroupIPSetsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return applySecurityGroupIPSetsResponse;
+	}
+
+
 }

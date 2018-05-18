@@ -165,7 +165,28 @@ public interface IQingCloudWSClient {
 			ModifySecurityGroupRuleAttributesRequest modifySecurityGroupRuleAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
-	// -----------------------------------Vxnets------------------------------------------------------
+	public DescribeSecurityGroupIPSetsResponse describeSecurityGroupIPSets(
+			DescribeSecurityGroupIPSetsRequest describeSecurityGroupIPSetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateSecurityGroupIPSetResponse createSecurityGroupIPSet(
+			CreateSecurityGroupIPSetRequest createSecurityGroupIPSetRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteSecurityGroupIPSetsResponse deleteSecurityGroupIPSets(
+			DeleteSecurityGroupIPSetsRequest deleteSecurityGroupIPSetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifySecurityGroupIPSetAttributesResponse modifySecurityGroupIPSetAttributes(
+			ModifySecurityGroupIPSetAttributesRequest modifySecurityGroupIPSetAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ApplySecurityGroupIPSetsResponse applySecurityGroupIPSets(
+			ApplySecurityGroupIPSetsRequest applySecurityGroupIPSetsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+
+		// -----------------------------------Vxnets------------------------------------------------------
 	public DescribeVxnetsResponse describeVxnets(
 			DescribeVxnetsRequest describeVxnetsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;

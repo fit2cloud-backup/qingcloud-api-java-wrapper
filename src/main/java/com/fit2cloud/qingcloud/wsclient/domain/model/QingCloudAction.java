@@ -50,6 +50,15 @@ public class QingCloudAction {
     public static String ADD_SECURITY_GROUP_RULES = "AddSecurityGroupRules";
     public static String DELETE_SECURITY_GROUP_RULES = "DeleteSecurityGroupRules";
     public static String MODIFY_SECURITY_GROUP_RULE_ATTRIBUTES = "ModifySecurityGroupRuleAttributes";
+    public static String DESCRIBE_SECURIRY_GROUP_IP_SETS = "DescribeSecurityGroupIPSets";
+    public static String CREATE_SECURIRY_GROUP_IP_SETS = "CreateSecurityGroupIPSet";
+    public static String DELETE_SECURIRY_GROUP_IP_SETS = "DeleteSecurityGroupIPSets";
+    public static String MODIFY_SECURIRY_GROUP_IP_SETS_ATTRIBUTE = "ModifySecurityGroupIPSetAttributes";
+    public static String APPLY_SECURIRY_GROUP_IP_SETS = "ApplySecurityGroupIPSets";
+
+
+
+
     
     // vxnets
     public static String DESCRIBE_VXNETS = "DescribeVxnets";
