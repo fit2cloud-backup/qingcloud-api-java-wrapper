@@ -8,6 +8,7 @@ public class ModifySecurityGroupIPSetAttributesResponse {
 	private String action;
 	private String security_group_ipset_id;
 	private Integer ret_code;
+	private String message;
 	
 	public static ModifySecurityGroupIPSetAttributesResponse fromJson(String jsonDeleteSecurityGroupRulesResponse){
 		Gson gson = new Gson();
@@ -38,5 +39,13 @@ public class ModifySecurityGroupIPSetAttributesResponse {
 
 	public void setSecurity_group_ipset_id(String security_group_ipset_id) {
 		this.security_group_ipset_id = security_group_ipset_id;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }

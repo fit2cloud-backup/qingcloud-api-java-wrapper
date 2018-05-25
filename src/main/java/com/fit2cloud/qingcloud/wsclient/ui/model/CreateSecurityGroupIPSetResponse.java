@@ -6,6 +6,7 @@ public class CreateSecurityGroupIPSetResponse {
 	private String action;
 	private String security_group_ipset_id;
 	private Integer ret_code;
+	private String message;
 	
 	public static CreateSecurityGroupIPSetResponse fromJson(String jsonCreateSecurityGroupResponse){
 		Gson gson = new Gson();
@@ -33,6 +34,12 @@ public class CreateSecurityGroupIPSetResponse {
 	public void setRet_code(Integer ret_code) {
 		this.ret_code = ret_code;
 	}
-	
-	
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }

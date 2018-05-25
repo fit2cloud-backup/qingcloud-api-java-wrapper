@@ -11,6 +11,7 @@ public class DescribeSecurityGroupIPSetsResponse {
     private List<SecurityGroupIpsetSet> security_group_ipset_set;
     private Integer total_count = 0;
     private Integer ret_code;
+    private String message;
 
     public static DescribeSecurityGroupIPSetsResponse fromJson(String jsonDescribeVolumesResponse){
         Gson gson = new Gson();
@@ -50,6 +51,13 @@ public class DescribeSecurityGroupIPSetsResponse {
         this.ret_code = ret_code;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
 	
 

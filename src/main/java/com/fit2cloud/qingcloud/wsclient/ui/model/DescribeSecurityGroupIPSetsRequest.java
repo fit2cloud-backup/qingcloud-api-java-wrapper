@@ -10,6 +10,8 @@ public class DescribeSecurityGroupIPSetsRequest extends Request {
 
     private List<String> security_group_ipsets;
 
+    private String security_group_ipset_name;
+
 
     public DescribeSecurityGroupIPSetsRequest() {
     }
@@ -38,4 +40,11 @@ public class DescribeSecurityGroupIPSetsRequest extends Request {
         this.security_group_ipsets = security_group_ipsets;
     }
 
+    public String getSecurity_group_ipset_name() {
+        return security_group_ipset_name;
+    }
+
+    public void setSecurity_group_ipset_name(String security_group_ipset_name) {
+        this.security_group_ipset_name = security_group_ipset_name;
+    }
 }
