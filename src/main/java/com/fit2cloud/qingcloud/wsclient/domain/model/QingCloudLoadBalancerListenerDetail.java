@@ -7,6 +7,7 @@ public class QingCloudLoadBalancerListenerDetail {
 	private String loadbalancer_listener_id;
 	private String loadbalancer_listener_name;
 	private List<QingCloudLoadBalancerBackend> backends;
+	private List<String> server_certificate_id;
 	private String balance_mode;
 	private String session_sticky;
 	private String create_time;
@@ -25,6 +26,15 @@ public class QingCloudLoadBalancerListenerDetail {
 	public void setLoadbalancer_listener_name(String loadbalancer_listener_name) {
 		this.loadbalancer_listener_name = loadbalancer_listener_name;
 	}
+
+	public List<String> getServer_certificate_id() {
+		return server_certificate_id;
+	}
+
+	public void setServer_certificate_id(List<String> server_certificate_id) {
+		this.server_certificate_id = server_certificate_id;
+	}
+
 	public List<QingCloudLoadBalancerBackend> getBackends() {
 		return backends;
 	}
