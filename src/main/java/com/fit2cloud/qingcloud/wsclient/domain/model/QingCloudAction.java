@@ -10,6 +10,7 @@ public class QingCloudAction {
     public static String REVOKE_IMAGE_FROM_USERS = "RevokeImageFromUsers";
     
     // instances
+    public static String DESCRIBE_INSTANCETYPES = "DescribeInstanceTypes";
     public static String DESCRIBE_INSTANCES = "DescribeInstances";
     public static String RUN_INSTANCES = "RunInstances";
     public static String TERMINATE_INSTANCES = "TerminateInstances";

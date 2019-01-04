@@ -143,6 +143,23 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return stopInstancesResponse;
 	}
+
+	public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest describeInstanceTypesRequest) throws IOException, QingCloudClientException, QingCloudServiceException {
+		DescribeInstanceTypesResponse describeInstanceTypesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_INSTANCETYPES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeInstanceTypesRequest);
+			describeInstanceTypesResponse = DescribeInstanceTypesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeInstanceTypesResponse;
+
+	}
 	
 	
 	public StartInstancesResponse startInstances(
