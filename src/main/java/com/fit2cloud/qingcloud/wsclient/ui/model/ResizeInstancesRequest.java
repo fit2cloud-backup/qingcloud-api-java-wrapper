@@ -9,7 +9,16 @@ public class ResizeInstancesRequest extends Request {
     private Integer cpu;
     private Integer memory;
     private String zone;
-    
+    private Integer os_disk_size;
+
+	public Integer getOs_disk_size() {
+		return os_disk_size;
+	}
+
+	public void setOs_disk_size(Integer os_disk_size) {
+		this.os_disk_size = os_disk_size;
+	}
+
 	public List<String> getInstances() {
 		return instances;
 	}
