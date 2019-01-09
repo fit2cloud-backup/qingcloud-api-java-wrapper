@@ -33,7 +33,16 @@ public class QingCloudInstance {
     private String lastest_snapshot_time;
     private String device;
     private String repl;
-    
+    private QingCloudInstanceExtra extra;
+
+	public QingCloudInstanceExtra getExtra() {
+		return extra;
+	}
+
+	public void setExtra(QingCloudInstanceExtra extra) {
+		this.extra = extra;
+	}
+
 	public String getInstance_id() {
 		return instance_id;
 	}

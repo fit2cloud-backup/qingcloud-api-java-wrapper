@@ -29,7 +29,15 @@ public class RunInstancesRequest extends Request {
 	private String repl = null;
 	
 	private String zone;
+	private String hostname = null;
 
+	public String getHostname() {
+		return hostname;
+	}
+
+	public void setHostname(String hostname) {
+		this.hostname = hostname;
+	}
 
 	public RunInstancesRequest() {
 	}
