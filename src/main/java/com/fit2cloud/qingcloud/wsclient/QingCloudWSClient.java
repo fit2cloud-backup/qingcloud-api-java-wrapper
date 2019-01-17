@@ -12,7 +12,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.security.InvalidKeyException;
+import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -21,6 +24,7 @@ import java.util.SimpleTimeZone;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+import javax.net.ssl.*;
 
 import org.apache.commons.codec.binary.Base64;
 
@@ -1859,9 +1863,23 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			String query = paramsToQueryString(parameters);
 			URL url = new URL(endpoint + "?" + query);
 
+			TrustManager[] tm = {new MyX509TrustManager()};
+			SSLContext sslContext = SSLContext.getInstance("SSL");
+			sslContext.init(null, tm, new java.security.SecureRandom());
+			// 从上述SSLContext对象中得到SSLSocketFactory对象
+			SSLSocketFactory ssf = sslContext.getSocketFactory();
+
 			if(DEBUG) System.out.println("url=" + url);
-			
-			connection = (HttpURLConnection) url.openConnection();
+
+			if(endpoint.startsWith("https:")){
+				HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+				conn.setHostnameVerifier(new TrustAnyHostnameVerifier());
+				conn.setSSLSocketFactory(ssf);
+				connection = conn;
+			}else{
+				connection = (HttpURLConnection) url.openConnection();
+			}
+
 			connection.connect();
 			int code = connection.getResponseCode();
 			
@@ -1907,6 +1925,10 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			}
 		} catch (IOException e) {
 			throw e;
+		} catch (NoSuchAlgorithmException e) {
+			throw new QingCloudServiceException(e.getMessage(), e);
+		} catch (KeyManagementException e) {
+			throw new QingCloudServiceException(e.getMessage(), e);
 		} finally {
 			safeClose(content);
 		}
@@ -2319,5 +2341,22 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return applySecurityGroupIPSetsResponse;
 	}
 
+	private static class MyX509TrustManager implements X509TrustManager {
 
+		public X509Certificate[] getAcceptedIssuers() {
+			return null;
+		}
+
+		public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+		}
+
+		public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+		}
+	}
+
+	private static class TrustAnyHostnameVerifier implements HostnameVerifier {
+		public boolean verify(String hostname, SSLSession session) {
+			return true;
+		}
+	}
 }
