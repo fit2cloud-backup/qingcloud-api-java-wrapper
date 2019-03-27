@@ -31,6 +31,16 @@ public class RunInstancesRequest extends Request {
 	private String zone;
 	private String hostname = null;
 
+	private Integer os_disk_size;
+
+	public Integer getOs_disk_size() {
+		return os_disk_size;
+	}
+
+	public void setOs_disk_size(Integer os_disk_size) {
+		this.os_disk_size = os_disk_size;
+	}
+
 	public String getHostname() {
 		return hostname;
 	}
