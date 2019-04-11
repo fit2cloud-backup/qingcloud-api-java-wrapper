@@ -12,6 +12,15 @@ public class DescribeSecurityGroupIPSetsRequest extends Request {
 
     private String security_group_ipset_name;
 
+    private Integer limit;
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
 
     public DescribeSecurityGroupIPSetsRequest() {
     }
