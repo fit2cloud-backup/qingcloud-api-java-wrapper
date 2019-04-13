@@ -11,6 +11,7 @@ public class QingCloudBotSet {
     private Double free_disk;
     private Double use_disk;
     private Integer memory_max;
+    private Integer total_memory;
     private Integer used_memory;
     private Integer free_memory;
     private Integer real_free_memory;
@@ -24,6 +25,14 @@ public class QingCloudBotSet {
     private String status;
     private String create_time;
     private String status_time;
+
+    public Integer getTotal_memory() {
+        return total_memory;
+    }
+
+    public void setTotal_memory(Integer total_memory) {
+        this.total_memory = total_memory;
+    }
 
     public String getBot_id() {
         return bot_id;
