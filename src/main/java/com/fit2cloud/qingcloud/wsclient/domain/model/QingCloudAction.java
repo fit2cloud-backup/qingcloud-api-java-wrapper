@@ -57,9 +57,9 @@ public class QingCloudAction {
     public static String MODIFY_SECURIRY_GROUP_IP_SETS_ATTRIBUTE = "ModifySecurityGroupIPSetAttributes";
     public static String APPLY_SECURIRY_GROUP_IP_SETS = "ApplySecurityGroupIPSets";
 
-
-
-
+    //network acl
+    public static String DESCRIBE_NETWORK_ACLS = "DescribeNetworkACLs";
+    public static String CREATE_NETWORK_ACL = "CreateNetworkACL";
     
     // vxnets
     public static String DESCRIBE_VXNETS = "DescribeVxnets";

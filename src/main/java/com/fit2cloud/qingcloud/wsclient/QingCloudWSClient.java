@@ -406,7 +406,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		DescribeSecurityGroupsResponse describeSecurityGroupsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SECURITY_GROUPS;
-		describeSecurityGroupsRequest.setZone("kfcs1");
+//		describeSecurityGroupsRequest.setZone("kfcs1");
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeSecurityGroupsRequest);
@@ -2339,6 +2339,38 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			throw e;
 		}
 		return applySecurityGroupIPSetsResponse;
+	}
+
+
+	public DescribeNetworkACLsResponse describeNetworkACLs(DescribeNetworkACLSRequest describeNetworkACLSRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		DescribeNetworkACLsResponse describeNetworkACLsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_NETWORK_ACLS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, describeNetworkACLSRequest);
+
+			describeNetworkACLsResponse = DescribeNetworkACLsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeNetworkACLsResponse;
+	}
+
+	public CreateNetworkACLResponse createNetworkACL(CreateNetworkACLRequest createNetworkACLRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		CreateNetworkACLResponse createNetworkACLResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CREATE_NETWORK_ACL;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, createNetworkACLRequest);
+			createNetworkACLResponse = CreateNetworkACLResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return createNetworkACLResponse;
 	}
 
 	private static class MyX509TrustManager implements X509TrustManager {

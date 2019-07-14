@@ -430,4 +430,14 @@ public interface IQingCloudWSClient {
 	public DescribeReplPolicysResponse describeReplPolicys(
 			DescribeReplPolicysRequest describeReplPolicysRequest)
 			throws QingCloudClientException,QingCloudServiceException,IOException;
+
+	// -----------------------------------Network ACL------------------------------------------------------
+	public DescribeNetworkACLsResponse describeNetworkACLs(
+			DescribeNetworkACLSRequest describeNetworkACLSRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateNetworkACLResponse createNetworkACL(
+			CreateNetworkACLRequest createNetworkACLRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 }
