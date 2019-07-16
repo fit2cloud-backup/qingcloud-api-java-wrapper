@@ -440,4 +440,20 @@ public interface IQingCloudWSClient {
 			CreateNetworkACLRequest createNetworkACLRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	public DeleteNetworkACLEntriesResponse deleteNetworkACLEntries(
+			DeleteNetworkACLEntriesRequest deleteNetworkACLEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ApplyNetworkACLResponse applyNetworkACL(
+			ApplyNetworkACLRequest applyNetworkACLRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public RemoveNetworkACLResponse removeNetworkACL(
+			RemoveNetworkACLRequest removeNetworkACLRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributes(
+			ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 }
