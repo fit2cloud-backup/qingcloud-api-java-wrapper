@@ -2,6 +2,8 @@ package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudNetworkACLRuleEntry;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import java.util.List;
 
@@ -19,8 +21,8 @@ public class AddNetworkACLEntriesRequest extends Request {
 		this.network_acl = network_acl;
 	}
 
-	public List<QingCloudNetworkACLRuleEntry> getEntries() {
-		return entries;
+	public String getEntries() {
+		return new Gson().toJson(entries);
 	}
 
 	public void setEntries(List<QingCloudNetworkACLRuleEntry> entries) {

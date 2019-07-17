@@ -1854,6 +1854,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		for (Map.Entry<String, String> entry : parameters.entrySet()) {
 			String key = entry.getKey();
 			String value = entry.getValue();
+			System.out.println(String.format("%s=%s", key, value));
 			if(DEBUG) System.out.println(String.format("%s=%s", key, value));
 		}
 
@@ -2420,12 +2421,12 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return removeNetworkACLResponse;
 	}
 
-	public AddNetworkACLEntriesResponse addNetworkACLEntries(RemoveNetworkACLRequest removeNetworkACLRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+	public AddNetworkACLEntriesResponse addNetworkACLEntries(AddNetworkACLEntriesRequest addNetworkACLEntriesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		AddNetworkACLEntriesResponse addNetworkACLEntriesResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.ADD_NETWORK_ACL_ENTRIES;
 		try {
-			String jsonResponse = this.sendRequest(httpMethod, action, removeNetworkACLRequest);
+			String jsonResponse = this.sendRequest(httpMethod, action, addNetworkACLEntriesRequest);
 			addNetworkACLEntriesResponse = AddNetworkACLEntriesResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
