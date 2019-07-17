@@ -2376,7 +2376,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	public DeleteNetworkACLEntriesResponse deleteNetworkACLEntries(DeleteNetworkACLEntriesRequest deleteNetworkACLEntriesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		DeleteNetworkACLEntriesResponse deleteNetworkACLEntriesResponse = null;
 		String httpMethod = "GET";
-		String action = QingCloudAction.DESCRIBE_NETWORK_ACLS;
+		String action = QingCloudAction.DELETE_NETWORK_ACL_ENTRIES;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action, deleteNetworkACLEntriesRequest);
 
@@ -2392,7 +2392,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	public ApplyNetworkACLResponse applyNetworkACL(ApplyNetworkACLRequest applyNetworkACLRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		ApplyNetworkACLResponse applyNetworkACLResponse = null;
 		String httpMethod = "GET";
-		String action = QingCloudAction.CREATE_NETWORK_ACL;
+		String action = QingCloudAction.APPLY_NETWORK_ACL;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action, applyNetworkACLRequest);
 			applyNetworkACLResponse = ApplyNetworkACLResponse.fromJson(jsonResponse);
@@ -2408,7 +2408,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	public RemoveNetworkACLResponse removeNetworkACL(RemoveNetworkACLRequest removeNetworkACLRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		RemoveNetworkACLResponse removeNetworkACLResponse = null;
 		String httpMethod = "GET";
-		String action = QingCloudAction.CREATE_NETWORK_ACL;
+		String action = QingCloudAction.REMOVE_NETWORK_ACL;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action, removeNetworkACLRequest);
 			removeNetworkACLResponse = RemoveNetworkACLResponse.fromJson(jsonResponse);
@@ -2420,10 +2420,25 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return removeNetworkACLResponse;
 	}
 
+	public AddNetworkACLEntriesResponse addNetworkACLEntries(RemoveNetworkACLRequest removeNetworkACLRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		AddNetworkACLEntriesResponse addNetworkACLEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.ADD_NETWORK_ACL_ENTRIES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, removeNetworkACLRequest);
+			addNetworkACLEntriesResponse = AddNetworkACLEntriesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return addNetworkACLEntriesResponse;
+	}
+
 	public ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributes(ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributesResponse = null;
 		String httpMethod = "GET";
-		String action = QingCloudAction.CREATE_NETWORK_ACL;
+		String action = QingCloudAction.MODIFY_NETWORK_ACL_ENTRY_ATTRIBUTES;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action, modifyNetworkACLEntryAttributesRequest);
 			modifyNetworkACLEntryAttributesResponse = ModifyNetworkACLEntryAttributesResponse.fromJson(jsonResponse);

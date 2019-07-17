@@ -64,6 +64,7 @@ public class QingCloudAction {
     public static String DELETE_NETWORK_ACL_ENTRIES = "DeleteNetworkACLEntries";
     public static String APPLY_NETWORK_ACL = "ApplyNetworkACL";
     public static String MODIFY_NETWORK_ACL_ENTRY_ATTRIBUTES = "ModifyNetworkACLEntryAttributes";
+    public static String ADD_NETWORK_ACL_ENTRIES = "AddNetworkACLEntries";
 
     // vxnets
     public static String DESCRIBE_VXNETS = "DescribeVxnets";
