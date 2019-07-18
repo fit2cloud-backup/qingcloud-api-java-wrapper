@@ -11,7 +11,7 @@ public class ModifyNetworkACLEntryAttributesRequest extends Request {
 	// the nacl entry name
     private String network_acl_entry_name;
     // 1 for disable, 0 for enable || No ||
-    private String disabled;
+    private Integer disabled;
     // level high 0~255 low || No ||
     private Integer priority;
 //  4 or 6 || No ||
@@ -19,7 +19,7 @@ public class ModifyNetworkACLEntryAttributesRequest extends Request {
     //  the network cidr || No ||
     private String cidr;
     // 1 for permit, 0 for deny || No ||
-    private String entry_action;
+    private Integer entry_action;
     //  1 for outbound of instance, 0 for inbound || No ||
     private Integer egress;
 
@@ -42,11 +42,11 @@ public class ModifyNetworkACLEntryAttributesRequest extends Request {
 		this.network_acl_entry_name = network_acl_entry_name;
 	}
 
-	public String getDisabled() {
+	public Integer getDisabled() {
 		return disabled;
 	}
 
-	public void setDisabled(String disabled) {
+	public void setDisabled(Integer disabled) {
 		this.disabled = disabled;
 	}
 
@@ -74,11 +74,11 @@ public class ModifyNetworkACLEntryAttributesRequest extends Request {
 		this.cidr = cidr;
 	}
 
-	public String getEntry_action() {
+	public Integer getEntry_action() {
 		return entry_action;
 	}
 
-	public void setEntry_action(String entry_action) {
+	public void setEntry_action(Integer entry_action) {
 		this.entry_action = entry_action;
 	}
 
