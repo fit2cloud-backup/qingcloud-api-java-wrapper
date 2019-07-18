@@ -2436,6 +2436,21 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return addNetworkACLEntriesResponse;
 	}
 
+	public DeleteNetworkACLsResponse deleteNetworkACLsResponse(DeleteNetworkACLsRequest deleteNetworkACLsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		DeleteNetworkACLsResponse addNetworkACLEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.ADD_NETWORK_ACL_ENTRIES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, deleteNetworkACLsRequest);
+			addNetworkACLEntriesResponse = DeleteNetworkACLsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return addNetworkACLEntriesResponse;
+	}
+
 	public ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributes(ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
 		ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributesResponse = null;
 		String httpMethod = "GET";
