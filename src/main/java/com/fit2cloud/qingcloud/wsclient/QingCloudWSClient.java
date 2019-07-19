@@ -2436,19 +2436,19 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return addNetworkACLEntriesResponse;
 	}
 
-	public DeleteNetworkACLsResponse deleteNetworkACLsResponse(DeleteNetworkACLsRequest deleteNetworkACLsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
-		DeleteNetworkACLsResponse addNetworkACLEntriesResponse = null;
+	public DeleteNetworkACLsResponse deleteNetworkACLs(DeleteNetworkACLsRequest deleteNetworkACLsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		DeleteNetworkACLsResponse deleteNetworkACLsResponse = null;
 		String httpMethod = "GET";
-		String action = QingCloudAction.ADD_NETWORK_ACL_ENTRIES;
+		String action = QingCloudAction.DELETE_NETWORK_ACLS;
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action, deleteNetworkACLsRequest);
-			addNetworkACLEntriesResponse = DeleteNetworkACLsResponse.fromJson(jsonResponse);
+			deleteNetworkACLsResponse = DeleteNetworkACLsResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
 		} catch (QingCloudServiceException e) {
 			throw e;
 		}
-		return addNetworkACLEntriesResponse;
+		return deleteNetworkACLsResponse;
 	}
 
 	public ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributes(ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
@@ -2464,6 +2464,21 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			throw e;
 		}
 		return modifyNetworkACLEntryAttributesResponse;
+	}
+
+	public ModifyNetworkACLAttributesResponse modifyNetworkACLAttributes(ModifyNetworkACLAttributesRequest modifyNetworkACLAttributesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		ModifyNetworkACLAttributesResponse modifyNetworkACLAttributesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.MODIFY_NETWORK_ACL_ATTRIBUTES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, modifyNetworkACLAttributesRequest);
+			modifyNetworkACLAttributesResponse = ModifyNetworkACLAttributesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return modifyNetworkACLAttributesResponse;
 	}
 
 	private static class MyX509TrustManager implements X509TrustManager {
