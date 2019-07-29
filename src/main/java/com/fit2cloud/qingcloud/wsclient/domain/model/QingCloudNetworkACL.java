@@ -14,7 +14,7 @@ public class QingCloudNetworkACL {
     private String create_time;
     private String status_time;
     private String owner;
-    private List<QingCloudVxnet> vxnets;
+    private List<String> vxnets;
 
     public String getNetwork_acl_id() {
         return network_acl_id;
@@ -96,11 +96,11 @@ public class QingCloudNetworkACL {
         this.owner = owner;
     }
 
-    public List<QingCloudVxnet> getVxnets() {
+    public List<String> getVxnets() {
         return vxnets;
     }
 
-    public void setVxnets(List<QingCloudVxnet> vxnets) {
+    public void setVxnets(List<String> vxnets) {
         this.vxnets = vxnets;
     }
 }
