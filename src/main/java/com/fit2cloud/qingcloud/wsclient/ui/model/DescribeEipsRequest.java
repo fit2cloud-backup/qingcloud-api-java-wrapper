@@ -9,6 +9,7 @@ public class DescribeEipsRequest extends Request {
 	private String search_word;
 	private Integer offset;
 	private Integer limit;
+	private Integer verbose;
 
 	private String zone;
 
@@ -68,4 +69,11 @@ public class DescribeEipsRequest extends Request {
 		this.zone = zone;
 	}
 
+	public Integer getVerbose() {
+		return verbose;
+	}
+
+	public void setVerbose(Integer verbose) {
+		this.verbose = verbose;
+	}
 }

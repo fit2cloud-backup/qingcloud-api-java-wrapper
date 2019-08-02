@@ -1266,6 +1266,28 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return changeEipsBandwidthResponse;
 	}
 
+	public ChangeEipsBillingModeResponse changeEipsBillingMode(
+			ChangeEipsBillingModeRequest changeEipsBillingModeRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		ChangeEipsBillingModeResponse changeEipsBillingModeResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CHANGE_EIPS_BILLINGMODE;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					changeEipsBillingModeRequest);
+			changeEipsBillingModeResponse = ChangeEipsBillingModeResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return changeEipsBillingModeResponse;
+	}
+
+
+
 	public DescribeEipGroupsResponse describeEipGroups(
 			DescribeEipGroupsRequest describeEipGroupsRequest)
 			throws QingCloudClientException, QingCloudServiceException,

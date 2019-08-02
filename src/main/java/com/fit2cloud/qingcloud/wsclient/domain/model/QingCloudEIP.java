@@ -9,6 +9,8 @@ public class QingCloudEIP {
     private String status;
     private String transition_status;
     private String icp_codes;
+    private Integer associate_mode;
+    private String billing_mode;
     
     private String create_time;
     private String status_time;
@@ -114,6 +116,21 @@ public class QingCloudEIP {
 	public void setEip_addr(String eip_addr) {
 		this.eip_addr = eip_addr;
 	}
-    
-    
+
+
+	public Integer getAssociate_mode() {
+		return associate_mode;
+	}
+
+	public void setAssociate_mode(Integer associate_mode) {
+		this.associate_mode = associate_mode;
+	}
+
+	public String getBilling_mode() {
+		return billing_mode;
+	}
+
+	public void setBilling_mode(String billing_mode) {
+		this.billing_mode = billing_mode;
+	}
 }
