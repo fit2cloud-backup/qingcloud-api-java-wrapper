@@ -8,6 +8,7 @@ public class CreateRoutersRequest extends Request {
 	private String security_group;
 	private String zone;
 	private Integer router_type;
+	private String vpc_network;
 
 	public String getRouter_name() {
 		return router_name;
@@ -47,5 +48,13 @@ public class CreateRoutersRequest extends Request {
 
 	public void setRouter_type(Integer router_type) {
 		this.router_type = router_type;
+	}
+
+	public String getVpc_network() {
+		return vpc_network;
+	}
+
+	public void setVpc_network(String vpc_network) {
+		this.vpc_network = vpc_network;
 	}
 }
