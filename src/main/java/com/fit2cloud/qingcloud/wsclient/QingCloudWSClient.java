@@ -1129,6 +1129,26 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return modifyRouterStaticAttributesResponse;
 	}
+
+	public ResizeRouterResponse resizeRouters(
+			ResizeRouterRequest resizeRouterRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		ResizeRouterResponse resizeRouterResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.RESIZE_ROUTERS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					resizeRouterRequest);
+			resizeRouterResponse = ResizeRouterResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return resizeRouterResponse;
+	}
 	
 
 	public AssociateEipResponse associateEip(

@@ -267,6 +267,10 @@ public interface IQingCloudWSClient {
 	public ModifyRouterStaticAttributesResponse modifyRouterStaticAttributes(
 			ModifyRouterStaticAttributesRequest modifyRouterStaticAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public ResizeRouterResponse resizeRouters(
+			ResizeRouterRequest resizeRouterRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 					
     //-----------------------------------EIPs------------------------------------------------------
 	public AssociateEipResponse associateEip(
