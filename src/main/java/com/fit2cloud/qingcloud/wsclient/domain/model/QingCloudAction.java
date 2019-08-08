@@ -8,6 +8,8 @@ public class QingCloudAction {
     public static String MODIFY_IMAGE_ATTRIBUTES = "ModifyImageAttributes";
     public static String GRANT_IMAGE_TO_USERS = "GrantImageToUsers";
     public static String REVOKE_IMAGE_FROM_USERS = "RevokeImageFromUsers";
+    public static String CREATE_BROKERS = "CreateBrokers";
+    public static String DELETE_BROKERS = "DeleteBrokers";
     
     // instances
     public static String DESCRIBE_INSTANCETYPES = "DescribeInstanceTypes";

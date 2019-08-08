@@ -2523,6 +2523,22 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return modifyNetworkACLAttributesResponse;
 	}
 
+	public CreateBrokersResponse createBrokers(CreateBrokersRequest createBrokersRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		CreateBrokersResponse createBrokersResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CREATE_BROKERS;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, createBrokersRequest);
+			createBrokersResponse = CreateBrokersResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return createBrokersResponse;
+	}
+
+
 	private static class MyX509TrustManager implements X509TrustManager {
 
 		public X509Certificate[] getAcceptedIssuers() {
