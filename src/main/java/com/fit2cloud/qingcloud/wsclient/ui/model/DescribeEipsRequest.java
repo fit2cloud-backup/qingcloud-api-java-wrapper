@@ -5,7 +5,7 @@ import java.util.List;
 public class DescribeEipsRequest extends Request {
 	private List<String> eips;
 	private String instance_id;
-	private String status;
+	private List<String> status;
 	private String search_word;
 	private Integer offset;
 	private Integer limit;
@@ -29,11 +29,11 @@ public class DescribeEipsRequest extends Request {
 		this.instance_id = instance_id;
 	}
 
-	public String getStatus() {
+	public List<String> getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(List<String> status) {
 		this.status = status;
 	}
 
