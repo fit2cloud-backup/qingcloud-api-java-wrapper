@@ -10,6 +10,7 @@ public class QingCloudAction {
     public static String REVOKE_IMAGE_FROM_USERS = "RevokeImageFromUsers";
     public static String CREATE_BROKERS = "CreateBrokers";
     public static String DELETE_BROKERS = "DeleteBrokers";
+    public static String CLONE_INSTANCES = "CloneInstances";
     
     // instances
     public static String DESCRIBE_INSTANCETYPES = "DescribeInstanceTypes";
