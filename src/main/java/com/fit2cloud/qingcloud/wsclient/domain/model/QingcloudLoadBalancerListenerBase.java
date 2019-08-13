@@ -10,6 +10,8 @@ public class QingcloudLoadBalancerListenerBase {
 	private Integer forwardfor;
 	private String healthy_check_method;
 	private String healthy_check_option;
+
+	private Integer tunnel_timeout =3600;
 	public Integer getListener_port() {
 		return listener_port;
 	}
@@ -63,5 +65,13 @@ public class QingcloudLoadBalancerListenerBase {
 	}
 	public void setHealthy_check_option(String healthy_check_option) {
 		this.healthy_check_option = healthy_check_option;
-	} 	
+	}
+
+	public Integer getTunnel_timeout() {
+		return tunnel_timeout;
+	}
+
+	public void setTunnel_timeout(Integer tunnel_timeout) {
+		this.tunnel_timeout = tunnel_timeout;
+	}
 }

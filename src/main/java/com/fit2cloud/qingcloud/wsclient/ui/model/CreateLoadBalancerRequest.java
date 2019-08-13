@@ -10,6 +10,9 @@ public class CreateLoadBalancerRequest extends Request {
 	private String loadbalancer_name;
 	private String security_group;
 	private String zone;
+	private String vxnet;
+
+
 	public List<String> getEips() {
 		return eips;
 	}
@@ -40,5 +43,25 @@ public class CreateLoadBalancerRequest extends Request {
 	public void setZone(String zone) {
 		this.zone = zone;
 	}
-	
+
+	public String getVxnet() {
+		return vxnet;
+	}
+
+	public void setVxnet(String vxnet) {
+		this.vxnet = vxnet;
+	}
+
+
+	@Override
+	public String toString() {
+		return "CreateLoadBalancerRequest{" +
+				"eips=" + eips +
+				", loadbalancer_type=" + loadbalancer_type +
+				", loadbalancer_name='" + loadbalancer_name + '\'' +
+				", security_group='" + security_group + '\'' +
+				", zone='" + zone + '\'' +
+				", vxnet='" + vxnet + '\'' +
+				'}';
+	}
 }
