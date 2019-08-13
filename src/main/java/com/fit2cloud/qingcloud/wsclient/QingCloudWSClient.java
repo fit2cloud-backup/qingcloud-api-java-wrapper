@@ -2538,6 +2538,20 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return createBrokersResponse;
 	}
 
+	public CloneInstancesResponse cloneInstances(CloneInstancesRequest cloneInstancesRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+		CloneInstancesResponse cloneInstancesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.CLONE_INSTANCES;
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action, cloneInstancesRequest);
+			cloneInstancesResponse = CloneInstancesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return cloneInstancesResponse;
+	}
 
 	private static class MyX509TrustManager implements X509TrustManager {
 

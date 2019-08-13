@@ -16,6 +16,8 @@ public class DescribeInstancesRequest extends Request {
 	
     private String zone;
 
+    private Integer instance_class;
+
 	public List<String> getInstances() {
 		return instances;
 	}
@@ -88,6 +90,12 @@ public class DescribeInstancesRequest extends Request {
 	public void setZone(String zone) {
 		this.zone = zone;
 	}
-    
-    
+
+	public Integer getInstance_class() {
+		return instance_class;
+	}
+
+	public void setInstance_class(Integer instance_class) {
+		this.instance_class = instance_class;
+	}
 }
