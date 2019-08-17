@@ -1787,8 +1787,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return applySnapshotsResponse;
 	}
 
-	public DescribeSnapshotsResponse describeSnapshots(
-			DescribeSnapshotsRequest describeSnapshotsRequest)
+	public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest describeSnapshotsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeSnapshotsResponse describeSnapshotsResponse = null;
 		String httpMethod = "GET";
