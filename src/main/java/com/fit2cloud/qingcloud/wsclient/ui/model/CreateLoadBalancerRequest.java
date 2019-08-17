@@ -11,6 +11,7 @@ public class CreateLoadBalancerRequest extends Request {
 	private String security_group;
 	private String zone;
 	private String vxnet;
+	private String private_ip;
 
 
 	public List<String> getEips() {
@@ -63,5 +64,13 @@ public class CreateLoadBalancerRequest extends Request {
 				", zone='" + zone + '\'' +
 				", vxnet='" + vxnet + '\'' +
 				'}';
+	}
+
+	public String getPrivate_ip() {
+		return private_ip;
+	}
+
+	public void setPrivate_ip(String private_ip) {
+		this.private_ip = private_ip;
 	}
 }

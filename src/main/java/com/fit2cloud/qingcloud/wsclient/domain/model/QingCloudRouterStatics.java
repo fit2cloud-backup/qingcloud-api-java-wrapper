@@ -8,9 +8,9 @@ public class QingCloudRouterStatics {
 	private Integer static_type;
 	private String router_static_id;
 	private String create_time;
-	private Integer val1;
+	private String val1;
 	private String val2;
-	private Integer val3;
+	private String val3;
 	private String val4;
 
 	public String getRouter_id() {
@@ -45,13 +45,7 @@ public class QingCloudRouterStatics {
 		this.create_time = create_time;
 	}
 
-	public Integer getVal1() {
-		return val1;
-	}
 
-	public void setVal1(Integer val1) {
-		this.val1 = val1;
-	}
 
 	public String getVal2() {
 		return val2;
@@ -61,11 +55,19 @@ public class QingCloudRouterStatics {
 		this.val2 = val2;
 	}
 
-	public Integer getVal3() {
+	public String getVal1() {
+		return val1;
+	}
+
+	public void setVal1(String val1) {
+		this.val1 = val1;
+	}
+
+	public String getVal3() {
 		return val3;
 	}
 
-	public void setVal3(Integer val3) {
+	public void setVal3(String val3) {
 		this.val3 = val3;
 	}
 

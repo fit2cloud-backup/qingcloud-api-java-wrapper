@@ -227,11 +227,11 @@ public class QingCloudRoutersAPITest {
 		}
 	}
 	
-	//@Test
+	@Test
 	public void testDescribeRouterStatics() throws Exception{
 		DescribeRouterStaticsRequest request = new DescribeRouterStaticsRequest();
-		request.setZone(ZONE);
-		request.setRouter("rtr-9sdesb3g");
+		request.setZone("pek3d");
+		request.setRouter("rtr-enzf2v6v");
 		DescribeRouterStaticsResponse response = qingCloudWSClient.describeRouterStatics(request);
 		assertTrue(response!=null);
 		System.out.println("DescribeRouterStaticsResponse.getRet_code()=" + response.getRet_code());
@@ -254,9 +254,9 @@ public class QingCloudRoutersAPITest {
 		QingCloudRouterStatics s = new QingCloudRouterStatics();
 		s.setStatic_type(1);
 		s.setRouter_id("rtr-9sdesb3g");
-		s.setVal1(80);
+		//s.setVal1(80);
 		s.setVal2("192.168.1.3");
-		s.setVal3(8080);
+		//s.setVal3(8080);
 		s.setVal4("tcp");
 		statics.add(s);
 		request.setStatics(statics);
