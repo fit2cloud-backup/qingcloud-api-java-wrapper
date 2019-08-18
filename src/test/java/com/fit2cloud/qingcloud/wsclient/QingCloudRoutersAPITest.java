@@ -231,7 +231,8 @@ public class QingCloudRoutersAPITest {
 	public void testDescribeRouterStatics() throws Exception{
 		DescribeRouterStaticsRequest request = new DescribeRouterStaticsRequest();
 		request.setZone("pek3d");
-		request.setRouter("rtr-enzf2v6v");
+		request.setRouter("rtr-mx2vdj15");
+		request.setVerbose(1);
 		DescribeRouterStaticsResponse response = qingCloudWSClient.describeRouterStatics(request);
 		assertTrue(response!=null);
 		System.out.println("DescribeRouterStaticsResponse.getRet_code()=" + response.getRet_code());
