@@ -406,7 +406,11 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		DescribeSecurityGroupsResponse describeSecurityGroupsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SECURITY_GROUPS;
+<<<<<<< Updated upstream
 //		describeSecurityGroupsRequest.setZone("kfcs1");
+=======
+		//describeSecurityGroupsRequest.setZone("kfcs1");
+>>>>>>> Stashed changes
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeSecurityGroupsRequest);
