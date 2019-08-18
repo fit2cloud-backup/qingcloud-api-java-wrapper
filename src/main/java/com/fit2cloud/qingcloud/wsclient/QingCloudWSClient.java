@@ -406,7 +406,11 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		DescribeSecurityGroupsResponse describeSecurityGroupsResponse = null;
 		String httpMethod = "GET";
 		String action = QingCloudAction.DESCRIBE_SECURITY_GROUPS;
+<<<<<<< Updated upstream
 //		describeSecurityGroupsRequest.setZone("kfcs1");
+=======
+		//describeSecurityGroupsRequest.setZone("kfcs1");
+>>>>>>> Stashed changes
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeSecurityGroupsRequest);
@@ -1787,8 +1791,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return applySnapshotsResponse;
 	}
 
-	public DescribeSnapshotsResponse describeSnapshots(
-			DescribeSnapshotsRequest describeSnapshotsRequest)
+	public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest describeSnapshotsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {
 		DescribeSnapshotsResponse describeSnapshotsResponse = null;
 		String httpMethod = "GET";
