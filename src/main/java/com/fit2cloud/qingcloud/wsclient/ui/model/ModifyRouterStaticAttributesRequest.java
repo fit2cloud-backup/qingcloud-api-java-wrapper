@@ -10,6 +10,7 @@ public class ModifyRouterStaticAttributesRequest extends Request {
 	private String val2;
 	private String val3;
 	private String val4;
+	private String val5;
 	private String zone;
 	public String getRouter_static() {
 		return router_static;
@@ -47,6 +48,15 @@ public class ModifyRouterStaticAttributesRequest extends Request {
 	public void setVal4(String val4) {
 		this.val4 = val4;
 	}
+
+	public String getVal5() {
+		return val5;
+	}
+
+	public void setVal5(String val5) {
+		this.val5 = val5;
+	}
+
 	public String getZone() {
 		return zone;
 	}

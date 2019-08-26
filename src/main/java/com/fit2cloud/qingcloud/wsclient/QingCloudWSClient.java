@@ -1129,6 +1129,66 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return modifyRouterStaticAttributesResponse;
 	}
 
+	public AddRouterStaticsEntriesResponse addRouterStaticsEntries(
+			AddRouterStaticsEntriesRequest addRouterStaticsEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		AddRouterStaticsEntriesResponse addRouterStaticsEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.ADD_ROUTER_STATICS_ENTRIES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					addRouterStaticsEntriesRequest);
+			addRouterStaticsEntriesResponse = AddRouterStaticsEntriesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return addRouterStaticsEntriesResponse;
+	}
+
+	public DeleteRouterStaticsEntriesResponse deleteRouterStaticsEntries(
+			DeleteRouterStaticsEntriesRequest deleteRouterStaticsEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		DeleteRouterStaticsEntriesResponse deleteRouterStaticsEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DELETE_ROUTER_STATICS_ENTRIES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					deleteRouterStaticsEntriesRequest);
+			deleteRouterStaticsEntriesResponse = DeleteRouterStaticsEntriesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return deleteRouterStaticsEntriesResponse;
+	}
+
+	public ModifyRouterStaticAttributesEntriesResponse modifyRouterStaticAttributesEntries(
+			ModifyRouterStaticAttributesEntriesRequest modifyRouterStaticAttributesEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		ModifyRouterStaticAttributesEntriesResponse modifyRouterStaticAttributesEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.MODIFY_ROUTER_STATIC_ATTRIBUTES_ENTRIES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					modifyRouterStaticAttributesEntriesRequest);
+			modifyRouterStaticAttributesEntriesResponse = ModifyRouterStaticAttributesEntriesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return modifyRouterStaticAttributesEntriesResponse;
+	}
+
 	public ResizeRouterResponse resizeRouters(
 			ResizeRouterRequest resizeRouterRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {

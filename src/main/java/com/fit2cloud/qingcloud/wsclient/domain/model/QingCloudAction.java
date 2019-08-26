@@ -95,6 +95,9 @@ public class QingCloudAction {
     public static String ADD_ROUTER_STATICS = "AddRouterStatics";
     public static String DELETE_ROUTER_STATICS = "DeleteRouterStatics";
     public static String MODIFY_ROUTER_STATIC_ATTRIBUTES = "ModifyRouterStaticAttributes";
+    public static String ADD_ROUTER_STATICS_ENTRIES = "AddRouterStaticEntries";
+    public static String DELETE_ROUTER_STATICS_ENTRIES = "DeleteRouterStaticEntries";
+    public static String MODIFY_ROUTER_STATIC_ATTRIBUTES_ENTRIES = "ModifyRouterStaticEntryAttributes";
     public static String RESIZE_ROUTERS = "ResizeRouters";
 
     // eip

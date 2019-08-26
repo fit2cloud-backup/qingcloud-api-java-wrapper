@@ -14,6 +14,7 @@ public class QingCloudRouterStatics {
 	private String val2;
 	private String val3;
 	private String val4;
+	private String val5;
 
     private List<routerStaticEntry> entry_set;
 
@@ -111,6 +112,14 @@ public class QingCloudRouterStatics {
 
 	public void setVal4(String val4) {
 		this.val4 = val4;
+	}
+
+	public String getVal5() {
+		return val5;
+	}
+
+	public void setVal5(String val5) {
+		this.val5 = val5;
 	}
 
 	public Integer getStatic_type() {
