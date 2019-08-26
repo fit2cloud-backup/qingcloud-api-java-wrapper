@@ -244,6 +244,7 @@ public class QingCloudRoutersAPITest {
 		for(QingCloudRouterStatics rs : routerStaticSet) {
 			System.out.println("router statics >> "+rs);
 		}
+
 	}
 	
 	//@Test

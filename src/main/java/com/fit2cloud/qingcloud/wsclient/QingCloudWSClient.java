@@ -1208,7 +1208,46 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return resizeRouterResponse;
 	}
-	
+
+	public DeleteRouterStaticEntriesResponse deleteRouterStaticEntries(
+			DeleteRouterStaticEntriesRequest deleteRouterStaticEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		DeleteRouterStaticEntriesResponse deleteRouterStaticEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DELETE_ROUTER_STATIC_ENTRIES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					deleteRouterStaticEntriesRequest);
+			deleteRouterStaticEntriesResponse = DeleteRouterStaticEntriesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return deleteRouterStaticEntriesResponse;
+	}
+
+	public AddRouterStaticEntriesResponse addRouterStaticEntries(
+			AddRouterStaticEntriesRequest addRouterStaticEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		AddRouterStaticEntriesResponse addRouterStaticEntriesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.ADD_ROUTER_STATIC_ENTRIES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					addRouterStaticEntriesRequest);
+			addRouterStaticEntriesResponse = AddRouterStaticEntriesResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return addRouterStaticEntriesResponse;
+	}
 
 	public AssociateEipResponse associateEip(
 			AssociateEipRequest associateEipRequest)

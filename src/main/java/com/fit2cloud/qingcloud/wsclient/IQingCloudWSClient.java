@@ -271,6 +271,14 @@ public interface IQingCloudWSClient {
 	public ResizeRouterResponse resizeRouters(
 			ResizeRouterRequest resizeRouterRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public DeleteRouterStaticEntriesResponse deleteRouterStaticEntries(
+			DeleteRouterStaticEntriesRequest deleteRouterStaticEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AddRouterStaticEntriesResponse addRouterStaticEntries(
+			AddRouterStaticEntriesRequest addRouterStaticEntriesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 					
     //-----------------------------------EIPs------------------------------------------------------
 	public AssociateEipResponse associateEip(
