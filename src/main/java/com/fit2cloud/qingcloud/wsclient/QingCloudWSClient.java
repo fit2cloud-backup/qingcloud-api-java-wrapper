@@ -1993,8 +1993,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		for (Map.Entry<String, String> entry : parameters.entrySet()) {
 			String key = entry.getKey();
 			String value = entry.getValue();
-			System.out.println(String.format("%s=%s", key, value));
-			if(DEBUG) System.out.println(String.format("%s=%s", key, value));
 		}
 
 		InputStream content = null;
@@ -2009,8 +2007,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			// 从上述SSLContext对象中得到SSLSocketFactory对象
 			SSLSocketFactory ssf = sslContext.getSocketFactory();
 
-			if(DEBUG) System.out.println("url=" + url);
-
 			if(endpoint.startsWith("https:")){
 				HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
 				conn.setHostnameVerifier(new TrustAnyHostnameVerifier());
@@ -2022,8 +2018,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 			connection.connect();
 			int code = connection.getResponseCode();
-			
-			if(DEBUG) System.out.println("code=" + code);
 			
 			if (code >= 400) {
 				content = connection.getErrorStream();
@@ -2037,8 +2031,6 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			} else {
 				content = connection.getInputStream();
 				String message = readContent(content);
-				if(DEBUG) System.out.println("message=" + message);
-				
 				//check retcode
 				Response response = Response.fromJson(message);
 				int retCode = response.getRet_code();

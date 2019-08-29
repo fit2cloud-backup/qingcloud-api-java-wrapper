@@ -253,7 +253,6 @@ public class RunInstancesRequest extends Request {
 	public String toJson(){
 		Gson gson = new GsonBuilder().create();
 		String jsonRequest = gson.toJson(this);
-		System.out.println(jsonRequest);
 		return jsonRequest;
 	}
 

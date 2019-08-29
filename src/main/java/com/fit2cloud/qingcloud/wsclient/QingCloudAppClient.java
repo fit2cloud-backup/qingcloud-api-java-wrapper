@@ -80,7 +80,6 @@ public class QingCloudAppClient implements IQingCloudAppClient {
         for (Map.Entry<String, String> entry : parameters.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
-            if(DEBUG) System.out.println(String.format("%s=%s", key, value));
         }
 
         InputStream content = null;
@@ -89,13 +88,9 @@ public class QingCloudAppClient implements IQingCloudAppClient {
             String query = paramsToQueryString(parameters);
             URL url = new URL(ENDPOINT + "?" + query);
 
-            if(DEBUG) System.out.println("url=" + url);
-
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
             int code = connection.getResponseCode();
-
-            if(DEBUG) System.out.println("code=" + code);
 
             if (code >= 400) {
                 content = connection.getErrorStream();
@@ -109,8 +104,6 @@ public class QingCloudAppClient implements IQingCloudAppClient {
             } else {
                 content = connection.getInputStream();
                 String message = readContent(content);
-                if(DEBUG) System.out.println("message=" + message);
-
                 //check retcode
                 Response response = Response.fromJson(message);
                 int retCode = response.getRet_code();
