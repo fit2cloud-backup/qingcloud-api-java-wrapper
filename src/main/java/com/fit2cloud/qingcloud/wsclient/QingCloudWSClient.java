@@ -1904,6 +1904,25 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		return describeSnapshotsResponse;
 	}
 
+	public DescribeAlarmResponse describeAlarms(DescribeAlarmRequest describeAlarmRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException {
+		DescribeAlarmResponse describeAlarmResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_ALARMS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					describeAlarmRequest);
+			describeAlarmResponse = DescribeAlarmResponse
+					.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return describeAlarmResponse;
+	}
+
 	public ModifySnapshotAttributesResponse modifySnapshotAttributes(
 			ModifySnapshotAttributesRequest modifySnapshotAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException {

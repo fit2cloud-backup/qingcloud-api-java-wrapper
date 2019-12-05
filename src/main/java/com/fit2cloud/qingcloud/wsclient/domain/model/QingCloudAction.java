@@ -161,4 +161,8 @@ public class QingCloudAction {
     //Physical resource
     public static final String DESCRIBE_HUPERNODES = "DescribeHyperNodes";
     public static final String DESCRIBE_BOTS="DescribeBots";
+
+
+    //alarm
+    public static final String DESCRIBE_ALARMS = "DescribeAlarmHistory";
 }
