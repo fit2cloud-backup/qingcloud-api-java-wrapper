@@ -4,7 +4,7 @@ public class QingCloudAlarmItem {
     private String alarm_id;
     private String status;
     private String alarm_policy_id;
-    private String resource_id;
+    private AlarmResource resource;
     private String related_resource;
     private String create_time;
 
@@ -41,13 +41,6 @@ public class QingCloudAlarmItem {
         this.alarm_policy_id = alarm_policy_id;
     }
 
-    public String getResource_id() {
-        return resource_id;
-    }
-
-    public void setResource_id(String resource_id) {
-        this.resource_id = resource_id;
-    }
 
     public String getRelated_resource() {
         return related_resource;
@@ -55,5 +48,14 @@ public class QingCloudAlarmItem {
 
     public void setRelated_resource(String related_resource) {
         this.related_resource = related_resource;
+    }
+
+
+    public AlarmResource getResource() {
+        return resource;
+    }
+
+    public void setResource(AlarmResource resource) {
+        this.resource = resource;
     }
 }

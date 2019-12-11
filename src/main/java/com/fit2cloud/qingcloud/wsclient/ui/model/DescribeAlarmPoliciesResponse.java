@@ -1,14 +1,15 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
+import com.fit2cloud.qingcloud.wsclient.domain.model.QingAlarmPolicy;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAlarmItem;
-import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudSnapshot;
 import com.google.gson.Gson;
 
 import java.util.List;
 
-public class DescribeAlarmResponse {
+public class DescribeAlarmPoliciesResponse {
+
     private String action;
-    private List<QingCloudAlarmItem> alarm_set;
+    private List<QingAlarmPolicy> alarm_policy_set;
     private Integer ret_code;
     private Integer total_count = 0;
 
@@ -21,9 +22,9 @@ public class DescribeAlarmResponse {
         this.total_count = total_count;
     }
 
-    public static DescribeAlarmResponse fromJson(String jsonDescribeAlarmsResponse) {
+    public static DescribeAlarmPoliciesResponse fromJson(String jsonDescribeAlarmPoliciesResponse) {
         Gson gson = new Gson();
-        DescribeAlarmResponse describeSAlarmsResponse = gson.fromJson(jsonDescribeAlarmsResponse, DescribeAlarmResponse.class);
+        DescribeAlarmPoliciesResponse describeSAlarmsResponse = gson.fromJson(jsonDescribeAlarmPoliciesResponse, DescribeAlarmPoliciesResponse.class);
         return describeSAlarmsResponse;
     }
 
@@ -36,7 +37,6 @@ public class DescribeAlarmResponse {
     }
 
 
-
     public Integer getRet_code() {
         return ret_code;
     }
@@ -45,11 +45,12 @@ public class DescribeAlarmResponse {
         this.ret_code = ret_code;
     }
 
-    public List<QingCloudAlarmItem> getAlarm_set() {
-        return alarm_set;
+
+    public List<QingAlarmPolicy> getAlarm_policy_set() {
+        return alarm_policy_set;
     }
 
-    public void setAlarm_set(List<QingCloudAlarmItem> alarm_set) {
-        this.alarm_set = alarm_set;
+    public void setAlarm_policy_set(List<QingAlarmPolicy> alarm_policy_set) {
+        this.alarm_policy_set = alarm_policy_set;
     }
 }

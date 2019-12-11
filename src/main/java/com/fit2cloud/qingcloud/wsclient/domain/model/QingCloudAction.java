@@ -1,17 +1,17 @@
 package com.fit2cloud.qingcloud.wsclient.domain.model;
 
 public class QingCloudAction {
-	//images
-	public static String DESCRIBE_IMAGES = "DescribeImages";
-	public static String CAPTURE_INSTANCE = "CaptureInstance";
-	public static String DELETE_IMAGES = "DeleteImages";
+    //images
+    public static String DESCRIBE_IMAGES = "DescribeImages";
+    public static String CAPTURE_INSTANCE = "CaptureInstance";
+    public static String DELETE_IMAGES = "DeleteImages";
     public static String MODIFY_IMAGE_ATTRIBUTES = "ModifyImageAttributes";
     public static String GRANT_IMAGE_TO_USERS = "GrantImageToUsers";
     public static String REVOKE_IMAGE_FROM_USERS = "RevokeImageFromUsers";
     public static String CREATE_BROKERS = "CreateBrokers";
     public static String DELETE_BROKERS = "DeleteBrokers";
     public static String CLONE_INSTANCES = "CloneInstances";
-    
+
     // instances
     public static String DESCRIBE_INSTANCETYPES = "DescribeInstanceTypes";
     public static String DESCRIBE_INSTANCES = "DescribeInstances";
@@ -146,10 +146,10 @@ public class QingCloudAction {
     public static String MODIFY_SNAPSHOT_ATTRIBUTES = "ModifySnapshotAttributes";
     public static String CAPTURE_INSTANCE_FROM_SNAPSHOT = "CaptureInstanceFromSnapshot";
     public static String CREATE_VOLUME_FROM_SNAPSHOT = "CreateVolumeFromSnapshot";
-    
+
     // job
     public static String DESCRIBE_JOBS = "DescribeJobs";
-    
+
     // zone
     public static String DESCRIBE_ZONES = "DescribeZones";
 
@@ -160,9 +160,11 @@ public class QingCloudAction {
 
     //Physical resource
     public static final String DESCRIBE_HUPERNODES = "DescribeHyperNodes";
-    public static final String DESCRIBE_BOTS="DescribeBots";
+    public static final String DESCRIBE_BOTS = "DescribeBots";
 
 
     //alarm
-    public static final String DESCRIBE_ALARMS = "DescribeAlarmHistory";
+    public static final String DESCRIBE_ALARMS = "DescribeAlarms";
+    public static final String DESCRIBE_ALARM_POLICIES = "DescribeAlarmPolicies";
+    public static final String DESCRIBE_ALARMS_POLICY_RULES = "DescribeAlarmPolicyRules";
 }

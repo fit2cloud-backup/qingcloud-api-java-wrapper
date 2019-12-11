@@ -3,7 +3,7 @@ package com.fit2cloud.qingcloud.wsclient.ui.model;
 import java.util.List;
 
 
-public class DescribeAlarmRequest extends Request {
+public class DescribeAlarmsRequest extends Request {
     private List<String> alarm;
     private String policy;
     private String status;
