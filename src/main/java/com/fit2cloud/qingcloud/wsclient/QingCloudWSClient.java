@@ -1941,6 +1941,24 @@ public class QingCloudWSClient implements IQingCloudWSClient {
         return describeAlarmPoliciesResponse;
     }
 
+    public GetResourceLeaseResponse getResourceLeaseResponse(GetResourceLeaseRequest getResourceLeaseRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        GetResourceLeaseResponse getResourceLeaseResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.GET_RESOURCE_LEASE_INFO;
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action,
+                    getResourceLeaseRequest);
+            getResourceLeaseResponse = GetResourceLeaseResponse
+                    .fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return getResourceLeaseResponse;
+
+    }
+
 
     public DescribeAlarmPolicyRulesResponse describeAlarmPolicyRules(DescribeAlarmPolicyRulesRequest describeAlarmPolicyRulesRequest)
             throws QingCloudClientException, QingCloudServiceException, IOException {

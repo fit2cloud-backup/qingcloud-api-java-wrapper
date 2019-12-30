@@ -167,4 +167,9 @@ public class QingCloudAction {
     public static final String DESCRIBE_ALARMS = "DescribeAlarms";
     public static final String DESCRIBE_ALARM_POLICIES = "DescribeAlarmPolicies";
     public static final String DESCRIBE_ALARMS_POLICY_RULES = "DescribeAlarmPolicyRules";
+
+
+    //Get Lease Info
+    public static final String GET_RESOURCE_LEASE_INFO = "GetLeaseInfo";
+
 }
