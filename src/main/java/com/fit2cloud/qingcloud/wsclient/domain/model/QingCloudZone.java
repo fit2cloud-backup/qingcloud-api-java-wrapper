@@ -6,4 +6,5 @@ public class QingCloudZone {
     public final static String PEK3 = "pek3a";
     public final static String GD1 = "gd1";
     public final static String AP1 = "ap1";
+    public final static String GD2 = "gd2";
 }

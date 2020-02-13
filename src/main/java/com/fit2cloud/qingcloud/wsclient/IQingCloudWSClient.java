@@ -405,17 +405,17 @@ public interface IQingCloudWSClient {
 //			ApplySnapshotsRequest applySnapshotsRequest)
 //			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
-//	public DescribeSnapshotsResponse describeSnapshots(
-//			DescribeSnapshotsRequest describeSnapshotsRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
+	public DescribeSnapshotsResponse describeSnapshots(
+			DescribeSnapshotsRequest describeSnapshotsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public ModifySnapshotAttributesResponse modifySnapshotAttributes(
 //			ModifySnapshotAttributesRequest modifySnapshotAttributesRequest)
 //			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
-//	public CaptureInstanceFromSnapshotResponse captureInstanceFromSnapshot(
-//			CaptureInstanceFromSnapshotRequest captureInstanceFromSnapshotRequest)
-//			throws QingCloudClientException, QingCloudServiceException, IOException;
+	public CaptureInstanceFromSnapshotResponse captureInstanceFromSnapshot(
+			CaptureInstanceFromSnapshotRequest captureInstanceFromSnapshotRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 //
 //	public CreateVolumeFromSnapshotResponse createVolumeFromSnapshot(
 //			CreateVolumeFromSnapshotRequest createVolumeFromSnapshotRequest)
