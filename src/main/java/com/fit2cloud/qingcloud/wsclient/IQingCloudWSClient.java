@@ -468,4 +468,22 @@ public interface IQingCloudWSClient {
 			ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+	//-----------------------------------Tags------------------------------------------------------
+
+	public DescribeTagsResponse describeTags(
+			DescribeTagsRequest describeTagsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateTagResponse createTag(
+			CreateTagRequest createTagRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public AttachTagsResponse attachTags(
+			AttachTagsRequest attachTagsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+
+	public DetachTagsResponse detachTags(DetachTagsRequest detachTagsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 }

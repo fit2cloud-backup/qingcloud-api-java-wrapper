@@ -41,6 +41,7 @@ import com.fit2cloud.qingcloud.wsclient.ui.model.*;
  * 5) Snapshot APIs
  * 6) Load Balancer APIs
  * 7) Monitor APIs
+ * 8）Tag APIs
  *
  * @author jason
  */
@@ -2734,5 +2735,68 @@ public class QingCloudWSClient implements IQingCloudWSClient {
         public boolean verify(String hostname, SSLSession session) {
             return true;
         }
+    }
+
+    public DescribeTagsResponse describeTags(DescribeTagsRequest describeTagRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        DescribeTagsResponse describeTagsResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.DESCRIBE_TAGS;
+
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action,
+                    describeTagRequest);
+            describeTagsResponse = DescribeTagsResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return describeTagsResponse;
+    }
+
+    public CreateTagResponse createTag(CreateTagRequest createTagRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        CreateTagResponse createTagResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.CREATE_TAG;
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action, createTagRequest);
+            createTagResponse = CreateTagResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return createTagResponse;
+    }
+
+    public AttachTagsResponse attachTags(AttachTagsRequest AttachTagsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        AttachTagsResponse attachTagsResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.ATTACH_TAGS;
+
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action, AttachTagsRequest);
+            attachTagsResponse = AttachTagsResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return attachTagsResponse;
+    }
+
+    public DetachTagsResponse detachTags(DetachTagsRequest detachTagsRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        DetachTagsResponse detachKeyPairsResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.DETACH_TAGS;
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action, detachTagsRequest);
+            detachKeyPairsResponse = DetachTagsResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return detachKeyPairsResponse;
     }
 }

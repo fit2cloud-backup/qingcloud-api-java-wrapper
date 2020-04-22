@@ -11,6 +11,8 @@ public class DescribeVxnetsRequest extends Request {
 	private Integer offset;
 	private Integer limit;
 	private String zone;
+	private boolean showVxnet0;//控制是否展示基础网络
+//    private List<String> visibility;// public, private, shared
 
 	public List<String> getVxnets() {
 		return vxnets;
@@ -68,4 +70,11 @@ public class DescribeVxnetsRequest extends Request {
 		this.zone = zone;
 	}
 
+	public boolean isShowVxnet0() {
+		return showVxnet0;
+	}
+
+	public void setShowVxnet0(boolean showVxnet0) {
+		this.showVxnet0 = showVxnet0;
+	}
 }

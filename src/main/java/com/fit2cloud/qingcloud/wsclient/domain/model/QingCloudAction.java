@@ -172,4 +172,11 @@ public class QingCloudAction {
     //Get Lease Info
     public static final String GET_RESOURCE_LEASE_INFO = "GetLeaseInfo";
 
+    //tag
+    public static final String DESCRIBE_TAGS = "DescribeTags";
+    public static final String DETACH_TAGS = "DetachTags";
+    public static final String ATTACH_TAGS = "AttachTags";
+    public static final String CREATE_TAG = "CreateTag";
 }
+
+
