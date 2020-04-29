@@ -5,7 +5,7 @@ import java.util.List;
 public class DescribeVxnetsRequest extends Request {
 
 	private List<String> vxnets;
-	private Integer vxnet_type;
+	private Integer vxnet_type;//0:自管；1：受管；2：基础网络;
 	private String search_word;
 	private Integer verbose;
 	private Integer offset;

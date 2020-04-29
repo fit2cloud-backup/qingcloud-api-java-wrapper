@@ -4,7 +4,7 @@
   <groupId>com.fit2cloud.qingcloud</groupId>
   <artifactId>qingcloud-api-sdk</artifactId>
   <packaging>jar</packaging>
-  <version>2.1.1</version>
+  <version>2.1.4</version>
   <name>Fit2Cloud for Qingyun Java SDK Lib</name>
 
 	<licenses>
