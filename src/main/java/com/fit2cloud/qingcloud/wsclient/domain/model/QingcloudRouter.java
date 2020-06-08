@@ -21,6 +21,7 @@ public class QingcloudRouter {
     private String manager_ip;
     private QingCloudEIP eip;
     private List<QingCloudVxnet> vxnets;
+    private String vpc_network;
 
     public String getRouter_id() {
         return router_id;
@@ -135,7 +136,7 @@ public class QingcloudRouter {
                 + ", transition_status=" + transition_status + ", create_time="
                 + create_time + ", status_time=" + status_time
                 + ", security_group_id=" + security_group_id + ", eip=" + eip
-                + ", vxnets=" + vxnets + "]";
+                + ", vxnets=" + vxnets + ", vpc_network=" + vpc_network + "]";
     }
 
     public String getDyn_ip_end() {
@@ -176,5 +177,13 @@ public class QingcloudRouter {
 
     public void setManager_ip(String manager_ip) {
         this.manager_ip = manager_ip;
+    }
+
+    public String getVpc_network() {
+        return vpc_network;
+    }
+
+    public void setVpc_network(String vpc_network) {
+        this.vpc_network = vpc_network;
     }
 }
