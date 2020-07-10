@@ -177,6 +177,11 @@ public class QingCloudAction {
     public static final String DETACH_TAGS = "DetachTags";
     public static final String ATTACH_TAGS = "AttachTags";
     public static final String CREATE_TAG = "CreateTag";
+
+    //virtual san/nas
+    public static final String DESCRIBE_S2_SERVERS = "DescribeS2Servers";
+    public static final String CREATE_S2_SERVER = "CreateS2Server";
+
 }
 
 

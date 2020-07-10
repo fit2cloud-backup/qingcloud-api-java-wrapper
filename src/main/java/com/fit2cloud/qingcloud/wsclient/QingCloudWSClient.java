@@ -2799,4 +2799,36 @@ public class QingCloudWSClient implements IQingCloudWSClient {
         }
         return detachKeyPairsResponse;
     }
+
+    public DescribeS2ServersResponse describeS2Servers(DescribeS2ServersRequest describeS2ServersRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        DescribeS2ServersResponse describeS2ServersResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.DESCRIBE_S2_SERVERS;
+
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action,
+                    describeS2ServersRequest);
+            describeS2ServersResponse = DescribeS2ServersResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return describeS2ServersResponse;
+    }
+
+    public CreateS2ServerResponse createS2Server(CreateS2ServerRequest createS2ServerRequest) throws QingCloudClientException, QingCloudServiceException, IOException {
+        CreateS2ServerResponse createS2ServerResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.CREATE_S2_SERVER;
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action, createS2ServerRequest);
+            createS2ServerResponse = CreateS2ServerResponse.fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return createS2ServerResponse;
+    }
 }

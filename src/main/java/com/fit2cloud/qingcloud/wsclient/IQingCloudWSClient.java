@@ -486,4 +486,15 @@ public interface IQingCloudWSClient {
 	public DetachTagsResponse detachTags(DetachTagsRequest detachTagsRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
+
+	//-----------------------------------Virtual SAN / NAS-------------------------------------------
+
+	public DescribeS2ServersResponse describeS2Servers(
+			DescribeS2ServersRequest describeS2ServersRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+	public CreateS2ServerResponse createS2Server(
+			CreateS2ServerRequest createS2ServerRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
 }

@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../IdeaProjects/fit2cloud2.0-vm-service/src/main/java/com/fit2cloud/vm/service/PluginService.java" description="optionList.add(new HashMap&lt;String, String&gt;() {{" line="259" />
+    <bookmark url="file://$PROJECT_DIR$/../IdeaProjects/fit2cloud2.0-vm-service/src/main/resources/static/project/js/task/task.js" description="    $scope.complete = function () {&#10;" line="68" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d0f805bd-2b52-41f2-b97a-954d33e3f821" name="Default" comment="[#987]配置产品增加副本策略配置">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerServiveType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_1_7_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_1_7_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudAppClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudAppClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/IQingCloudWSClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/IQingCloudWSClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudWSClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudWSClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/RunInstancesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/RunInstancesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudAction.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +38,183 @@
       <FILTER>com.fit2cloud.qingcloud.wsclient.*</FILTER>
     </SUITE>
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+              <folding>
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#1014#1015#0" expanded="true" />
+                <element signature="e#1066#1067#0" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1168#1169#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1298#1299#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1575#1576#0" expanded="true" />
+                <element signature="e#1608#1609#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1820#1821#0" expanded="true" />
+                <element signature="e#1860#1861#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+                <element signature="e#1922#1923#0" expanded="true" />
+                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#2002#2003#0" expanded="true" />
+                <element signature="e#2046#2047#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
+                <element signature="e#2152#2153#0" expanded="true" />
+                <element signature="e#2210#2211#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="e#2336#2337#0" expanded="true" />
+                <element signature="e#2382#2383#0" expanded="true" />
+                <element signature="e#2420#2421#0" expanded="true" />
+                <element signature="e#2454#2455#0" expanded="true" />
+                <element signature="e#2508#2509#0" expanded="true" />
+                <element signature="e#2554#2555#0" expanded="true" />
+                <element signature="e#2594#2595#0" expanded="true" />
+                <element signature="e#2622#2623#0" expanded="true" />
+                <element signature="e#2672#2673#0" expanded="true" />
+                <element signature="e#2706#2707#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerServiveType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-272">
+              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/IQingCloudWSClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="491" column="37" selection-start-line="491" selection-start-column="37" selection-end-line="491" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudWSClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="2808" selection-start-line="2808" selection-end-line="2808" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding>
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1050#1051#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+                <element signature="e#1129#1130#0" expanded="true" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1279#1280#0" expanded="true" />
+                <element signature="e#1312#1313#0" expanded="true" />
+                <element signature="e#1364#1365#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1480#1481#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#1580#1581#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+                <element signature="e#1736#1737#0" expanded="true" />
+                <element signature="e#1767#1768#0" expanded="true" />
+                <element signature="e#1794#1795#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1866#1867#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudInstance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -27,8 +222,78 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>TimeStamp</find>
+      <find>time</find>
+      <find>vxnet</find>
+      <find>httpMethod</find>
+      <find>s2_server_name</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServcersRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServersResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServersRequest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudInstancesAPITest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerServiveType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/IQingCloudWSClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudWSClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2Server.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../Programs/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../Programs/apache-maven-3.5.3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Fit2Cloud for Qingyun Java SDK Lib" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Fit2Cloud for Qingyun Java SDK Lib" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Fit2Cloud for Qingyun Java SDK Lib" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="60" />
+    <option name="y" value="101" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectId" id="1Q6Is4ZakclbX00YNmsLkWX7dzI" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -60,6 +325,26 @@
     </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="qingcloud-api-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qingcloud-api-java-wrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -68,7 +353,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -89,7 +374,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.QingCloudInstancesAPITest.testRunInstances">
+  <component name="RunManager" selected="JUnit.QingCloudS2ServersAPITest.testCreateS2Servers">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -98,6 +383,22 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QingCloudInstancesAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="qingcloud-api-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fit2cloud.qingcloud.wsclient.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.fit2cloud.qingcloud.wsclient" />
+      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudInstancesAPITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +420,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QingCloudMonitorAPITest.testGetMonitor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QingCloudInstancesAPITest.testRunInstancesWithInstanceClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qingcloud-api-sdk" />
       <extension name="coverage">
         <pattern>
@@ -128,15 +429,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.fit2cloud.qingcloud.wsclient" />
-      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudMonitorAPITest" />
-      <option name="METHOD_NAME" value="testGetMonitor" />
+      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudInstancesAPITest" />
+      <option name="METHOD_NAME" value="testRunInstancesWithInstanceClass" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QingCloudMonitorAPITest.testGjson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qingcloud-api-sdk" />
       <extension name="coverage">
         <pattern>
@@ -145,15 +446,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.fit2cloud.qingcloud.wsclient" />
-      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudMonitorAPITest" />
-      <option name="METHOD_NAME" value="testGjson" />
+      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudS2ServersAPITest" />
+      <option name="METHOD_NAME" value="testCreateS2Servers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QingCloudS2ServersAPITest.testDescribeS2Servers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="qingcloud-api-sdk" />
       <extension name="coverage">
         <pattern>
@@ -162,25 +463,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.fit2cloud.qingcloud.wsclient" />
-      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudVxnetsAPITest" />
-      <option name="METHOD_NAME" value="testDescribeReplPolicys" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QingCloudVxnetsAPITest.testDiskList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="qingcloud-api-sdk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.fit2cloud.qingcloud.wsclient.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.fit2cloud.qingcloud.wsclient" />
-      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudVxnetsAPITest" />
-      <option name="METHOD_NAME" value="testDiskList" />
+      <option name="MAIN_CLASS_NAME" value="com.fit2cloud.qingcloud.wsclient.QingCloudS2ServersAPITest" />
+      <option name="METHOD_NAME" value="testDescribeS2Servers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -213,19 +497,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.QingCloudMonitorAPITest.testGetMonitor" />
-      <item itemvalue="JUnit.QingCloudMonitorAPITest.testGjson" />
-      <item itemvalue="JUnit.QingCloudVxnetsAPITest.testDescribeReplPolicys" />
-      <item itemvalue="JUnit.QingCloudVxnetsAPITest.testDiskList" />
       <item itemvalue="JUnit.QingCloudInstancesAPITest.testRunInstances" />
+      <item itemvalue="JUnit.QingCloudS2ServersAPITest.testCreateS2Servers" />
+      <item itemvalue="JUnit.QingCloudS2ServersAPITest.testDescribeS2Servers" />
+      <item itemvalue="JUnit.QingCloudInstancesAPITest" />
+      <item itemvalue="JUnit.QingCloudInstancesAPITest.testRunInstancesWithInstanceClass" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.QingCloudS2ServersAPITest.testCreateS2Servers" />
+        <item itemvalue="JUnit.QingCloudS2ServersAPITest.testDescribeS2Servers" />
+        <item itemvalue="JUnit.QingCloudInstancesAPITest.testRunInstancesWithInstanceClass" />
+        <item itemvalue="JUnit.QingCloudInstancesAPITest" />
         <item itemvalue="JUnit.QingCloudInstancesAPITest.testRunInstances" />
-        <item itemvalue="JUnit.QingCloudVxnetsAPITest.testDescribeReplPolicys" />
-        <item itemvalue="JUnit.QingCloudVxnetsAPITest.testDiskList" />
-        <item itemvalue="JUnit.QingCloudMonitorAPITest.testGetMonitor" />
-        <item itemvalue="JUnit.QingCloudMonitorAPITest.testGjson" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +534,12 @@
       <workItem from="1562926602120" duration="131000" />
       <workItem from="1562927759190" duration="608000" />
       <workItem from="1567084824605" duration="767000" />
+      <workItem from="1593309395424" duration="40000" />
+      <workItem from="1593309443895" duration="26000" />
+      <workItem from="1593309617804" duration="2038000" />
+      <workItem from="1593352307912" duration="1065000" />
+      <workItem from="1594013878102" duration="661000" />
+      <workItem from="1594106507275" duration="25257000" />
     </task>
     <task id="LOCAL-00001" summary="[#987]配置产品增加副本策略配置">
       <created>1517219024526</created>
@@ -258,40 +548,114 @@
       <option name="project" value="LOCAL" />
       <updated>1517219024526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pom文件">
+      <created>1593313341706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593313341706</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="QingCloudInstancesAPITest_testRunInstances - 2018.01.29 at 12h 20m 24s.xml">
-      <configuration name="QingCloudInstancesAPITest.testRunInstances" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testDescribeS2Servers - 2020.07.08 at 11h 59m 39s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testDescribeS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 11h 32m 33s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.08 at 13h 21m 19s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 11h 48m 03s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.08 at 13h 22m 58s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 11h 49m 52s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testDescribeS2Servers - 2020.07.08 at 13h 29m 28s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testDescribeS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 11h 50m 13s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testDescribeS2Servers - 2020.07.09 at 09h 57m 03s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testDescribeS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 11h 51m 00s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.09 at 10h 04m 43s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDescribeReplPolicys - 2018.01.29 at 12h 04m 27s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDescribeReplPolicys" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.09 at 10h 05m 54s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDiskList - 2018.01.29 at 11h 37m 09s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDiskList" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.09 at 10h 08m 49s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDiskList - 2018.01.29 at 11h 46m 26s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDiskList" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.09 at 10h 13m 40s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QingCloudVxnetsAPITest_testDiskList - 2018.01.29 at 11h 47m 50s.xml">
-      <configuration name="QingCloudVxnetsAPITest.testDiskList" configurationId="JUnit" />
+    <history-entry file="QingCloudS2ServersAPITest_testCreateS2Servers - 2020.07.09 at 10h 46m 05s.xml">
+      <configuration name="QingCloudS2ServersAPITest.testCreateS2Servers" configurationId="JUnit" />
     </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="29087000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2653791" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.50963855" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.43855423" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3819277" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.036144577" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.14878398" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23319027" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4554217" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3819277" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.42048192" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.20386267" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -312,8 +676,68 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="me" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="me" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Xiajunjie2020" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="xia" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -321,6 +745,556 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[#987]配置产品增加副本策略配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="[#987]配置产品增加副本策略配置" />
+    <MESSAGE value="pom文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/javaws.jar!/com/sun/javaws/CacheUtil.class</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
+          <line>887</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudInstancesAPITest.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudInstancesAPITest.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeSecurityGroupIPSetsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeSecurityGroupRulesResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudZone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudAPIsIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudEIPAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudKeyPairsAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudLoadBalancerAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudMonitorAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudTagsAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudVolumesAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/RunInstancesResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateRoutersRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateNetworkACLRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateLoadBalancerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateSecurityGroupIPSetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateSecurityGroupIPSetResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateSecurityGroupRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateRoutersResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateNetworkACLResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudVxnetsAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="61" column="9" selection-start-line="44" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudSecurityGroupAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudRoutersAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudInstanceExtra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudVxnetDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeVxnetsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="235" column="18" selection-start-line="235" selection-start-column="18" selection-end-line="235" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/javaws.jar!/com/sun/javaws/CacheUtil.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-116">
+          <folding>
+            <element signature="e#0#15691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Programs/maven/apache-maven-3.5.3/Repository-f2c/junit/junit/4.7/junit-4.7.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="1041" column="42" selection-start-line="1041" selection-start-column="42" selection-end-line="1041" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/rt.jar!/sun/util/locale/provider/LocaleProviderAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/text/DecimalFormatSymbols.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/rt.jar!/sun/util/resources/LocaleData.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudInstanceStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1222#1223#0" expanded="true" />
+            <element signature="e#1254#1255#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="908" column="22" selection-start-line="908" selection-start-column="22" selection-end-line="908" selection-end-column="22" />
+          <folding>
+            <element signature="e#31382#31383#0" expanded="true" />
+            <element signature="e#31427#31428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudGD1InstanceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/DescribeS2ServersResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudInstancesAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+          <folding>
+            <element signature="e#3217#3225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Programs/maven/apache-maven-3.5.3/Repository-f2c/junit/junit/4.7/junit-4.7.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../Programs/maven/apache-maven-3.5.3/Repository-f2c/junit/junit/4.7/junit-4.7.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/QingCloudWSClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="2808" selection-start-line="2808" selection-end-line="2808" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/IQingCloudWSClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="491" column="37" selection-start-line="491" selection-start-column="37" selection-end-line="491" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/ui/model/CreateS2ServerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerServiveType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1168#1169#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1860#1861#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#2046#2047#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2210#2211#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2336#2337#0" expanded="true" />
+            <element signature="e#2382#2383#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2508#2509#0" expanded="true" />
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+            <element signature="e#2622#2623#0" expanded="true" />
+            <element signature="e#2672#2673#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fit2cloud/qingcloud/wsclient/domain/model/QingCloudS2ServerStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fit2cloud/qingcloud/wsclient/QingCloudS2ServersAPITest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
