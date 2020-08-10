@@ -12,6 +12,9 @@ public class QingcloudLoadBalancerListenerBase {
 	private String healthy_check_option;
 
 	private Integer tunnel_timeout =3600;
+
+	private Integer scene; // 场景 0:默认优化；1：keep-alive
+
 	public Integer getListener_port() {
 		return listener_port;
 	}
@@ -73,5 +76,13 @@ public class QingcloudLoadBalancerListenerBase {
 
 	public void setTunnel_timeout(Integer tunnel_timeout) {
 		this.tunnel_timeout = tunnel_timeout;
+	}
+
+	public Integer getScene() {
+		return scene;
+	}
+
+	public void setScene(Integer scene) {
+		this.scene = scene;
 	}
 }

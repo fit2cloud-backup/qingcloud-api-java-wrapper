@@ -16,6 +16,7 @@ public class QingCloudLoadBalancerListenerDetail {
 	private String loadbalancer_id;
 	private Integer listener_port;
 	private Integer listener_option;
+	private String listener_protocol;
 
 	public String getLoadbalancer_id() {
 		return loadbalancer_id;
@@ -94,5 +95,13 @@ public class QingCloudLoadBalancerListenerDetail {
 	}
 	public void setHealthy_check_option(String healthy_check_option) {
 		this.healthy_check_option = healthy_check_option;
+	}
+
+	public String getListener_protocol() {
+		return listener_protocol;
+	}
+
+	public void setListener_protocol(String listener_protocol) {
+		this.listener_protocol = listener_protocol;
 	}
 }
