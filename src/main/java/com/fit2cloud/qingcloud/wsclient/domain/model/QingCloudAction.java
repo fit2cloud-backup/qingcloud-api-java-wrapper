@@ -138,6 +138,9 @@ public class QingCloudAction {
     public static String GET_MONITOR = "GetMonitor";
     public static String GET_LOADBALANCER_MONITOR = "GetLoadBalancerMonitor";
 
+    //server certificate
+    public static String DESCRIBE_SERVER_CERTIFICATES = "DescribeServerCertificates";
+
     // snapshot
     public static String CREATE_SNAPSHOTS = "CreateSnapshots";
     public static String DELETE_SNAPSHOTS = "DeleteSnapshots";

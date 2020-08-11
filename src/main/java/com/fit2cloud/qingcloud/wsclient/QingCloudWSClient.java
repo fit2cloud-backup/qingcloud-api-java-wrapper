@@ -1825,6 +1825,25 @@ public class QingCloudWSClient implements IQingCloudWSClient {
         return getLoadBalancerMonitorResponse;
     }
 
+    public DescribeServerCertificatesResponse describeServerCertificates(
+            DescribeServerCertificatesRequest describeServerCertificatesRequest)
+            throws QingCloudClientException, QingCloudServiceException, IOException {
+        DescribeServerCertificatesResponse describeServerCertificatesResponse = null;
+        String httpMethod = "GET";
+        String action = QingCloudAction.DESCRIBE_SERVER_CERTIFICATES;
+        try {
+            String jsonResponse = this.sendRequest(httpMethod, action,
+                    describeServerCertificatesRequest);
+            describeServerCertificatesResponse = DescribeServerCertificatesResponse
+                    .fromJson(jsonResponse);
+        } catch (QingCloudClientException e) {
+            throw e;
+        } catch (QingCloudServiceException e) {
+            throw e;
+        }
+        return describeServerCertificatesResponse;
+    }
+
     public CreateSnapshotsResponse createSnapshots(
             CreateSnapshotsRequest createSnapshotsRequest)
             throws QingCloudClientException, QingCloudServiceException, IOException {

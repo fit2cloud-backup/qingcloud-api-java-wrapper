@@ -392,7 +392,13 @@ public interface IQingCloudWSClient {
 			GetLoadBalancerMonitorRequest getLoadBalancerMonitorRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
 
-//	//-----------------------------------Snapshots------------------------------------------------------
+	public DescribeServerCertificatesResponse describeServerCertificates(
+			DescribeServerCertificatesRequest describeServerCertificatesRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+
+
+
+	//	//-----------------------------------Snapshots------------------------------------------------------
 //	public CreateSnapshotsResponse createSnapshots(
 //			CreateSnapshotsRequest createSnapshotsRequest)
 //			throws QingCloudClientException, QingCloudServiceException, IOException;

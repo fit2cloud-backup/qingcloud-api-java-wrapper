@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -21,40 +22,6 @@ import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudLoadBalancerListen
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudLoadBalancerType;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudZone;
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingcloudLoadBalancerListenerBase;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddLoadBalancerBackendsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddLoadBalancerBackendsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddLoadBalancerListenersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AddLoadBalancerListenersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AssociateEipsToLoadBalancerRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.AssociateEipsToLoadBalancerResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateLoadBalancerRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.CreateLoadBalancerResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancerBackendsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancerBackendsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancerListenersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancerListenersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DeleteLoadBalancersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancerBackendsRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancerBackendsResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancerListenersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancerListenersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DescribeLoadBalancersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DissociateEipsFromLoadBalancerRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.DissociateEipsFromLoadBalancerResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerBackendAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerBackendAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerListenerAttributesRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.ModifyLoadBalancerListenerAttributesResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StartLoadBalancersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StartLoadBalancersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StopLoadBalancersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.StopLoadBalancersResponse;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UpdateLoadBalancersRequest;
-import com.fit2cloud.qingcloud.wsclient.ui.model.UpdateLoadBalancersResponse;
 import com.google.gson.Gson;
 
 public class QingCloudLoadBalancerAPITest {
@@ -407,4 +374,19 @@ public class QingCloudLoadBalancerAPITest {
 			System.out.println("message="+message);
 		}
 	}
+
+	@Test
+	public void testDescribeServerCertificates() throws Exception {
+		DescribeServerCertificatesRequest request = new DescribeServerCertificatesRequest();
+		request.setZone("sh1a");
+		DescribeServerCertificatesResponse response = qingCloudWSClient.describeServerCertificates(request);
+		assertTrue(response!=null);
+		System.out.println("DescribeServerCertificates.getRet_code()=" + response.getRet_code());
+		if(response.getRet_code() != 0) {
+			String message = response.getMessage();
+			System.out.println("message="+message);
+		}
+	}
+
+
 }

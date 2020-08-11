@@ -15,6 +15,8 @@ public class QingcloudLoadBalancerListenerBase {
 
 	private Integer scene; // 场景 0:默认优化；1：keep-alive
 
+	private String server_certificate_id;
+
 	public Integer getListener_port() {
 		return listener_port;
 	}
@@ -84,5 +86,13 @@ public class QingcloudLoadBalancerListenerBase {
 
 	public void setScene(Integer scene) {
 		this.scene = scene;
+	}
+
+	public String getServer_certificate_id() {
+		return server_certificate_id;
+	}
+
+	public void setServer_certificate_id(String server_certificate_id) {
+		this.server_certificate_id = server_certificate_id;
 	}
 }
