@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 
@@ -256,7 +257,7 @@ public class QingCloudAPIsIntegrationTest {
 		List<String> instances = new ArrayList<String>();
 		instances.add(instance_id);
 		applySecurityGroupRequest.setInstances(instances);
-		applySecurityGroupRequest.setSecurity_group(security_group_id);
+		applySecurityGroupRequest.setSecurity_group(Collections.singletonList(security_group_id));
 		applySecurityGroupRequest.setZone(QingCloudZone.PEK2);
 		
 		return applySecurityGroupRequest;
