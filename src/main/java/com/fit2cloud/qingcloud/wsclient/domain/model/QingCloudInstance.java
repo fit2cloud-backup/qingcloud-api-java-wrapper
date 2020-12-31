@@ -34,6 +34,7 @@ public class QingCloudInstance {
     private String device;
     private String repl;
     private QingCloudInstanceExtra extra;
+    private List<SecurityGroup> security_groups;
 
 	public QingCloudInstanceExtra getExtra() {
 		return extra;
@@ -202,5 +203,44 @@ public class QingCloudInstance {
 
 	public void setRepl(String repl) {
 		this.repl = repl;
+	}
+
+	public List<SecurityGroup> getSecurity_groups() {
+		return security_groups;
+	}
+
+	public void setSecurity_groups(List<SecurityGroup> security_groups) {
+		this.security_groups = security_groups;
+	}
+
+	public class SecurityGroup {
+
+		Integer is_default;
+		String security_group_id;
+		String security_group_name;
+
+		public Integer getIs_default() {
+			return is_default;
+		}
+
+		public void setIs_default(Integer is_default) {
+			this.is_default = is_default;
+		}
+
+		public String getSecurity_group_id() {
+			return security_group_id;
+		}
+
+		public void setSecurity_group_id(String security_group_id) {
+			this.security_group_id = security_group_id;
+		}
+
+		public String getSecurity_group_name() {
+			return security_group_name;
+		}
+
+		public void setSecurity_group_name(String security_group_name) {
+			this.security_group_name = security_group_name;
+		}
 	}
 }
