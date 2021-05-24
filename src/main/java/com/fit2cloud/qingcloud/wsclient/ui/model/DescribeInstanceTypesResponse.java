@@ -1,7 +1,6 @@
 package com.fit2cloud.qingcloud.wsclient.ui.model;
 
 import com.google.gson.*;
-import org.apache.commons.collections.CollectionUtils;
 
 import java.util.List;
 
