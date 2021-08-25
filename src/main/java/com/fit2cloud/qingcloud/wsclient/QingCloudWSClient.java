@@ -8,9 +8,7 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.io.Writer;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
+import java.net.*;
 import java.security.InvalidKeyException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -51,6 +49,8 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	private static final boolean DEBUG = false;
 	
 	private String endpoint = "https://api.qingcloud.com/iaas/";
+	private String proxyHost;
+	private int proxyPort;
 
 	private String accessKeyId;
 	private String secretKey;
@@ -58,6 +58,12 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	public QingCloudWSClient(String accessKeyId, String secretKey) {
 		this.accessKeyId = accessKeyId;
 		this.secretKey = secretKey;
+	}
+
+	public QingCloudWSClient(String accessKeyId, String secretKey, String proxyHost, String proxyPort) {
+		this(accessKeyId, secretKey);
+		this.proxyHost = proxyHost;
+		this.proxyPort = Integer.valueOf(proxyPort);
 	}
 	
 	public QingCloudWSClient(String accessKeyId, String secretKey, String endPoint) {
@@ -70,7 +76,13 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			}
 		}
 	}
-	
+
+	public QingCloudWSClient(String accessKeyId, String secretKey, String endpoint, String proxyHost, String proxyPort) {
+		this(accessKeyId, secretKey, endpoint);
+		this.proxyHost = proxyHost;
+		this.proxyPort = Integer.valueOf(proxyPort);
+	}
+
 	public DescribeInstancesResponse describeInstances(
 			DescribeInstancesRequest describeInstanceRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException{
@@ -2007,13 +2019,20 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			// 从上述SSLContext对象中得到SSLSocketFactory对象
 			SSLSocketFactory ssf = sslContext.getSocketFactory();
 
+			URLConnection tmpConn;
+			if (null != this.proxyHost) {
+				Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(this.proxyHost, this.proxyPort));
+				tmpConn = url.openConnection(proxy);
+			} else {
+			    tmpConn = url.openConnection();
+            }
 			if(endpoint.startsWith("https:")){
-				HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+				HttpsURLConnection conn = (HttpsURLConnection) tmpConn;
 				conn.setHostnameVerifier(new TrustAnyHostnameVerifier());
 				conn.setSSLSocketFactory(ssf);
 				connection = conn;
 			}else{
-				connection = (HttpURLConnection) url.openConnection();
+				connection = (HttpURLConnection) tmpConn;
 			}
 
 			connection.connect();
