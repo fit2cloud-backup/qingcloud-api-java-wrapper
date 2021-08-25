@@ -62,8 +62,10 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public QingCloudWSClient(String accessKeyId, String secretKey, String proxyHost, String proxyPort) {
 		this(accessKeyId, secretKey);
-		this.proxyHost = proxyHost;
-		this.proxyPort = Integer.valueOf(proxyPort);
+		if (null == proxyHost || null == proxyPort) {
+			this.proxyHost = proxyHost;
+			this.proxyPort = Integer.valueOf(proxyPort);
+		}
 	}
 	
 	public QingCloudWSClient(String accessKeyId, String secretKey, String endPoint) {
@@ -79,8 +81,10 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public QingCloudWSClient(String accessKeyId, String secretKey, String endpoint, String proxyHost, String proxyPort) {
 		this(accessKeyId, secretKey, endpoint);
-		this.proxyHost = proxyHost;
-		this.proxyPort = Integer.valueOf(proxyPort);
+		if (null == proxyHost || null == proxyPort) {
+			this.proxyHost = proxyHost;
+			this.proxyPort = Integer.valueOf(proxyPort);
+		}
 	}
 
 	public DescribeInstancesResponse describeInstances(
