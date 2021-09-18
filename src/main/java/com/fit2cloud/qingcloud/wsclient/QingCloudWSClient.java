@@ -24,6 +24,7 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import javax.net.ssl.*;
 
+import com.fit2cloud.qingcloud.wsclient.ui.model.cluster.DescribeClustersRequest;
 import org.apache.commons.codec.binary.Base64;
 
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAction;
@@ -62,7 +63,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public QingCloudWSClient(String accessKeyId, String secretKey, String proxyHost, String proxyPort) {
 		this(accessKeyId, secretKey);
-		if (null == proxyHost || null == proxyPort) {
+		if (null != proxyHost && null != proxyPort) {
 			this.proxyHost = proxyHost;
 			this.proxyPort = Integer.valueOf(proxyPort);
 		}
@@ -81,7 +82,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	public QingCloudWSClient(String accessKeyId, String secretKey, String endpoint, String proxyHost, String proxyPort) {
 		this(accessKeyId, secretKey, endpoint);
-		if (null == proxyHost || null == proxyPort) {
+		if (null != proxyHost && null != proxyPort) {
 			this.proxyHost = proxyHost;
 			this.proxyPort = Integer.valueOf(proxyPort);
 		}
@@ -2664,6 +2665,65 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		}
 		return cloneInstancesResponse;
 	}
+
+	public String describeChargeSums(
+			GetChargeSumsRequest getChargeSumsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException{
+
+		DescribeInstancesResponse describeInstancesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_CHARGE_SUMS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					getChargeSumsRequest);
+			return jsonResponse;
+//			describeInstancesResponse = DescribeInstancesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+	}
+	public ChargeRecordsResponse getChargeRecords(
+			GetChargeRecordsRequest recordsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException{
+
+		ChargeRecordsResponse chargeRecordsResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_CHARGE_RECORDS;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					recordsRequest);
+			chargeRecordsResponse = ChargeRecordsResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+		return chargeRecordsResponse;
+	}
+	public String getClusterNodes(
+			GetChargeRecordsRequest recordsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException{
+
+		DescribeInstancesResponse describeInstancesResponse = null;
+		String httpMethod = "GET";
+		String action = QingCloudAction.DESCRIBE_CLUSTER_NODES;
+
+		try {
+			String jsonResponse = this.sendRequest(httpMethod, action,
+					recordsRequest);
+			return jsonResponse;
+//			describeInstancesResponse = DescribeInstancesResponse.fromJson(jsonResponse);
+		} catch (QingCloudClientException e) {
+			throw e;
+		} catch (QingCloudServiceException e) {
+			throw e;
+		}
+	}
+
 
 	private static class MyX509TrustManager implements X509TrustManager {
 

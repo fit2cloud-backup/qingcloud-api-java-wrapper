@@ -3,6 +3,7 @@ package com.fit2cloud.qingcloud.wsclient;
 import java.io.IOException;
 
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
+import com.fit2cloud.qingcloud.wsclient.ui.model.cluster.DescribeClustersRequest;
 
 public interface IQingCloudWSClient {
 
@@ -467,5 +468,10 @@ public interface IQingCloudWSClient {
 	public ModifyNetworkACLEntryAttributesResponse modifyNetworkACLEntryAttributes(
 			ModifyNetworkACLEntryAttributesRequest modifyNetworkACLEntryAttributesRequest)
 			throws QingCloudClientException, QingCloudServiceException, IOException;
-
+	public String describeChargeSums(
+			GetChargeSumsRequest getChargeSumsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
+	public ChargeRecordsResponse getChargeRecords(
+			GetChargeRecordsRequest recordsRequest)
+			throws QingCloudClientException, QingCloudServiceException, IOException;
 }

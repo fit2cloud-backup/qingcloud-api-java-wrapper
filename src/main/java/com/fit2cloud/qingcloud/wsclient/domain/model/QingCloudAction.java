@@ -161,4 +161,14 @@ public class QingCloudAction {
     //Physical resource
     public static final String DESCRIBE_HUPERNODES = "DescribeHyperNodes";
     public static final String DESCRIBE_BOTS="DescribeBots";
+
+    //balance
+    public static final String DESCRIBE_BALANCE="GetBalance";
+    public static final String DESCRIBE_CHARGE_RECORDS="GetChargeRecords";
+    public static final String DESCRIBE_CHARGE_SUMS="GetChargeSums";
+    public static final String DESCRIBE_LEASE_INFO="GetLeaseInfo";
+
+    // app center / cluster
+    public static final String DESCRIBE_CLUSTERS="DescribeClusters";
+    public static final String DESCRIBE_CLUSTER_NODES="DescribeClusterNodes";
 }
