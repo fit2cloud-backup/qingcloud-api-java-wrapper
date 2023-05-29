@@ -9,6 +9,16 @@ public class ModifyLoadBalancerAttributesRequest extends Request {
 	private String security_group;
 	private String description;
 	private String zone;
+	private String rsyslog;
+
+	public String getRsyslog() {
+		return rsyslog;
+	}
+
+	public void setRsyslog(String rsyslog) {
+		this.rsyslog = rsyslog;
+	}
+
 	public String getLoadbalancer() {
 		return loadbalancer;
 	}
