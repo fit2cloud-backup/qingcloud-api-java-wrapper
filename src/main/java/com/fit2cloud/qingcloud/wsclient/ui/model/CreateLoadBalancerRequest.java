@@ -12,6 +12,7 @@ public class CreateLoadBalancerRequest extends Request {
 	private String zone;
 	private String vxnet;
 	private String private_ip;
+	private Integer mode;
 
 
 	public List<String> getEips() {
@@ -53,6 +54,13 @@ public class CreateLoadBalancerRequest extends Request {
 		this.vxnet = vxnet;
 	}
 
+	public Integer getMode() {
+		return mode;
+	}
+
+	public void setMode(Integer mode) {
+		this.mode = mode;
+	}
 
 	@Override
 	public String toString() {
@@ -63,6 +71,7 @@ public class CreateLoadBalancerRequest extends Request {
 				", security_group='" + security_group + '\'' +
 				", zone='" + zone + '\'' +
 				", vxnet='" + vxnet + '\'' +
+				", mode='" + mode + '\'' +
 				'}';
 	}
 
