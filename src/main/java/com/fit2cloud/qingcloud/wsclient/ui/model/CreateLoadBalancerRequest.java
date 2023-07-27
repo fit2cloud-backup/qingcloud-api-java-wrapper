@@ -13,6 +13,7 @@ public class CreateLoadBalancerRequest extends Request {
 	private String vxnet;
 	private String private_ip;
 	private Integer mode;
+	private String node_count;
 
 
 	public List<String> getEips() {
@@ -62,6 +63,14 @@ public class CreateLoadBalancerRequest extends Request {
 		this.mode = mode;
 	}
 
+	public String getNode_count() {
+		return node_count;
+	}
+
+	public void setNode_count(String node_count) {
+		this.node_count = node_count;
+	}
+
 	@Override
 	public String toString() {
 		return "CreateLoadBalancerRequest{" +
@@ -72,6 +81,7 @@ public class CreateLoadBalancerRequest extends Request {
 				", zone='" + zone + '\'' +
 				", vxnet='" + vxnet + '\'' +
 				", mode='" + mode + '\'' +
+				", node_count='" + node_count + '\'' +
 				'}';
 	}
 
