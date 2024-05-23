@@ -19,6 +19,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
 import java.util.SimpleTimeZone;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -54,6 +56,8 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 
 	private String accessKeyId;
 	private String secretKey;
+
+	private Logger logger;
 
 	public QingCloudWSClient(String accessKeyId, String secretKey) {
 		this.accessKeyId = accessKeyId;
@@ -2393,6 +2397,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeBotsRequest);
+			logger.log(Level.INFO,"查询宿主机返回是"+jsonResponse);
 			describeBotsResponse = describeBotsResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
