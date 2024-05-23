@@ -19,8 +19,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
 import java.util.SimpleTimeZone;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -30,6 +28,8 @@ import org.apache.commons.codec.binary.Base64;
 
 import com.fit2cloud.qingcloud.wsclient.domain.model.QingCloudAction;
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -57,7 +57,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 	private String accessKeyId;
 	private String secretKey;
 
-	private Logger logger;
+	private Logger log = LoggerFactory.getLogger(getClass());
 
 	public QingCloudWSClient(String accessKeyId, String secretKey) {
 		this.accessKeyId = accessKeyId;
@@ -2397,7 +2397,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeBotsRequest);
-			logger.log(Level.INFO,"查询宿主机返回是"+jsonResponse);
+			log.info("查询宿主机返回是"+jsonResponse);
 			describeBotsResponse = describeBotsResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
