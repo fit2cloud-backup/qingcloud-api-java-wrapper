@@ -102,6 +102,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 		try {
 			String jsonResponse = this.sendRequest(httpMethod, action,
 					describeInstanceRequest);
+			log.info("青云同步的虚拟机信息为: " + jsonResponse);
 			describeInstancesResponse = DescribeInstancesResponse.fromJson(jsonResponse);
 		} catch (QingCloudClientException e) {
 			throw e;
