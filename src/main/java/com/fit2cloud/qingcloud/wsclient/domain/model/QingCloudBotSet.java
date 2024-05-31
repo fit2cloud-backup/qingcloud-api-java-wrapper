@@ -25,6 +25,7 @@ public class QingCloudBotSet {
     private String status;
     private String create_time;
     private String status_time;
+    private String cpu_model_name;
 
     public Integer getTotal_memory() {
         return total_memory;
@@ -192,5 +193,13 @@ public class QingCloudBotSet {
 
     public void setStatus_time(String status_time) {
         this.status_time = status_time;
+    }
+
+    public String getCpu_model_name() {
+        return cpu_model_name;
+    }
+
+    public void setCpu_model_name(String cpu_model_name) {
+        this.cpu_model_name = cpu_model_name;
     }
 }
