@@ -14,7 +14,15 @@ public class CreateLoadBalancerRequest extends Request {
 	private String private_ip;
 	private Integer mode;
 	private String node_count;
+	private String architecture;
 
+	public String getArchitecture() {
+		return architecture;
+	}
+
+	public void setArchitecture(String architecture) {
+		this.architecture = architecture;
+	}
 
 	public List<String> getEips() {
 		return eips;
@@ -82,6 +90,7 @@ public class CreateLoadBalancerRequest extends Request {
 				", vxnet='" + vxnet + '\'' +
 				", mode='" + mode + '\'' +
 				", node_count='" + node_count + '\'' +
+				", architecture='" + architecture + '\'' +
 				'}';
 	}
 
