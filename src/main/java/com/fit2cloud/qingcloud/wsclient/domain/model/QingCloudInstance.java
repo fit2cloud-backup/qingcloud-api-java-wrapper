@@ -35,6 +35,7 @@ public class QingCloudInstance {
     private String repl;
     private QingCloudInstanceExtra extra;
     private List<SecurityGroup> security_groups;
+	private String host_machine;
 
 	public QingCloudInstanceExtra getExtra() {
 		return extra;
@@ -242,5 +243,14 @@ public class QingCloudInstance {
 		public void setSecurity_group_name(String security_group_name) {
 			this.security_group_name = security_group_name;
 		}
+	}
+
+
+	public String getHost_machine() {
+		return host_machine;
+	}
+
+	public void setHost_machine(String host_machine) {
+		this.host_machine = host_machine;
 	}
 }
