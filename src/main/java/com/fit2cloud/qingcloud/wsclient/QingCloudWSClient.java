@@ -2058,6 +2058,7 @@ public class QingCloudWSClient implements IQingCloudWSClient {
 			} else {
 				content = connection.getInputStream();
 				String message = readContent(content);
+				log.info("sendRequest: message: " + message);
 				//check retcode
 				Response response = Response.fromJson(message);
 				int retCode = response.getRet_code();
