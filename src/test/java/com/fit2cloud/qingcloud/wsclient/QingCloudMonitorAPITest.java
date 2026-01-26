@@ -3,22 +3,18 @@ package com.fit2cloud.qingcloud.wsclient;
 import com.fit2cloud.qingcloud.wsclient.domain.model.*;
 import com.fit2cloud.qingcloud.wsclient.ui.model.*;
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.omg.CORBA.OBJ_ADAPTER;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static org.junit.Assert.assertTrue;
 
 public class QingCloudMonitorAPITest {
 
